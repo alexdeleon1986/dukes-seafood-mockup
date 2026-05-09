@@ -53,14 +53,25 @@
   .header-rail {
     background: var(--navy);
     color: var(--cream);
-    text-align: center;
     padding: 8px 24px;
     font-family: 'JetBrains Mono', ui-monospace, monospace;
     font-size: 11px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
   }
-  .header-rail .dot { color: var(--copper); margin: 0 10px; }
+  .header-rail .rail-brand { color: rgba(242,235,223,0.78); }
+  .header-rail .rail-links { display: flex; gap: 20px; }
+  .header-rail .rail-links a {
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .header-rail .rail-links a:hover { color: var(--copper); }
+  .header-rail .dot { color: var(--copper); margin: 0 6px; }
   .nav {
     max-width: 1320px;
     margin: 0 auto;
@@ -72,6 +83,117 @@
   }
   .nav-left, .nav-right { display: flex; gap: 28px; align-items: center; }
   .nav-right { justify-content: flex-end; }
+
+  /* Hamburger button (hidden on desktop, shown on mobile) */
+  .hamburger {
+    display: none;
+    background: none;
+    border: 0;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--ink, #0d2436);
+    transition: all 0.25s;
+  }
+  body.menu-open .hamburger span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  body.menu-open .hamburger span:nth-child(2) { opacity: 0; }
+  body.menu-open .hamburger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  /* Mobile menu overlay */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(13, 36, 54, 0.97);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: auto;
+  }
+  body.menu-open .mobile-menu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .mobile-menu-inner {
+    width: 100%;
+    max-width: 480px;
+    padding: 80px 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+  }
+  .mobile-menu-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: 0;
+    color: var(--cream, #f2ebdf);
+    font-size: 36px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px 12px;
+  }
+  .mobile-menu a {
+    color: var(--cream, #f2ebdf);
+    text-decoration: none;
+    padding: 18px 4px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.1;
+    border-bottom: 1px solid rgba(242,235,223,0.12);
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--copper, #b58450); }
+  .mobile-menu .mobile-menu-cta {
+    margin-top: 24px;
+    padding: 18px 24px;
+    background: var(--copper, #b58450);
+    color: var(--navy, #0d2436);
+    text-align: center;
+    border: 0;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border-radius: 0;
+  }
+  .mobile-menu .mobile-menu-rail {
+    margin-top: 24px;
+    text-align: center;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(242,235,223,0.6);
+  }
+  .mobile-menu .mobile-menu-rail a {
+    display: inline;
+    color: rgba(242,235,223,0.78);
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+  }
+  .mobile-menu .mobile-menu-rail .dot { color: var(--copper, #b58450); margin: 0 8px; }
+  body.menu-open { overflow: hidden; }
+
   .nav a {
     color: var(--ink);
     text-decoration: none;
@@ -686,10 +808,17 @@
 
   /* Mobile */
   @media (max-width: 900px) {
-    .nav { grid-template-columns: 1fr auto 1fr; padding: 14px 20px; }
-    .nav-left, .nav-right { gap: 14px; }
+    .nav {
+      grid-template-columns: auto 1fr auto;
+      padding: 14px 20px;
+    }
+    .nav .nav-left { display: none; }
+    .nav .nav-right { gap: 14px; }
     .nav a { font-size: 11px; letter-spacing: 0.14em; }
     .nav .nav-hide-mobile { display: none; }
+    .hamburger { display: flex; }
+    .header-rail { padding: 8px 16px; font-size: 9px; }
+    .header-rail .rail-links { display: none; }
     .logo { font-size: 24px; }
     .hero-grid { grid-template-columns: 1fr; padding: 64px 24px 56px; gap: 40px; }
     .hero-image { aspect-ratio: 4/3; }
@@ -757,6 +886,8 @@
 
     /* === Family/people grid === */
     section.family { padding: 56px 20px; }
+    .family-head { margin-bottom: 32px; }
+    .family-head .eyebrow { margin-bottom: 14px; }
     .family-head h2 { font-size: clamp(28px, 8vw, 36px); margin-bottom: 14px; }
     .family-head p { font-size: 16px; }
     .person-body { padding: 22px 22px 0; }
@@ -813,12 +944,19 @@
 <!-- Header -->
 <header class="site">
   <div class="header-rail">
-    Family-owned <span class="dot">·</span> Sourced from Alaska <span class="dot">·</span> Pacific Northwest
+    <span class="rail-brand">Family-owned <span class="dot">·</span> Sourced from Alaska <span class="dot">·</span> Pacific Northwest</span>
+    <span class="rail-links">
+      <a href="https://order.online/business/dukes-seafood-22397">Order online</a>
+      <a href="https://dukesseafood.com/locations/">Reservations</a>
+    </span>
   </div>
   <nav class="nav">
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" onclick="document.body.classList.toggle('menu-open');this.setAttribute('aria-expanded',document.body.classList.contains('menu-open'))">
+      <span></span><span></span><span></span>
+    </button>
     <div class="nav-left">
-      <a href="https://dukesseafood.com/menus/">Menus</a>
-      <a href="https://dukesseafood.com/locations/">Locations</a>
+      <a href="https://dukesseafood.com/menus/" class="nav-hide-mobile">Menus</a>
+      <a href="index.html#locations" class="nav-hide-mobile">Locations</a>
       <a href="https://docksideatdukes.com/" class="nav-hide-mobile">Private Dining</a>
     </div>
     <a href="index.html" class="logo">
@@ -826,11 +964,28 @@
       <small>WILD PACIFIC SEAFOOD · SINCE 1976</small>
     </a>
     <div class="nav-right">
-      <a href="https://dukesseafood.com/blog" class="nav-hide-mobile">Stories</a>
-      <a href="#story">Our Story</a>
+      <a href="index.html#chowder" class="nav-hide-mobile">Chowder</a>
+      <a href="about.html" class="nav-hide-mobile">Our Story</a>
       <a href="https://dukesseafood.com/locations/" class="reserve">Reserve</a>
     </div>
   </nav>
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" onclick="if(event.target===this){document.body.classList.remove('menu-open');document.querySelector('.hamburger').setAttribute('aria-expanded','false')}">
+    <div class="mobile-menu-inner">
+      <button class="mobile-menu-close" aria-label="Close menu" onclick="document.body.classList.remove('menu-open');document.querySelector('.hamburger').setAttribute('aria-expanded','false')">×</button>
+      <a href="https://dukesseafood.com/menus/">Menus</a>
+      <a href="index.html#locations">Locations</a>
+      <a href="https://docksideatdukes.com/">Private Dining</a>
+      <a href="index.html#chowder">Chowder</a>
+      <a href="about.html">Our Story</a>
+      <a href="https://dukesseafood.com/locations/" class="mobile-menu-cta">Reserve a table →</a>
+      <div class="mobile-menu-rail">
+        <a href="https://order.online/business/dukes-seafood-22397">Order online</a>
+        <span class="dot">·</span>
+        <a href="https://dukesseafood.com/locations/">Reservations</a>
+      </div>
+    </div>
+  </div>
 </header>
 
 <!-- Hero -->
@@ -955,7 +1110,7 @@
     <div class="people-grid">
       <article class="person">
         <div class="person-image">
-          <img src="images/duke-portrait.jpg" alt="Duke Moscrip with the Colonel Salmon dish">
+          <img src="images/duke-portrait.jpg" alt="Duke Moscrip with the Colonel Salmon dish" style="object-position: center top;">
         </div>
         <div class="person-body">
           <h3>Duke Moscrip</h3>
