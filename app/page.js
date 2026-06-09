@@ -64,7 +64,7 @@ export default function Home() {
 
           <div className="locations-grid">
             <a href="/locations/lake-union" className="location-card">
-              <div className="photo"><span className="imgfill"><img src="/images/loc-slu.jpg" alt="South Lake Union" /></span></div>
+              <div className="photo"><span className="imgfill"><img src="/images/slu-interior.jpg" alt="South Lake Union" /></span></div>
               <div className="city">South Lake Union</div>
               <div className="meta"><strong>The original Chowder House.</strong> Big bar, lake views, the patio that started it all. Opened 1989.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
@@ -76,25 +76,25 @@ export default function Home() {
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
             <a href="/locations/green-lake" className="location-card">
-              <div className="photo"><span className="imgfill"><img src="/images/loc-greenlake.jpg" alt="Green Lake" /></span></div>
+              <div className="photo"><span className="imgfill"><img src="/images/greenlake-hero.jpg" alt="Green Lake" /></span></div>
               <div className="city">Green Lake</div>
               <div className="meta"><strong>Right on the lake.</strong> Seaplanes overhead, the deck open most of the year.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
             <a href="/locations/tacoma" className="location-card">
-              <div className="photo"><span className="imgfill"><img src="/images/loc-tacoma.jpg" alt="Tacoma" /></span></div>
+              <div className="photo"><span className="imgfill"><img src="/images/tacoma-hero.jpg" alt="Tacoma" /></span></div>
               <div className="city">Tacoma Waterfront</div>
               <div className="meta"><strong>Ruston Way.</strong> The water at your shoulder, Mount Rainier in the window.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
             <a href="/locations/southcenter" className="location-card">
-              <div className="photo"><span className="imgfill"><img src="/images/loc-southcenter.jpg" alt="Southcenter" /></span></div>
+              <div className="photo"><span className="imgfill"><img src="/images/southcenter-hero.jpg" alt="Southcenter" /></span></div>
               <div className="city">Southcenter</div>
               <div className="meta"><strong>Westfield Southcenter.</strong> Full menu, full bar, easy from anywhere south of Seattle.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
             <a href="/locations/kent-station" className="location-card">
-              <div className="photo"><span className="imgfill"><img src="/images/loc-kent.jpg" alt="Kent Station" /></span></div>
+              <div className="photo"><span className="imgfill"><img src="/images/kent-hero.jpg" alt="Kent Station" /></span></div>
               <div className="city">Kent Station</div>
               <div className="meta"><strong>Open daily.</strong> Family-friendly, easy parking, in the heart of Kent Station.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>

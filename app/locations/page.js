@@ -19,7 +19,7 @@ export default function LocationsIndex() {
             </div>
           </div>
           <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
-            <img src="/images/loc-tacoma.jpg" alt="Duke's Seafood on the Tacoma waterfront" />
+            <img src="/images/tacoma-hero.jpg" alt="Duke's Seafood on the Tacoma waterfront" />
           </div>
         </div>
       </section>
