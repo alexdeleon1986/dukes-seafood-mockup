@@ -5,7 +5,7 @@ export const metadata = {
 
 export default function DukesVip() {
   return (
-    <>
+    <div className="page-simple">
       <section className="hero">
         <div className="shell">
           <div>
@@ -51,6 +51,6 @@ export default function DukesVip() {
           <p className="body" style={{ marginTop: 28 }}>You&apos;ll also get our newsletter: stories from more than forty years of Duke&apos;s, recipes and tips from Wild Bill Ranniger, and member-only promotions.</p>
         </div>
       </section>
-    </>
+    </div>
   );
 }

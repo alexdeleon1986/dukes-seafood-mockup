@@ -32,7 +32,7 @@ const RETAILERS = [
 
 export default function FrozenChowders() {
   return (
-    <>
+    <div className="page-simple">
       <section className="hero">
         <div className="shell">
           <div>
@@ -77,6 +77,6 @@ export default function FrozenChowders() {
           </p>
         </div>
       </section>
-    </>
+    </div>
   );
 }

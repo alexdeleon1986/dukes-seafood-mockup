@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function VipSignup() {
   return (
-    <>
+    <div className="page-simple">
       <section className="hero">
         <div className="shell">
           <div>
@@ -20,6 +20,6 @@ export default function VipSignup() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
