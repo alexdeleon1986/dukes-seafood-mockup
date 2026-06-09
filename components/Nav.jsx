@@ -62,7 +62,7 @@ export default function Nav() {
           <div className="mobile-menu-rail">
             <a href={ORDER_URL}>Order online</a>
             <span className="dot">·</span>
-            <a href="https://dukesseafood.com/locations/">Reservations</a>
+            <a href="/locations">Reservations</a>
           </div>
         </div>
       </div>

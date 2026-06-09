@@ -4,8 +4,8 @@ export const metadata = {
 };
 
 const PEOPLE = [
-  { name: 'Duke Moscrip', role: 'Founder', photo: '/images/duke-portrait.jpg', bio: 'Opened the original Duke\u2019s on Queen Anne in 1976. Still flies to Alaska to vet the boats, still runs taste tests in the kitchen, still writes most of the company\u2019s blog posts himself.', pos: 'center top' },
-  { name: 'John Moscrip', role: "President · Duke\u2019s Son", photo: '/images/john-and-duke.jpg', bio: 'Took over running the company. Day-to-day operations, sourcing relationships, the foundation work. Wrote the announcement of the Saving Salmon Foundation in 2025.', pos: '85% center' },
+  { name: 'Duke Moscrip', role: 'Founder', photo: '/images/duke-portrait-2015.jpg', bio: 'Opened the original Duke\u2019s on Queen Anne in 1976. Still flies to Alaska to vet the boats, still runs taste tests in the kitchen, still writes most of the company\u2019s blog posts himself.', pos: 'center top' },
+  { name: 'John Moscrip', role: "President · Duke\u2019s Son", photo: '/images/duke-john-bar.jpg', bio: 'Took over running the company. Day-to-day operations, sourcing relationships, the foundation work. Wrote the announcement of the Saving Salmon Foundation in 2025.', pos: '85% center' },
   { name: 'Alan Caraco', role: 'Executive Chef', photo: '/images/alan-caraco.jpg', bio: 'Runs the kitchens across all six restaurants. Develops the seasonal menu alongside Chef Bill\u2019s specials. Believes a deviled egg without crab on top is a missed opportunity.', pos: 'center' },
 ];
 
@@ -31,7 +31,7 @@ export default function OurStory() {
             <p className="lede">Duke opened the first restaurant in 1976, paying employees in cash out of cigar boxes. His son John runs the company now. The salmon still comes off the same Alaska boats.</p>
           </div>
           <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
-            <img src="/images/duke-hero.jpg" alt="Duke Moscrip" style={{ objectPosition: '75% center' }} />
+            <img src="/images/duke-amy-jm-dock.jpg" alt="Duke, Amy, and John Moscrip on the dock" style={{ objectPosition: 'center' }} />
           </div>
         </div>
       </section>
@@ -66,7 +66,7 @@ export default function OurStory() {
       <section className="sec menus">
         <div className="shell">
           <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
-            <img src="/images/duke-sourcing.jpg" alt="Duke sourcing in Alaska" />
+            <img src="/images/duke-rockfish.jpg" alt="Duke Moscrip fishing for rockfish in Alaska" />
           </div>
           <div>
             <p className="eyebrow">The sourcing · Wild Alaska, since the nineties</p>

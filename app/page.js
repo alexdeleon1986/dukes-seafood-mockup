@@ -114,8 +114,8 @@ export default function Home() {
               <h2 className="h-display">Duke's <em>grandfather's</em> recipe. Three Cook Off wins.</h2>
               <p>The base of our award-winning clam chowder came from Duke's grandfather in New England and has been simmering in our kitchens since the first Chowder House opened in 1989. It took home the Seattle Chowder Cook Off three years in a row, and we now ship frozen kits anywhere in the country so you can have it without driving to one of our restaurants.</p>
               <div className="actions">
-                <a href="https://dukesseafood.com/frozen-chowders/" className="btn btn-primary">Ship a chowder kit <span className="arrow">→</span></a>
-                <a href="https://dukesseafood.com/menus/" className="btn btn-ghost">Order in restaurant</a>
+                <a href="/frozen-chowders" className="btn btn-primary">Ship a chowder kit <span className="arrow">→</span></a>
+                <a href="/menus" className="btn btn-ghost">Order in restaurant</a>
               </div>
             </div>
           </div>

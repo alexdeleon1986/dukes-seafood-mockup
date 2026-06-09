@@ -28,7 +28,7 @@ export default async function MenuPage({ params }) {
             <h1 className="h-display">{menu.name} <em>menu</em>.</h1>
             <p className="lede">{menu.note}</p>
             <div className="hero-ctas">
-              <a href="https://dukesseafood.com/locations/" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">→</span></a>
+              <a href="/locations" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">→</span></a>
               <a href="/menus" className="btn btn-ghost btn-lg">All menus</a>
             </div>
           </div>

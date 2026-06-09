@@ -1536,3 +1536,120 @@ body[data-theme="modern"] {
     justify-content: center;
   }
 }
+
+/* ===== VIP + Frozen Chowders + form pages ===== */
+.shell-narrow {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.sec.alt { background: var(--cream-2); }
+.sec .shell {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+.sec .shell-narrow { display: block; }
+.body {
+  color: var(--ink-soft);
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+.body + .body { margin-top: 16px; }
+.plain-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 32px;
+}
+.plain-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--serif);
+  font-size: 19px;
+  color: var(--ink);
+}
+
+/* VIP hub two-up cards */
+.vip-card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  padding: clamp(28px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.vip-card .h-display { margin: 0; }
+.vip-card .btn { margin-top: 12px; }
+.benefit { padding: 24px 0; border-bottom: 1px solid var(--line); }
+.benefit:first-of-type { border-top: 1px solid var(--line); }
+.benefit h3 {
+  font-family: var(--serif);
+  font-weight: 440;
+  font-size: 22px;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+/* Forms */
+.form-panel {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  padding: clamp(24px, 3.5vw, 40px);
+}
+.vip-form { display: flex; flex-direction: column; gap: 20px; }
+.form-note { font-size: 13px; color: var(--ink-soft); margin: 0; }
+.field { display: flex; flex-direction: column; gap: 6px; border: 0; padding: 0; margin: 0; }
+.field-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.field input, .field select {
+  font-family: var(--sans);
+  font-size: 16px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 12px 14px;
+  border-radius: 0;
+  outline: none;
+  width: 100%;
+}
+.field input:focus, .field select:focus { border-color: var(--ink); }
+.field-row { display: grid; grid-template-columns: 1.4fr 0.8fr 1fr; gap: 10px; }
+.form-confirm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+}
+.form-confirm .check {
+  width: 44px; height: 44px;
+  border: 1px solid var(--brass);
+  display: grid; place-items: center;
+  color: var(--brass);
+  font-family: var(--serif);
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.form-confirm h3 {
+  font-family: var(--serif);
+  font-weight: 440;
+  font-size: 24px;
+  color: var(--ink);
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .sec .shell { grid-template-columns: 1fr; }
+  .plain-list { grid-template-columns: 1fr; }
+}

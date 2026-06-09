@@ -22,7 +22,7 @@ export default function Chowder() {
             <h1 className="h-display">The chowder that <em>started it all</em>.</h1>
             <p className="lede">Three-time champion of the Seattle Chowder Cook Off, made fresh every day at every location. The base is Duke&apos;s grandfather&apos;s New England recipe, and we&apos;ve never had a reason to change it.</p>
             <div className="hero-ctas">
-              <a href="https://dukesseafood.com/frozen-chowders/" className="btn btn-primary btn-lg">Ship frozen chowder <span className="arrow">→</span></a>
+              <a href="/frozen-chowders" className="btn btn-primary btn-lg">Ship frozen chowder <span className="arrow">→</span></a>
               <a href="/locations" className="btn btn-ghost btn-lg">Find a location</a>
             </div>
           </div>
@@ -73,7 +73,7 @@ export default function Chowder() {
             <p className="lede" style={{ marginTop: 16, color: 'rgba(242,235,223,0.82)' }}>We ship frozen chowder kits anywhere in the country, so a Duke&apos;s lunch is never out of reach.</p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
-            <a href="https://dukesseafood.com/frozen-chowders/" className="btn btn-primary btn-lg">Order frozen chowder <span className="arrow">→</span></a>
+            <a href="/frozen-chowders" className="btn btn-primary btn-lg">Order frozen chowder <span className="arrow">→</span></a>
           </div>
         </div>
       </section>
