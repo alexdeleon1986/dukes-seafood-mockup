@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { LOCATIONS, LOCATION_SLUGS, LOCATION_LIST, getLocation, ORDER_URL } from '@/lib/locations';
+import ReservationWidget from '@/components/ReservationWidget';
 
 export function generateStaticParams() {
   return LOCATION_SLUGS.map((slug) => ({ slug }));
@@ -101,9 +102,7 @@ export default async function LocationPage({ params }) {
             <h2 className="h-display">Reserve at <em>{loc.name}</em>.</h2>
             <p className="lede">Walk-ins always welcome at the bar — full menu and happy hour served there every day of the week.</p>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <a href="https://dukesseafood.com/locations/" className="btn btn-primary btn-lg">Book on OpenTable <span className="arrow">→</span></a>
-          </div>
+          <ReservationWidget rid={loc.rid} name={loc.name} />
         </div>
       </section>
 

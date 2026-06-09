@@ -22,7 +22,7 @@ export default function Home() {
               <span>Pacific Northwest · Family-Owned Since 1976</span>
               <span>Wild Alaska Salmon · Sustainably Sourced</span>
             </div>
-            <h1 className="h-display">The fish on your plate has a <em>shorter commute</em> than you do.</h1>
+            <h1 className="h-display">Pacific Northwest seafood, <em>family-run since 1976</em>.</h1>
             <p className="lede">We buy directly from small Alaska boats Duke has known for thirty years and pull oysters and Dungeness crab from up and down the Sound. Family-owned since 1976, six dining rooms in Western Washington, and the chowder is the same award-winning recipe we've had since we opened.</p>
             <div className="ctas">
               <a href="#reserve" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">→</span></a>
