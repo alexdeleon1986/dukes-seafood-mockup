@@ -11,7 +11,7 @@ export default function Home() {
       <section className="hero-video">
 
         <div className="hero-video-embed" aria-hidden="true">
-          <iframe src="https://player.vimeo.com/video/1073729759?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen title="Duke's hero"></iframe>
+          <iframe src="https://player.vimeo.com/video/1073729759?background=1&autoplay=1&loop=1&muted=1&autopause=0" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen title="Duke's hero"></iframe>
         </div>
         <div className="hero-video-fallback" aria-hidden="true"></div>
         <div className="scrim"></div>

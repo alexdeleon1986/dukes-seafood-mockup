@@ -45,7 +45,7 @@ export default function Nav() {
         <div className="nav-right">
           <Link href="/chowder" className={`nav-link nav-link-hide-mobile ${isActive('/chowder') ? 'active' : ''}`}>Chowder</Link>
           <Link href="/our-story" className={`nav-link nav-link-hide-mobile ${isActive('/our-story') ? 'active' : ''}`}>Our Story</Link>
-          <a href="https://dukesseafood.com/locations/" className="btn btn-primary btn-sm">Reserve <span className="arrow">→</span></a>
+          <Link href="/locations" className="btn btn-primary btn-sm">Reserve <span className="arrow">→</span></Link>
         </div>
       </div>
 
@@ -58,7 +58,7 @@ export default function Nav() {
           <a href={DOCKSIDE_URL}>Private Dining</a>
           <Link href="/chowder">Chowder</Link>
           <Link href="/our-story">Our Story</Link>
-          <a href="https://dukesseafood.com/locations/" className="mobile-menu-cta">Reserve a table →</a>
+          <Link href="/locations" className="mobile-menu-cta">Reserve a table →</Link>
           <div className="mobile-menu-rail">
             <a href={ORDER_URL}>Order online</a>
             <span className="dot">·</span>
