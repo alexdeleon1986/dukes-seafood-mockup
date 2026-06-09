@@ -1536,8 +1536,3 @@ body[data-theme="modern"] {
     justify-content: center;
   }
 }
-/* OpenTable reservation widget mount */
-.reserve-form .ot-mount { min-height: 0; }
-.reserve-form .ot-mount:empty + .ot-fallback { margin-top: 0; }
-.reserve-form .ot-fallback { margin-top: 16px; width: 100%; text-align: center; }
-.reserve-form .ot-mount iframe { background: var(--cream); border-radius: 2px; }

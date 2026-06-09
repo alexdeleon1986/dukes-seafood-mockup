@@ -1,49 +1,103 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useState, useMemo } from 'react';
 
-/**
- * OpenTable reservation widget, embedded per location.
- * Uses OpenTable's official reserve-widget iframe build. The `rid` is the
- * restaurant's OpenTable ID. A direct booking link is always rendered as a
- * fallback (and in case the widget is blocked on a non-whitelisted domain).
- */
+// Time-of-day tiles. Each maps to a concrete time we hand to OpenTable.
+const TIME_SLOTS = [
+  { label: '11:30a', time: '11:30' },
+  { label: '12:00p', time: '12:00' },
+  { label: '1:00p', time: '13:00' },
+  { label: '5:00p', time: '17:00' },
+  { label: '6:00p', time: '18:00' },
+  { label: '6:30p', time: '18:30' },
+  { label: '7:00p', time: '19:00' },
+  { label: '7:30p', time: '19:30' },
+  { label: '8:00p', time: '20:00' },
+];
+
+function todayISO() {
+  const d = new Date();
+  return d.toISOString().slice(0, 10);
+}
+
 export default function ReservationWidget({ rid, name }) {
-  const mountRef = useRef(null);
+  const [covers, setCovers] = useState(2);
+  const [date, setDate] = useState(todayISO());
+  const [time, setTime] = useState('19:00');
+  const [booked, setBooked] = useState(false);
 
-  useEffect(() => {
-    if (!rid || !mountRef.current) return;
-    const mount = mountRef.current;
-    mount.innerHTML = '';
+  const bookUrl = useMemo(() => {
+    // OpenTable deep link with party size, date, and time prefilled.
+    const dateTime = `${date}T${time}`;
+    const params = new URLSearchParams({
+      restref: String(rid),
+      datetime: dateTime,
+      covers: String(covers),
+      lang: 'en-US',
+    });
+    return `https://www.opentable.com/restref/client/?rid=${rid}&${params.toString()}`;
+  }, [rid, date, time, covers]);
 
-    // OpenTable's standard embeddable widget iframe.
-    const iframe = document.createElement('iframe');
-    iframe.title = `Reserve a table at Duke's ${name}`;
-    iframe.src =
-      `https://www.opentable.com/widget/reservation/canvas?rid=${rid}` +
-      `&type=standard&theme=tall&color=1&iframe=true&domain=com&lang=en-US&newtab=false`;
-    iframe.width = '100%';
-    iframe.height = '300';
-    iframe.frameBorder = '0';
-    iframe.style.border = '0';
-    iframe.style.display = 'block';
-    mount.appendChild(iframe);
+  function handleBook() {
+    window.open(bookUrl, '_blank', 'noopener,noreferrer');
+    setBooked(true);
+  }
 
-    return () => { mount.innerHTML = ''; };
-  }, [rid, name]);
-
-  const directUrl = `https://www.opentable.com/restref/client/?rid=${rid}&restref=${rid}`;
+  if (booked) {
+    return (
+      <div className="reserve-form">
+        <div className="rf-confirm">
+          <div className="check">✓</div>
+          <div className="val" style={{ fontFamily: 'var(--serif)', fontSize: 22 }}>Opening OpenTable</div>
+          <p className="rf-help">
+            We sent your request for {covers} {covers === 1 ? 'guest' : 'guests'} to OpenTable in a new tab.
+            Pick your spot there to confirm.
+          </p>
+          <button className="rf-time" style={{ marginTop: 12, padding: '10px 18px' }} onClick={() => setBooked(false)}>
+            Change details
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="reserve-form">
-      <div ref={mountRef} className="ot-mount" aria-live="polite" />
-      <a
-        href={directUrl}
-        className="btn btn-primary btn-lg ot-fallback"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Book on OpenTable <span className="arrow">→</span>
-      </a>
+      <div className="rf-row">
+        <div className="rf-cell">
+          <span className="lbl">Party size</span>
+          <select className="val" value={covers} onChange={(e) => setCovers(Number(e.target.value))} aria-label="Party size">
+            {Array.from({ length: 12 }, (_, i) => i + 1).map((n) => (
+              <option key={n} value={n}>{n} {n === 1 ? 'guest' : 'guests'}</option>
+            ))}
+            <option value={13}>13+ guests</option>
+          </select>
+        </div>
+        <div className="rf-cell">
+          <span className="lbl">Date</span>
+          <input className="val" type="date" value={date} min={todayISO()} onChange={(e) => setDate(e.target.value)} aria-label="Reservation date" />
+        </div>
+      </div>
+
+      <div className="rf-times" role="group" aria-label="Time">
+        {TIME_SLOTS.map((slot) => (
+          <button
+            key={slot.time}
+            type="button"
+            className={`rf-time ${time === slot.time ? 'active' : ''}`}
+            aria-pressed={time === slot.time}
+            onClick={() => setTime(slot.time)}
+          >
+            {slot.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="rf-submit">
+        <span className="rf-help">Walk-ins welcome at the bar.</span>
+        <button type="button" className="btn btn-primary btn-lg" onClick={handleBook}>
+          Book at {name} <span className="arrow">→</span>
+        </button>
+      </div>
     </div>
   );
 }

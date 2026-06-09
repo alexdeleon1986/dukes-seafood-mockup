@@ -107,7 +107,7 @@ export default function Home() {
         <div className="shell">
           <div className="feature-row">
             <div className="photo">
-              <span className="imgfill"><img src="/images/chowder.jpg" alt="chowder photography" /></span>
+              <span className="imgfill"><img src="/images/chowder-hero.jpg" alt="Duke's award-winning clam chowder in a bread bowl" /></span>
             </div>
             <div>
               <p className="eyebrow">The Chowder</p>

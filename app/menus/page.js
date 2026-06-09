@@ -19,7 +19,7 @@ export default function MenusHub() {
             </div>
           </div>
           <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
-            <img src="/images/dukes-chowder.jpg" alt="Duke's award-winning chowder" />
+            <img src="/images/patio-spread.jpg" alt="Sandwich, fish and chips, fries and a cocktail on a sunny Duke's patio table" />
           </div>
         </div>
       </section>

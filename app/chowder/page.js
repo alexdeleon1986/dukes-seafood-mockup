@@ -27,7 +27,7 @@ export default function Chowder() {
             </div>
           </div>
           <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
-            <img src="/images/dukes-chowder.jpg" alt="Duke's award-winning clam chowder" />
+            <img src="/images/chowder-hero.jpg" alt="Duke's award-winning clam chowder in a sourdough bread bowl" />
           </div>
         </div>
       </section>
@@ -35,7 +35,7 @@ export default function Chowder() {
       <section className="sec menus">
         <div className="shell">
           <div className="photo imgfill" style={{ aspectRatio: '1/1' }}>
-            <img src="/images/chowder.jpg" alt="A bowl of Duke's chowder" />
+            <img src="/images/chowder-bowl.jpg" alt="Clam chowder bread bowl with a margarita" />
           </div>
           <div>
             <p className="eyebrow">The recipe</p>
