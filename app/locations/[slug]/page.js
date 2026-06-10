@@ -130,10 +130,14 @@ export default async function LocationPage({ params }) {
               </div>
             ))}
           </div>
-          {loc.events.needsConfirm && (
-            <p style={{ marginTop: 24, fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--brass-dark)' }}>
-              Preview · private-dining options to be confirmed against this location
-            </p>
+          {loc.events.contact && (
+            <div className="events-contact">
+              <p>Talk to <strong>{loc.events.contact.name}</strong> about your event.</p>
+              <div className="events-contact-actions">
+                <a href={`tel:${loc.events.contact.phoneHref}`} className="btn btn-primary btn-sm">{loc.events.contact.phone} <span className="arrow">→</span></a>
+                <a href={`mailto:${loc.events.contact.email}`} className="btn btn-ghost btn-sm">{loc.events.contact.email}</a>
+              </div>
+            </div>
           )}
         </div>
       </section>

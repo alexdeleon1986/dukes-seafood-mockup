@@ -2,6 +2,7 @@ import NewsletterForm from '@/components/NewsletterForm';
 import HeroVideoControls from '@/components/HeroVideoControls';
 import ReservationWidget from '@/components/ReservationWidget';
 import { LOCATION_LIST } from '@/lib/locations';
+import { AWARDS, GUARANTEE } from '@/lib/awards';
 
 export const metadata = {
   title: "Duke's Seafood — Wild Pacific Seafood Since 1977",
@@ -127,6 +128,27 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="awards-strip" aria-label="Awards">
+        <div className="shell">
+          <ul className="awards-list">
+            {AWARDS.map((a, i) => (
+              <li key={i}><span className="aw-name">{a.award}</span><span className="aw-src">{a.source}</span></li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {GUARANTEE.confirmed && (
+        <section className="guarantee-band">
+          <div className="shell">
+            <blockquote>
+              <p>&ldquo;{GUARANTEE.quote}&rdquo;</p>
+              <cite>{GUARANTEE.attribution}</cite>
+            </blockquote>
+          </div>
+        </section>
+      )}
 
       <section className="sec" id="chowder">
         <div className="shell">
