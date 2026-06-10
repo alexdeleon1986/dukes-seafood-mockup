@@ -49,7 +49,7 @@ export default async function LocationPage({ params }) {
             <h1 className="h-display">{loc.heroHeadline[0]}<em>{loc.heroHeadline[1]}</em>.</h1>
             <p className="lede">{loc.heroLede}</p>
             <div className="hero-ctas">
-              <a href="/locations" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">→</span></a>
+              <a href="#reserve" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">→</span></a>
               <a href="/menus" className="btn btn-ghost btn-lg">View menus</a>
             </div>
           </div>
@@ -160,7 +160,7 @@ export default async function LocationPage({ params }) {
               </p>
             </div>
             <div style={{ marginTop: 28, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-              <a href="/locations" className="btn btn-primary btn-sm">Reserve <span className="arrow">→</span></a>
+              <a href="#reserve" className="btn btn-primary btn-sm">Reserve <span className="arrow">→</span></a>
               <a href={`https://maps.google.com/?q=${loc.mapsQuery}`} className="btn btn-ghost btn-sm">Get directions</a>
               <a href={ORDER_URL} className="btn btn-ghost btn-sm">Order online</a>
             </div>
