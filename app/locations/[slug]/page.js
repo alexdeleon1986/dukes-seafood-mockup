@@ -159,7 +159,6 @@ export default async function LocationPage({ params }) {
               <p className="meta">
                 <a href={`tel:${loc.phoneHref}`}>{loc.phone}</a><br />
                 {loc.metaLines.join(' · ')}
-                {loc.needsConfirmAddress && <><br /><em style={{ color: 'var(--brass-dark)' }}>Address &amp; details to confirm against live site</em></>}
               </p>
             </div>
             <div style={{ marginTop: 28, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
