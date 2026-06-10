@@ -67,7 +67,7 @@ export default function Home() {
         <div className="shell">
           <div className="feature-row flip">
             <div className="photo">
-              <span className="imgfill"><img src="/images/menu-chowder-breadbowl.jpg" alt="A bread bowl of chowder and a cocktail on a Duke's table" /></span>
+              <span className="imgfill"><img src="/images/patio-spread.jpg" alt="A spread of Duke's food and a cocktail on a sunny patio table" /></span>
             </div>
             <div>
               <p className="eyebrow">Happy Hour</p>
