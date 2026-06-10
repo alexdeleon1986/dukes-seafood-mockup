@@ -51,13 +51,32 @@ export default function Home() {
       <section className="sec about" id="story">
         <div className="shell">
           <div className="about-lead">
-            <h2 className="h-display">A <em>Moscrip</em> still runs every dining room.</h2>
+            <h2 className="h-display">Seattle&apos;s been eating here <em>since 1976</em>.</h2>
           </div>
           <div>
             <p>Duke opened the first Duke&apos;s in 1976, two blocks from the Seattle Center, paying employees in cash out of cigar boxes. Nearly fifty years later his son John runs the company, the chowder recipe still comes from Duke&apos;s grandfather, and the same family sits at the same tables.</p>
             <p>We buy from small Alaska boats Duke has known for thirty years, pull oysters and Dungeness crab from up and down the Sound, and pour the same award-winning chowder we opened with. Six restaurants, one family, recipes we won&apos;t change and sourcing we won&apos;t compromise.</p>
             <div style={{marginTop: '24px'}}>
               <a href="/our-story" className="btn btn-ghost btn-sm">Read our history <span className="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec hh-band" id="happy-hour">
+        <div className="shell">
+          <div className="feature-row flip">
+            <div className="photo">
+              <span className="imgfill"><img src="/images/menu-chowder-breadbowl.jpg" alt="A bread bowl of chowder and a cocktail on a Duke's table" /></span>
+            </div>
+            <div>
+              <p className="eyebrow">Happy Hour</p>
+              <h2 className="h-display">Twice a day. <em>The full menu</em>, not just drinks.</h2>
+              <p>Most happy hours hand you a watered-down well drink and a sad basket of fries. Ours runs 3&ndash;6pm and again 9pm to close, seven days a week, in the dining room, the bar, and out on the deck. Same wild seafood, same grass-fed burgers, same award-winning chowder, at happy hour prices. Full portions. We never shrink the plate.</p>
+              <div className="actions">
+                <a href="/menus/happy-hour-menu" className="btn btn-primary">See the happy hour menu <span className="arrow">→</span></a>
+                <a href="/locations" className="btn btn-ghost">Find a table</a>
+              </div>
             </div>
           </div>
         </div>
@@ -161,8 +180,8 @@ export default function Home() {
       <section className="newsletter">
         <div className="shell">
           <div>
-            <h2 className="h-display">Free dinners. <em>Twice a month.</em></h2>
-            <p>Members of Duke's VIP list get free birthday dinners, first look at Chef Bill's seasonal specials, and a note from Duke a few times a year about what the boats are pulling in.</p>
+            <h2 className="h-display">A free dinner to join. <em>Another every birthday.</em></h2>
+            <p>Join Duke&apos;s email club and your first dinner is on us. Then a free entree every birthday, and up to $20 off each time you dine and check in. Members also get first look at Chef Bill&apos;s seasonal specials and a note from Duke about what the boats are pulling in.</p>
           </div>
           <div>
             <NewsletterForm />

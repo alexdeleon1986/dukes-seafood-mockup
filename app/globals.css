@@ -1738,7 +1738,12 @@ body[data-theme="modern"] {
 .page-simple .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  /* 5 row tracks the cards inherit via subgrid: photo, title, subtitle, quote,
+     features. auto height per track = tallest card's content for that row, so
+     every card's rows line up. */
+  grid-template-rows: auto auto auto auto auto;
+  column-gap: 28px;
+  row-gap: 0;
   width: 100%;
 }
 /* Each card spans 5 shared row tracks (photo / title / subtitle / quote /

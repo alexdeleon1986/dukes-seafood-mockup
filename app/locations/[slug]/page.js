@@ -151,6 +151,9 @@ export default async function LocationPage({ params }) {
                 </span>
               ))}
             </div>
+            <p className="location-perk">
+              <strong>Wine Down Monday:</strong> 50% off every bottle of wine, all day.
+            </p>
             <div className="address-block">
               <p className="addr" dangerouslySetInnerHTML={{ __html: loc.addressLines.join('<br>') }} />
               <p className="meta">
