@@ -167,15 +167,13 @@ export default async function LocationPage({ params }) {
           </div>
           <div className="col col-map">
             <div className="map-frame">
-              <svg viewBox="0 0 600 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style={{ width: '100%', height: '100%' }}>
-                <g stroke="rgba(17,32,46,0.16)" fill="none" strokeWidth="1.2">
-                  <path d="M0 120 L600 100" /><path d="M0 220 L600 200" /><path d="M0 320 L600 300" />
-                  <path d="M0 420 L600 400" /><path d="M120 0 L100 480" /><path d="M280 0 L260 480" />
-                  <path d="M440 0 L420 480" />
-                </g>
-                <circle cx="300" cy="240" r="9" fill="var(--brass)" />
-                <circle cx="300" cy="240" r="20" fill="none" stroke="var(--brass)" strokeWidth="1.5" opacity="0.5" />
-              </svg>
+              <iframe
+                title={`Map to Duke's Seafood ${loc.name}`}
+                src={`https://www.google.com/maps?q=${loc.mapsQuery}&output=embed`}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>

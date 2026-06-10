@@ -50,12 +50,15 @@ export default function Home() {
 
       <section className="sec about" id="story">
         <div className="shell">
-          <div>
+          <div className="about-lead">
             <h2 className="h-display">A <em>Moscrip</em> still runs every dining room.</h2>
+            <div className="about-photo imgfill">
+              <img src="/images/duke-vintage.jpg" alt="Duke Moscrip in the early years of Duke's Seafood" />
+            </div>
           </div>
           <div>
-            <p>Duke opened the first Duke's in 1976, two blocks from the Seattle Center, paying employees in cash out of cigar boxes. Nearly fifty years later his son John runs the company, the chowder recipe still comes from Duke's grandfather, and the same family sits at the same tables.</p>
-            <p>Six restaurants. One family. Recipes we won't change and sourcing we won't compromise.</p>
+            <p>Duke opened the first Duke&apos;s in 1976, two blocks from the Seattle Center, paying employees in cash out of cigar boxes. Nearly fifty years later his son John runs the company, the chowder recipe still comes from Duke&apos;s grandfather, and the same family sits at the same tables.</p>
+            <p>We buy from small Alaska boats Duke has known for thirty years, pull oysters and Dungeness crab from up and down the Sound, and pour the same award-winning chowder we opened with. Six restaurants, one family, recipes we won&apos;t change and sourcing we won&apos;t compromise.</p>
             <div style={{marginTop: '24px'}}>
               <a href="/our-story" className="btn btn-ghost btn-sm">Read our history <span className="arrow">→</span></a>
             </div>

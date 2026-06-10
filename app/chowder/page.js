@@ -4,9 +4,9 @@ export const metadata = {
 };
 
 const CHOWDERS = [
-  'Award-Winning Clam Chowder',
-  'Lobster Mobster Pernod Chowder',
-  'Dungeness Crab Chowder',
+  "Seattle's Best Clam Chowder",
+  'Lobster Mobster Chowder',
+  'Dungeness Crab Bisque',
   'Smoked Salmon Chowder',
   'North by Northwest Seafood Chowder',
   "Ragin\u2019 Cajun Chicken & Corn Chowder",
@@ -55,12 +55,13 @@ export default function Chowder() {
 
       <section className="sec">
         <div className="shell">
-          <div className="sec-head"><h2 className="h-display">Seven <em>chowders</em>.</h2></div>
-          <div className="menus-list">
+          <div className="sec-head">
+            <h2 className="h-display">Seven <em>chowders</em>.</h2>
+            <p className="head-aside">One award-winning original and six that grew out of it. Every one made fresh daily, every one available by the cup or the bowl, and the clam, lobster, and crab also go home frozen.</p>
+          </div>
+          <div className="chowder-list">
             {CHOWDERS.map((c) => (
-              <div key={c} style={{ display: 'flex', justifyContent: 'space-between', padding: '18px 0', borderBottom: '1px solid var(--line)', fontFamily: 'var(--serif)', fontSize: 22 }}>
-                <span>{c}</span>
-              </div>
+              <div className="chowder-list-item" key={c}>{c}</div>
             ))}
           </div>
         </div>

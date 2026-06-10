@@ -313,13 +313,13 @@ body[data-theme="lodge"] .photo image-slot {
   margin-bottom: clamp(32px, 5vw, 56px);
   display: flex;
   align-items: end;
-  justify-content: space-between;
-  gap: 32px;
+  justify-content: flex-start;
+  gap: clamp(40px, 8vw, 120px);
   flex-wrap: wrap;
 }
-.sec-head h2 { max-width: 14ch; }
+.sec-head h2 { max-width: 18ch; }
 .sec-head .head-aside {
-  max-width: 36ch;
+  max-width: 40ch;
   color: var(--ink-soft);
   font-size: 16px;
   text-wrap: pretty;
@@ -335,8 +335,15 @@ body[data-theme="lodge"] .photo image-slot {
   gap: clamp(40px, 6vw, 80px);
   align-items: start;
 }
+.about-lead { display: flex; flex-direction: column; gap: clamp(24px, 3vw, 36px); }
+.about-photo {
+  aspect-ratio: 4/5;
+  background: var(--cream-2);
+  filter: grayscale(0.1);
+}
 @media (max-width: 880px) {
   .about .shell { grid-template-columns: 1fr; }
+  .about-photo { max-width: 320px; }
 }
 .about p {
   font-family: var(--serif);
@@ -345,7 +352,7 @@ body[data-theme="lodge"] .photo image-slot {
   margin: 0 0 20px;
   color: var(--ink);
   text-wrap: pretty;
-  max-width: 36ch;
+  max-width: 46ch;
 }
 .about p + p { color: var(--ink-soft); font-size: clamp(16px, 1.2vw, 18px); }
 
@@ -659,6 +666,7 @@ body[data-theme="lodge"] .events { background: var(--cream-2); }
 }
 body[data-theme="lodge"] .map-frame { background: #221d15; }
 .map-frame svg { width: 100%; height: 100%; display: block; }
+.map-frame iframe { width: 100%; height: 100%; display: block; border: 0; filter: grayscale(0.18) contrast(1.02); }
 .map-pin {
   position: absolute;
   left: 50%; top: 48%;
@@ -1779,4 +1787,24 @@ body[data-theme="modern"] {
 }
 @media (max-width: 900px) {
   .page-simple .product-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
+}
+
+/* ===== Chowder page: seven-chowder two-column list ===== */
+.chowder-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(32px, 5vw, 72px);
+  border-top: 1px solid var(--line);
+}
+.chowder-list-item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.2vw, 24px);
+  font-weight: 420;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+@media (max-width: 720px) {
+  .chowder-list { grid-template-columns: 1fr; }
 }
