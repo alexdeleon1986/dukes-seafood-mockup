@@ -10,10 +10,10 @@ export default function Footer() {
             <div className="wordmark">
               <Image src="/images/dukes-logo.png" alt="Duke's Seafood" width={200} height={60}
                 style={{ width: 200, height: 60, objectFit: 'contain', display: 'block', marginBottom: 8, filter: 'brightness(0) invert(1) opacity(0.92)' }} />
-              <span className="small">Wild Pacific Seafood · Since 1976</span>
+              <span className="small">Wild Pacific Seafood · Since 1977</span>
             </div>
             <p style={{ marginTop: 20, fontSize: 14, lineHeight: 1.55, color: 'rgba(242,235,223,0.72)', maxWidth: '32ch' }}>
-              Six restaurants across Western Washington. Family-owned since 1976.
+              Six restaurants across Western Washington. Family-owned since 1977.
             </p>
           </div>
 

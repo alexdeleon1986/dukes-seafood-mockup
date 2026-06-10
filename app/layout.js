@@ -8,8 +8,8 @@ const sans = Geist({ subsets: ['latin'], weight: ['300','400','500'], variable: 
 const mono = JetBrains_Mono({ subsets: ['latin'], weight: ['400','500'], variable: '--font-mono', display: 'swap' });
 
 export const metadata = {
-  title: "Duke's Seafood — Wild Pacific Seafood Since 1976",
-  description: "Six family-owned restaurants across Western Washington serving sustainable wild Pacific seafood, grass-fed burgers, and award-winning chowder since 1976.",
+  title: "Duke's Seafood — Wild Pacific Seafood Since 1977",
+  description: "Six family-owned restaurants across Western Washington serving sustainable wild Pacific seafood, grass-fed burgers, and award-winning chowder since 1977.",
 };
 
 export default function RootLayout({ children }) {

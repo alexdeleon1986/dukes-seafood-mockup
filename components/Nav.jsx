@@ -46,7 +46,7 @@ export default function Nav() {
 
         <Link href="/" className="wordmark">
           <Image src="/images/dukes-logo.png" alt="Duke's Seafood" width={160} height={48} style={{ width: 160, height: 48, objectFit: 'contain', display: 'block', margin: '0 auto 2px' }} priority />
-          <span className="small">Wild Pacific Seafood · Since 1976</span>
+          <span className="small">Wild Pacific Seafood · Since 1977</span>
         </Link>
 
         <div className="nav-right">

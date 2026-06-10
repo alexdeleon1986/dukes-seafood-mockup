@@ -1,6 +1,6 @@
 export const metadata = {
   title: "The Chowder — Duke's Seafood",
-  description: "Duke's award-winning clam chowder: three-time Seattle Chowder Cook Off champion, made fresh daily from Duke's grandfather's New England recipe since 1989. Seven flavors.",
+  description: "Duke's award-winning clam chowder: three-time Seattle Chowder Cook Off champion, made fresh daily at every location since 1989. Seven flavors, all gluten free.",
 };
 
 const CHOWDERS = [
@@ -20,9 +20,9 @@ export default function Chowder() {
         <div className="shell">
           <div>
             <h1 className="h-display">The chowder that <em>started it all</em>.</h1>
-            <p className="lede">Three-time champion of the Seattle Chowder Cook Off, made fresh every day at every location. The base is Duke&apos;s grandfather&apos;s New England recipe, and we&apos;ve never had a reason to change it.</p>
+            <p className="lede">Three-time champion of the Seattle Chowder Cook Off, made fresh every day at every location. It&apos;s the recipe Duke spent years perfecting, and we&apos;ve never had a reason to change it.</p>
             <div className="hero-ctas">
-              <a href="/frozen-chowders" className="btn btn-primary btn-lg">Ship frozen chowder <span className="arrow">→</span></a>
+              <a href="/frozen-chowders" className="btn btn-primary btn-lg">Take it home <span className="arrow">→</span></a>
               <a href="/locations" className="btn btn-ghost btn-lg">Find a location</a>
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function Chowder() {
           <div>
             <p className="eyebrow">The recipe</p>
             <h2 className="h-display">From <em>New England</em>, by way of South Lake Union.</h2>
-            <p style={{ marginTop: 20, marginBottom: 16, color: 'var(--ink-soft)' }}>The base of our clam chowder is Duke&apos;s grandfather&apos;s recipe, made in New England long before any of this was a restaurant. We&apos;ve been pouring it since 1989, when the first Chowder House opened on South Lake Union.</p>
+            <p style={{ marginTop: 20, marginBottom: 16, color: 'var(--ink-soft)' }}>Our clam chowder is the recipe Duke spent years perfecting with Chef Bill. We&apos;ve been pouring it since 1989, when the first Chowder House opened on South Lake Union, and it hasn&apos;t changed since.</p>
             <p style={{ marginBottom: 16, color: 'var(--ink-soft)' }}>Six other flavors have grown out of that original. None displaced it. Order the four-chowder sampler and decide for yourself.</p>
             <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', borderTop: '1px solid var(--line)', paddingTop: 24, marginTop: 8 }}>
               {[['3× Champion', 'Seattle Chowder Cook Off'], ['Best Seafood', '425 Magazine, 2025'], ['Best of', 'South Sound, 2025']].map(([a, b]) => (
@@ -71,10 +71,10 @@ export default function Chowder() {
         <div className="shell">
           <div>
             <h2 className="h-display">Take it <em>home</em>.</h2>
-            <p className="lede" style={{ marginTop: 16, color: 'rgba(242,235,223,0.82)' }}>We ship frozen chowder kits anywhere in the country, so a Duke&apos;s lunch is never out of reach.</p>
+            <p className="lede" style={{ marginTop: 16, color: 'rgba(242,235,223,0.82)' }}>Find the clam, lobster, and crab in grocery freezers around the Puget Sound, or have them delivered by Sound Bites.</p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
-            <a href="/frozen-chowders" className="btn btn-primary btn-lg">Order frozen chowder <span className="arrow">→</span></a>
+            <a href="/frozen-chowders" className="btn btn-primary btn-lg">Find it in stores <span className="arrow">→</span></a>
           </div>
         </div>
       </section>

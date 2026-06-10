@@ -1,18 +1,18 @@
 export const metadata = {
   title: "Our Story — Duke's Seafood",
-  description: "Duke Moscrip opened the first Duke's in 1976. Fifty years on, the salmon still comes off the same Alaska boats and the chowder uses the same recipe. Family-owned since 1976.",
+  description: "Duke Moscrip opened the first Duke's in 1977. Nearly fifty years on, the salmon still comes off the same Alaska boats and the chowder uses the same recipe. Family-owned since 1977.",
 };
 
 const PEOPLE = [
-  { name: 'Duke Moscrip', role: 'Founder', photo: '/images/duke-portrait-2015.jpg', bio: 'Opened the original Duke\u2019s on Queen Anne in 1976. Still flies to Alaska to vet the boats, still runs taste tests in the kitchen, still writes most of the company\u2019s blog posts himself.', pos: 'center top' },
+  { name: 'Duke Moscrip', role: 'Founder', photo: '/images/duke-portrait-2015.jpg', bio: 'Opened the original Duke\u2019s on Queen Anne in 1977. Still flies to Alaska to vet the boats, still runs taste tests in the kitchen, still writes most of the company\u2019s blog posts himself.', pos: 'center top' },
   { name: 'John Moscrip', role: "President · Duke\u2019s Son", photo: '/images/duke-john-bar.jpg', bio: 'Took over running the company. Day-to-day operations, sourcing relationships, the foundation work. Wrote the announcement of the Saving Salmon Foundation in 2025.', pos: '85% center' },
   { name: 'Alan Caraco', role: 'Executive Chef', photo: '/images/alan-caraco.jpg', bio: 'Runs the kitchens across all six restaurants. Develops the seasonal menu alongside Chef Bill\u2019s specials. Believes a deviled egg without crab on top is a missed opportunity.', pos: 'center' },
 ];
 
 const TIMELINE = [
-  ['1976', "Duke\u2019s Bar & Grill opens on Queen Anne.", 'Two blocks from the Seattle Center. Chalkboard menu, eclectic food, cigar boxes for a register.'],
+  ['1977', "Duke\u2019s Bar & Grill opens on Queen Anne.", 'Two blocks from the Seattle Center. Chalkboard menu, eclectic food, cigar boxes for a register.'],
   ['1978', "Duke\u2019s Bellevue follows.", 'The success of Queen Anne pulls a second location across the lake.'],
-  ['1989', 'The first Chowder House opens on South Lake Union.', 'The grandfather\u2019s chowder recipe goes on the menu and stays on the menu.'],
+  ['1989', 'The first Chowder House opens on South Lake Union.', 'The chowder recipe goes on the menu and stays on the menu.'],
   ['1990', "Duke\u2019s Green Lake opens.", 'Right on the lake. Seaplanes overhead. Most of the year, the deck is open.'],
   ['~1995', 'The Alaska sourcing relationships begin.', 'Duke starts buying directly from small, family-run Alaska boats.'],
   ['2018', 'South Lake Union moves up the lake.', 'The Chowder House relocates to a larger waterfront spot with party facilities.'],
@@ -28,7 +28,7 @@ export default function OurStory() {
         <div className="shell">
           <div>
             <h1 className="h-display">Fifty years on, the chowder hasn&apos;t changed and <em>neither have the boats</em>.</h1>
-            <p className="lede">Duke opened the first restaurant in 1976, paying employees in cash out of cigar boxes. His son John runs the company now. The salmon still comes off the same Alaska boats.</p>
+            <p className="lede">Duke opened the first restaurant in 1977, paying employees in cash out of cigar boxes. His son John runs the company now. The salmon still comes off the same Alaska boats.</p>
           </div>
           <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
             <img src="/images/duke-amy-jm-dock.jpg" alt="Duke, Amy, and John Moscrip on the dock" style={{ objectPosition: 'center' }} />
@@ -40,11 +40,11 @@ export default function OurStory() {
       <section className="sec about">
         <div className="shell">
           <div>
-            <p className="eyebrow">The beginning · Queen Anne, 1976</p>
+            <p className="eyebrow">The beginning · Queen Anne, 1977</p>
             <h2 className="h-display">Duke wanted somewhere <em>less formal</em>. So he opened it.</h2>
           </div>
           <div>
-            <p style={{ marginBottom: 16 }}>Duke Moscrip broke away from a partnership at Ray&apos;s Boathouse and opened the first Duke&apos;s Bar &amp; Grill on Queen Anne in 1976. Two blocks from the Seattle Center. Cigar boxes for a register because nobody had time to set up a real one yet.</p>
+            <p style={{ marginBottom: 16 }}>Duke Moscrip broke away from a partnership at Ray&apos;s Boathouse and opened the first Duke&apos;s Bar &amp; Grill on Queen Anne in 1977. Two blocks from the Seattle Center. Cigar boxes for a register because nobody had time to set up a real one yet.</p>
             <p style={{ marginBottom: 16 }}>He wanted a hangout. Quality, but no fuss. That tension between casual and serious has run through every Duke&apos;s since.</p>
             <p style={{ fontFamily: 'var(--serif)', fontSize: 21, fontStyle: 'italic', color: 'var(--ink)', borderLeft: '3px solid var(--brass)', paddingLeft: 22, marginTop: 12 }}>&ldquo;There were no paychecks. We kept the money in cigar boxes. Really, cigar boxes.&rdquo;</p>
           </div>

@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Duke's VIP Email Club — Duke's Seafood",
-  description: "Join Duke's Seafood Email Club for a free dinner, a birthday entree every year, and up to $20 off your next meal. Already a member? Check in after you dine.",
+  description: "Join Duke's Seafood Email Club for a 2-for-1 entree, a birthday entree every year, and up to $20 off your next meal. Already a member? Check in after you dine.",
 };
 
 export default function DukesVip() {
@@ -11,7 +11,7 @@ export default function DukesVip() {
           <div>
             <p className="eyebrow">Free dinners</p>
             <h1 className="h-display">Duke&apos;s <em>Email Club</em>.</h1>
-            <p className="lede">Members eat well. A free dinner when you join, a free entree every birthday, and up to $20 off your next meal each time you dine and check in.</p>
+            <p className="lede">Members eat well. A 2-for-1 entree when you join, a free entree every birthday, and up to $20 off your next meal each time you dine and check in.</p>
           </div>
         </div>
       </section>
