@@ -1368,6 +1368,9 @@ body[data-theme="modern"] {
 @media (max-width: 768px) {
   .hero-video .hero-video-embed { display: none !important; }
   .hero-video .hero-video-fallback { display: block !important; z-index: 0 !important; }
+  /* No video plays on mobile (embed hidden above), so the pause control has
+     nothing to act on — hide it. */
+  .hero-video .hv-controls { display: none !important; }
 }
 @media (max-width: 880px) { .locations-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .locations-grid { grid-template-columns: 1fr; } }
