@@ -52,9 +52,6 @@ export default function Home() {
         <div className="shell">
           <div className="about-lead">
             <h2 className="h-display">A <em>Moscrip</em> still runs every dining room.</h2>
-            <div className="about-photo imgfill">
-              <img src="/images/dukes-storefront-crew.jpg" alt="A film crew shoots under the Duke's Dining & Drinking awning outside an early location" />
-            </div>
           </div>
           <div>
             <p>Duke opened the first Duke&apos;s in 1976, two blocks from the Seattle Center, paying employees in cash out of cigar boxes. Nearly fifty years later his son John runs the company, the chowder recipe still comes from Duke&apos;s grandfather, and the same family sits at the same tables.</p>

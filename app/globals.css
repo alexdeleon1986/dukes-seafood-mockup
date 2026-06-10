@@ -336,14 +336,8 @@ body[data-theme="lodge"] .photo image-slot {
   align-items: start;
 }
 .about-lead { display: flex; flex-direction: column; gap: clamp(24px, 3vw, 36px); }
-.about-photo {
-  aspect-ratio: 4/5;
-  background: var(--cream-2);
-  filter: grayscale(0.1);
-}
 @media (max-width: 880px) {
-  .about .shell { grid-template-columns: 1fr; }
-  .about-photo { max-width: 320px; }
+  .about .shell { grid-template-columns: 1fr; gap: clamp(20px, 4vw, 32px); }
 }
 .about p {
   font-family: var(--serif);
@@ -1808,3 +1802,72 @@ body[data-theme="modern"] {
 @media (max-width: 720px) {
   .chowder-list { grid-template-columns: 1fr; }
 }
+
+/* =========================================================
+   Menu page: inter-menu navigation
+   ========================================================= */
+
+/* Compact "More menus" row under the hero CTAs */
+.menu-switch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 18px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.menu-switch-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  width: 100%;
+  margin-bottom: 2px;
+}
+.menu-switch a {
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.menu-switch a:hover { color: var(--brass-dark); border-bottom-color: var(--brass-dark); }
+
+/* Full "Keep exploring" block at the foot of each menu */
+.menu-more {
+  margin-top: 8px;
+  padding-top: 36px;
+  border-top: 1px solid var(--line);
+}
+.menu-more-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+.menu-more-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2px 24px;
+}
+.menu-more-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.menu-more-link:hover { color: var(--brass-dark); }
+.menu-more-link .arrow { color: var(--brass-dark); transition: transform 0.15s ease; }
+.menu-more-link:hover .arrow { transform: translateX(3px); }

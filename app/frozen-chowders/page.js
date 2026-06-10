@@ -44,7 +44,7 @@ export default function FrozenChowders() {
           <div>
             <p className="eyebrow">In the frozen aisle</p>
             <h1 className="h-display">Duke&apos;s chowder, <em>at home</em>.</h1>
-            <p className="lede">The same recipes we serve in the dining room, ready any night of the week. Each one is chef-created, gluten free, and simple to make. Keep it frozen, then boil the pouch. Serves one to two.</p>
+            <p className="lede">The same recipes we serve in the dining room, ready any night of the week. Every one is gluten free and simple to make. Keep it frozen, then boil the pouch. Serves one to two.</p>
             <div className="hero-ctas">
               <a href="https://www.soundbitesdelivers.com/dukes" className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Order from Sound Bites <span className="arrow">→</span></a>
               <a href="/chowder" className="btn btn-ghost btn-lg">About the chowder</a>

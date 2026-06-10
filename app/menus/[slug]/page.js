@@ -1,10 +1,22 @@
 import { notFound } from 'next/navigation';
-import { getMenu, getAllMenuSlugs } from '@/lib/menus';
+import { getMenu, getAllMenuSlugs, getMenuHub } from '@/lib/menus';
 
 // Re-fetch the sheet at most once an hour in production. A menu edit goes live
 // within this window with no redeploy. Lower for faster updates, raise to cut
 // API calls.
 export const revalidate = 3600;
+
+// Per-menu hero image. Falls back to a general spread if a slug isn't mapped.
+const MENU_IMAGES = {
+  'lunch-dinner-menu': { src: '/images/menu-fish-and-chips.jpg', alt: "Duke's fish and chips with fries, slaw and dipping sauces" },
+  'happy-hour-menu': { src: '/images/menu-chowder-breadbowl.jpg', alt: "Award-winning clam chowder in a sourdough bread bowl with a margarita" },
+  'drinks-menu': { src: '/images/menu-bloody-mary.jpg', alt: "Duke's Bloody Mary with a grilled prawn and asparagus garnish" },
+  'dessert-menu': { src: '/images/menu-dessert-pie.jpg', alt: "A slice of layered chocolate and espresso mud pie with whipped cream" },
+  'kids-menu': { src: '/images/menu-kids-plate.jpg', alt: "Kids fish and chips plate with fries, slaw and dipping sauces" },
+  'gluten-free-menu': { src: '/images/menu-steamer-clams.jpg', alt: "Steamer clams in a white wine and tomato broth with grilled bread" },
+  'summer-specials': { src: '/images/menu-spread.jpg', alt: "A spread of Duke's summer dishes" },
+};
+const FALLBACK_IMAGE = { src: '/images/menu-table-spread.jpg', alt: "A table of Duke's Seafood dishes" };
 
 export async function generateStaticParams() {
   const slugs = await getAllMenuSlugs();
@@ -49,6 +61,10 @@ export default async function MenuPage({ params }) {
   const menu = await getMenu(slug);
   if (!menu) notFound();
 
+  const hub = await getMenuHub();
+  const others = hub.filter((m) => m.slug !== slug);
+  const img = MENU_IMAGES[slug] || FALLBACK_IMAGE;
+
   return (
     <>
       <script
@@ -64,9 +80,17 @@ export default async function MenuPage({ params }) {
               <a href="/locations" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">&rarr;</span></a>
               <a href="/menus" className="btn btn-ghost btn-lg">All menus</a>
             </div>
+            {others.length > 0 && (
+              <nav className="menu-switch" aria-label="Other menus">
+                <span className="menu-switch-label">More menus</span>
+                {others.map((m) => (
+                  <a key={m.slug} href={`/menus/${m.slug}`}>{m.name}</a>
+                ))}
+              </nav>
+            )}
           </div>
           <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
-            <img src="/images/chowder.jpg" alt="Duke's Seafood" />
+            <img src={img.src} alt={img.alt} />
           </div>
         </div>
       </section>
@@ -97,6 +121,17 @@ export default async function MenuPage({ params }) {
               ))}
             </div>
           ))}
+
+          <nav className="menu-more" aria-label="Browse other menus">
+            <span className="menu-more-label">Keep exploring</span>
+            <div className="menu-more-links">
+              {others.map((m) => (
+                <a key={m.slug} href={`/menus/${m.slug}`} className="menu-more-link">
+                  <span>{m.name}</span><span className="arrow">&rarr;</span>
+                </a>
+              ))}
+            </div>
+          </nav>
         </div>
       </section>
     </>

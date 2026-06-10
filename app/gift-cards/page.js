@@ -15,7 +15,7 @@ export default function GiftCards() {
           <div>
             <p className="eyebrow">Gift cards</p>
             <h1 className="h-display">The gift of a <em>good table</em>.</h1>
-            <p className="lede">Whether you&apos;re marking an occasion, thanking a colleague, or sharing a love of wild Pacific seafood, a Duke&apos;s gift card is an easy and thoughtful choice. Good for dining in or takeout at any of our six locations. They never expire. Yes, really.</p>
+            <p className="lede">A Duke&apos;s gift card works for a birthday, a thank-you, or anyone who loves wild Pacific seafood. Good for dining in or takeout at all six locations, and it never expires. Yes, really.</p>
             <div className="hero-ctas">
               <a href={CARD_LINK} className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Buy an e-gift card <span className="arrow">→</span></a>
               <a href={PHYSICAL_LINK} className="btn btn-ghost btn-lg" target="_blank" rel="noopener noreferrer">Buy a physical card</a>
