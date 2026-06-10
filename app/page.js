@@ -53,7 +53,7 @@ export default function Home() {
           <div className="about-lead">
             <h2 className="h-display">A <em>Moscrip</em> still runs every dining room.</h2>
             <div className="about-photo imgfill">
-              <img src="/images/duke-vintage.jpg" alt="Duke Moscrip in the early years of Duke's Seafood" />
+              <img src="/images/dukes-storefront-crew.jpg" alt="A film crew shoots under the Duke's Dining & Drinking awning outside an early location" />
             </div>
           </div>
           <div>
