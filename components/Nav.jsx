@@ -3,9 +3,16 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import ReserveModal from '@/components/ReserveModal';
+import { LOCATION_LIST } from '@/lib/locations';
 
 const ORDER_URL = 'https://order.online/business/dukes-seafood-22397';
 const DOCKSIDE_URL = 'https://docksideatdukes.com/';
+const RESERVE_ORDER = ['lake-union','bellevue','green-lake','tacoma','southcenter','kent-station'];
+const RESERVE_LOCATIONS = RESERVE_ORDER
+  .map((slug) => LOCATION_LIST.find((l) => l.slug === slug))
+  .filter(Boolean)
+  .map((l) => ({ slug: l.slug, name: l.name, rid: l.rid }));
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -45,7 +52,7 @@ export default function Nav() {
         <div className="nav-right">
           <Link href="/chowder" className={`nav-link nav-link-hide-mobile ${isActive('/chowder') ? 'active' : ''}`}>Chowder</Link>
           <Link href="/our-story" className={`nav-link nav-link-hide-mobile ${isActive('/our-story') ? 'active' : ''}`}>Our Story</Link>
-          <Link href="/locations" className="btn btn-primary btn-sm">Reserve <span className="arrow">→</span></Link>
+          <ReserveModal locations={RESERVE_LOCATIONS} triggerClassName="btn btn-primary btn-sm" triggerLabel="Reserve" />
         </div>
       </div>
 
@@ -58,7 +65,7 @@ export default function Nav() {
           <a href={DOCKSIDE_URL}>Private Dining</a>
           <Link href="/chowder">Chowder</Link>
           <Link href="/our-story">Our Story</Link>
-          <Link href="/locations" className="mobile-menu-cta">Reserve a table →</Link>
+          <ReserveModal locations={RESERVE_LOCATIONS} triggerClassName="mobile-menu-cta" triggerLabel="Reserve a table" showArrow={false} />
           <div className="mobile-menu-rail">
             <a href={ORDER_URL}>Order online</a>
             <span className="dot">·</span>

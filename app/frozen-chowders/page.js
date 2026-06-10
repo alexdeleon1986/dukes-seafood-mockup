@@ -1,23 +1,29 @@
 export const metadata = {
   title: "Frozen Chowders — Duke's Seafood",
-  description: "Duke's award-winning chowders and bisques at home, any day of the week. Available in the frozen aisle at Puget Sound grocers and delivered locally through Sound Bites.",
+  description: "Duke's award-winning chowders and bisque at home, any day of the week. Seattle's Best Clam Chowder, Lobster Mobster Chowder, and Dungeness Crab Bisque. In the frozen aisle at Puget Sound grocers and delivered through Sound Bites.",
 };
 
 const PRODUCTS = [
   {
     name: "Seattle's Best Clam Chowder",
-    img: '/images/chowder-hero.jpg',
-    copy: "The one that started it all. Our world-famous chowder comes from a recipe handed down by Duke's Grampa Cox, who swore it was the best in New England. Fresh herbs, a creamy base, and clams that show up without taking over. It won the Seattle Chowder Cook Off three years running, and we only stopped competing because they asked us to.",
+    img: '/images/frozen-clam.jpg',
+    made: 'Sustainable clams',
+    quote: 'This chowder won the Seattle Chowder Cook-Off so often, they asked us to stop entering.',
+    features: ['Rich & Creamy', 'Sustainable Clams', 'World Famous', 'Gluten Free'],
   },
   {
-    name: 'Lobster Mobster Pernod Chowder',
-    img: '/images/chowder-bowl.jpg',
-    copy: "A splash of Pernod sets this one apart. The faint note of black licorice plays against tender langostino and a rich lobster base, and the result is a bowl you will not find anywhere else.",
+    name: 'Lobster Mobster Chowder',
+    img: '/images/frozen-lobster.jpg',
+    made: 'Made with Argentinian Red Shrimp',
+    quote: 'This chowder is so delicious, you will want to lick the bowl.',
+    features: ['Rich & Creamy', 'Tender Red Shrimp', 'Fragrant Anise', 'Gluten Free'],
   },
   {
     name: 'Dungeness Crab Bisque',
-    img: '/images/lobster.jpg',
-    copy: "Sweet, briny Dungeness crab is hard to beat. We fold tender crab meat together with Tillamook Extra Sharp White Cheddar and a careful mix of herbs and spices for a bisque that is every bit as rich as it sounds.",
+    img: '/images/frozen-crab.jpg',
+    made: 'Made with Tillamook Extra Sharp White Cheddar',
+    quote: 'The marriage of the best crab in the world with the best cheese in the world.',
+    features: ['Rich & Creamy', 'Dungeness Crab', 'Tillamook Cheese', 'Gluten Free'],
   },
 ];
 
@@ -38,7 +44,7 @@ export default function FrozenChowders() {
           <div>
             <p className="eyebrow">In the frozen aisle</p>
             <h1 className="h-display">Duke&apos;s chowder, <em>at home</em>.</h1>
-            <p className="lede">Enjoy our famous chowders and bisques any day of the week. Each one carries the flavor of our signature recipes with the convenience of a boil-in-bag pouch. Find them at grocers around the Puget Sound, or have them delivered through Sound Bites.</p>
+            <p className="lede">The same recipes we serve in the dining room, ready any night of the week. Each one is chef-created, gluten free, and simple to make. Keep it frozen, then boil the pouch. Serves one to two.</p>
             <div className="hero-ctas">
               <a href="https://www.soundbitesdelivers.com/dukes" className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Order from Sound Bites <span className="arrow">→</span></a>
               <a href="/chowder" className="btn btn-ghost btn-lg">About the chowder</a>
@@ -50,31 +56,40 @@ export default function FrozenChowders() {
         </div>
       </section>
 
-      {PRODUCTS.map((p, i) => (
-        <section className="sec" key={p.name}>
-          <div className="shell" style={{ direction: i % 2 ? 'rtl' : 'ltr' }}>
-            <div className="photo imgfill" style={{ aspectRatio: '4/3', direction: 'ltr' }}>
-              <img src={p.img} alt={p.name} />
-            </div>
-            <div style={{ direction: 'ltr' }}>
-              <h2 className="h-display">{p.name}</h2>
-              <p className="body">{p.copy}</p>
-            </div>
+      <section className="sec">
+        <div className="shell-narrow">
+          <div className="sec-head"><h2 className="h-display">Three to <em>choose from</em>.</h2></div>
+        </div>
+        <div className="shell">
+          <div className="product-grid">
+            {PRODUCTS.map((p) => (
+              <div className="product-card" key={p.name}>
+                <div className="product-photo imgfill"><img src={p.img} alt={`Duke's ${p.name} retail package`} /></div>
+                <div className="product-body">
+                  <h3 className="h-display">{p.name}</h3>
+                  <p className="product-made">{p.made}</p>
+                  <p className="product-quote">&ldquo;{p.quote}&rdquo;</p>
+                  <ul className="product-features">
+                    {p.features.map((f) => <li key={f}>{f}</li>)}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
-        </section>
-      ))}
+        </div>
+      </section>
 
       <section className="sec alt">
         <div className="shell-narrow">
-          <div className="sec-head"><h2 className="h-display">Where to <em>buy</em>.</h2></div>
-          <p className="body">Duke&apos;s frozen chowders are stocked at these Puget Sound grocers:</p>
+          <div className="sec-head"><h2 className="h-display">Find it <em>near you</em>.</h2></div>
+          <p className="body">Duke&apos;s frozen chowders and bisque are stocked at grocers around the Puget Sound:</p>
           <ul className="plain-list">
             {RETAILERS.map((r) => <li key={r}>{r}</li>)}
           </ul>
-          <p className="body" style={{ marginTop: 24 }}>
-            Prefer delivery? Sound Bites brings them straight to your door.{' '}
-            <a href="https://www.soundbitesdelivers.com/dukes" target="_blank" rel="noopener noreferrer">Order from Sound Bites →</a>
+          <p className="body" style={{ marginTop: 28 }}>
+            Want it delivered? Sound Bites brings them straight to your door.
           </p>
+          <a href="https://www.soundbitesdelivers.com/dukes" className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer" style={{ marginTop: 8 }}>Order from Sound Bites <span className="arrow">→</span></a>
         </div>
       </section>
     </div>

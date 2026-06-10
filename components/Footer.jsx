@@ -43,7 +43,7 @@ export default function Footer() {
           <div>
             <h4>Duke's</h4>
             <ul>
-              <li><a href="https://dukesseafood.com/gift-cards/">Gift cards</a></li>
+              <li><a href="/gift-cards">Gift cards</a></li>
               <li><a href="/frozen-chowders">Frozen chowders</a></li>
               <li><a href="/dukes-vip">Free dinners (VIP)</a></li>
               <li><a href="https://dukesseafood.com/recipes/">Recipes</a></li>

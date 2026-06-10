@@ -19,23 +19,36 @@ function todayISO() {
   return d.toISOString().slice(0, 10);
 }
 
-export default function ReservationWidget({ rid, name }) {
+// Props:
+//   rid, name        -> single-location mode (location page)
+//   locations: [{slug,name,rid}]  -> multi-location mode (adds a picker)
+export default function ReservationWidget({ rid, name, locations }) {
+  const isMulti = Array.isArray(locations) && locations.length > 0;
+  const [locSlug, setLocSlug] = useState(isMulti ? locations[0].slug : null);
   const [covers, setCovers] = useState(2);
   const [date, setDate] = useState(todayISO());
   const [time, setTime] = useState('19:00');
   const [booked, setBooked] = useState(false);
 
+  // Resolve the active rid/name from either the picker or the fixed props.
+  const active = useMemo(() => {
+    if (isMulti) {
+      const l = locations.find((x) => x.slug === locSlug) || locations[0];
+      return { rid: l.rid, name: l.name };
+    }
+    return { rid, name };
+  }, [isMulti, locations, locSlug, rid, name]);
+
   const bookUrl = useMemo(() => {
-    // OpenTable deep link with party size, date, and time prefilled.
     const dateTime = `${date}T${time}`;
     const params = new URLSearchParams({
-      restref: String(rid),
+      restref: String(active.rid),
       datetime: dateTime,
       covers: String(covers),
       lang: 'en-US',
     });
-    return `https://www.opentable.com/restref/client/?rid=${rid}&${params.toString()}`;
-  }, [rid, date, time, covers]);
+    return `https://www.opentable.com/restref/client/?rid=${active.rid}&${params.toString()}`;
+  }, [active.rid, date, time, covers]);
 
   function handleBook() {
     window.open(bookUrl, '_blank', 'noopener,noreferrer');
@@ -49,7 +62,7 @@ export default function ReservationWidget({ rid, name }) {
           <div className="check">✓</div>
           <div className="val" style={{ fontFamily: 'var(--serif)', fontSize: 22 }}>Opening OpenTable</div>
           <p className="rf-help">
-            We sent your request for {covers} {covers === 1 ? 'guest' : 'guests'} to OpenTable in a new tab.
+            We sent your request for {covers} {covers === 1 ? 'guest' : 'guests'} at {active.name} to OpenTable in a new tab.
             Pick your spot there to confirm.
           </p>
           <button className="rf-time" style={{ marginTop: 12, padding: '10px 18px' }} onClick={() => setBooked(false)}>
@@ -62,6 +75,19 @@ export default function ReservationWidget({ rid, name }) {
 
   return (
     <div className="reserve-form">
+      {isMulti && (
+        <div className="rf-row rf-row-loc">
+          <div className="rf-cell">
+            <span className="lbl">Location</span>
+            <select className="val" value={locSlug} onChange={(e) => setLocSlug(e.target.value)} aria-label="Location">
+              {locations.map((l) => (
+                <option key={l.slug} value={l.slug}>{l.name}</option>
+              ))}
+            </select>
+          </div>
+        </div>
+      )}
+
       <div className="rf-row">
         <div className="rf-cell">
           <span className="lbl">Party size</span>
@@ -95,7 +121,7 @@ export default function ReservationWidget({ rid, name }) {
       <div className="rf-submit">
         <span className="rf-help">Walk-ins welcome at the bar.</span>
         <button type="button" className="btn btn-primary btn-lg" onClick={handleBook}>
-          Book at {name} <span className="arrow">→</span>
+          Book at {active.name} <span className="arrow">→</span>
         </button>
       </div>
     </div>

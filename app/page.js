@@ -1,9 +1,17 @@
 import NewsletterForm from '@/components/NewsletterForm';
+import ReservationWidget from '@/components/ReservationWidget';
+import { LOCATION_LIST } from '@/lib/locations';
 
 export const metadata = {
   title: "Duke's Seafood — Wild Pacific Seafood Since 1976",
   description: "Six family-owned Duke's Seafood restaurants across Western Washington. Wild Alaska salmon, sustainable Pacific seafood, and award-winning chowder since 1976.",
 };
+
+const RESERVE_ORDER = ['lake-union','bellevue','green-lake','tacoma','southcenter','kent-station'];
+const RESERVE_LOCATIONS = RESERVE_ORDER
+  .map((slug) => LOCATION_LIST.find((l) => l.slug === slug))
+  .filter(Boolean)
+  .map((l) => ({ slug: l.slug, name: l.name, rid: l.rid }));
 
 export default function Home() {
   return (
@@ -128,7 +136,7 @@ export default function Home() {
             <h2 className="h-display">Reserve at <em>any</em> of the six.</h2>
             <p className="lede">Pick a date, time, and dining room. We'll hand you off to OpenTable to confirm. Walk-ins always welcome at the bar.</p>
           </div>
-          <div id="reservation-mount" data-location="bellevue" data-show-location="true"></div>
+          <ReservationWidget locations={RESERVE_LOCATIONS} />
         </div>
       </section>
 

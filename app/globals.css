@@ -1653,3 +1653,130 @@ body[data-theme="modern"] {
   .page-simple .sec .shell { grid-template-columns: 1fr; }
   .page-simple .plain-list { grid-template-columns: 1fr; }
 }
+
+/* ===== Reservation location row (multi-location widget) ===== */
+.rf-row-loc { grid-template-columns: 1fr; }
+.rf-row-loc .rf-cell { border-right: 0; }
+
+/* ===== Nav-launched reservation modal ===== */
+.reserve-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 32, 46, 0.62);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(16px, 6vh, 80px) 16px;
+  overflow-y: auto;
+  animation: rm-fade 0.18s ease-out;
+}
+@keyframes rm-fade { from { opacity: 0; } to { opacity: 1; } }
+.reserve-modal {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  background: var(--cream-2);
+  border: 1px solid var(--line);
+  padding: clamp(24px, 4vw, 40px);
+  box-shadow: 0 30px 80px rgba(17, 32, 46, 0.35);
+  animation: rm-rise 0.22s ease-out;
+}
+@keyframes rm-rise { from { transform: translateY(10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.reserve-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: transparent;
+  border: 0;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--ink-soft);
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.reserve-modal-close:hover { color: var(--ink); }
+.reserve-modal-head { margin-bottom: 22px; }
+.reserve-modal-head .h-display { margin: 6px 0 0; }
+.reserve-modal-sub {
+  margin: 12px 0 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.55;
+  max-width: 42ch;
+}
+/* Inside the modal the form sits on cream-2; give it a hairline to separate */
+.reserve-modal .reserve-form {
+  background: var(--cream);
+  border: 1px solid var(--line);
+}
+
+/* ===== Frozen chowders product grid (scoped) ===== */
+.page-simple .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  width: 100%;
+}
+.page-simple .product-card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+.page-simple .product-photo {
+  aspect-ratio: 5/4;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+.page-simple .product-photo img { object-fit: contain; padding: 8px; }
+.page-simple .product-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.page-simple .product-body .h-display { font-size: 24px; margin: 0; line-height: 1.1; }
+.page-simple .product-made {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--brass-dark);
+  margin: 0;
+}
+.page-simple .product-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 4px 0 2px;
+}
+.page-simple .product-features {
+  list-style: none;
+  padding: 14px 0 0;
+  margin: auto 0 0;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 7px;
+}
+.page-simple .product-features li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.page-simple .product-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--brass);
+  font-weight: 600;
+}
+@media (max-width: 900px) {
+  .page-simple .product-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
+}
