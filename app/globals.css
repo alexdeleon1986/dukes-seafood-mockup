@@ -1565,11 +1565,16 @@ body[data-theme="modern"] {
   padding: 0 var(--gutter);
 }
 .page-simple .sec.alt { background: var(--cream-2); }
-.page-simple .sec .shell {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(32px, 5vw, 72px);
-  align-items: center;
+.page-simple .sec .shell { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+/* The product-grid manages its own three columns and must span the full width.
+   Without this it inherits the 2-col .sec .shell layout above and gets crammed
+   into the left half, leaving a big void on the right. */
+/* The product-grid manages its own three columns and must span the full width.
+   Its shell carries .shell-products so it escapes the 2-col .sec .shell layout
+   above (which otherwise crams it into the left half, leaving a void on right). */
+.page-simple .sec .shell.shell-products {
+  display: block;
+  grid-template-columns: none;
 }
 .page-simple .sec .shell-narrow { display: block; }
 .page-simple .body {
@@ -1737,7 +1742,7 @@ body[data-theme="modern"] {
 /* ===== Frozen chowders product grid (scoped) ===== */
 .page-simple .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   /* 5 row tracks the cards inherit via subgrid: photo, title, subtitle, quote,
      features. auto height per track = tallest card's content for that row, so
      every card's rows line up. */
@@ -1754,6 +1759,8 @@ body[data-theme="modern"] {
   border: 1px solid var(--line);
   display: grid;
   grid-template-rows: subgrid;
+  justify-self: stretch;
+  width: 100%;
   grid-row: span 5;
 }
 .page-simple .product-photo {

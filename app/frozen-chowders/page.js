@@ -60,7 +60,7 @@ export default function FrozenChowders() {
         <div className="shell-narrow">
           <div className="sec-head"><h2 className="h-display">Three to <em>choose from</em>.</h2></div>
         </div>
-        <div className="shell">
+        <div className="shell shell-products">
           <div className="product-grid">
             {PRODUCTS.map((p) => (
               <div className="product-card" key={p.name}>
