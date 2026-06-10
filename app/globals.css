@@ -295,7 +295,21 @@ body[data-theme="lodge"] .photo image-slot {
 /* Page heroes (not the homepage video hero) read better top-aligned: the copy
    starts level with the photo instead of floating in the middle of a tall 4/5
    image. Scoped to .page-simple so the homepage hero is untouched. */
-.page-simple .hero .shell { align-items: start; }
+/* Page heroes (not the homepage video hero): make the photo match the height of
+   the text column so the two end together. Without this a tall 4/5 photo overhangs
+   a short copy block, leaving dead space under the text. The image covers the
+   stretched box. Scoped to .page-simple so the homepage video hero is untouched. */
+.page-simple .hero .shell { align-items: stretch; }
+.page-simple .hero .photo {
+  aspect-ratio: auto;
+  height: 100%;
+  min-height: 380px;
+}
+.page-simple .hero .photo img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 880px) {
+  /* Stacked layout: give the photo a sane fixed shape again. */
+  .page-simple .hero .photo { aspect-ratio: 4/3; height: auto; min-height: 0; }
+}
 @media (max-width: 880px) {
   .hero .shell { grid-template-columns: 1fr; gap: 40px; }
 }

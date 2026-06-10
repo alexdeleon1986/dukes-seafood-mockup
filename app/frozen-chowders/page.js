@@ -50,7 +50,7 @@ export default function FrozenChowders() {
               <a href="/chowder" className="btn btn-ghost btn-lg">About the chowder</a>
             </div>
           </div>
-          <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
+          <div className="photo imgfill">
             <img src="/images/chowder-hero.jpg" alt="Bowl of Duke's award-winning clam chowder" />
           </div>
         </div>
