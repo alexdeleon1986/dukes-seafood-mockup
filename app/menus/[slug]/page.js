@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getMenu, getAllMenuSlugs, getMenuHub } from '@/lib/menus';
 
@@ -68,7 +69,7 @@ export default async function MenuPage({ params }) {
   const img = MENU_IMAGES[slug] || FALLBACK_IMAGE;
 
   return (
-    <>
+    <div className="page-menu">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(menuSchema(menu)) }}
@@ -79,46 +80,46 @@ export default async function MenuPage({ params }) {
             <h1 className="h-display">{menu.name} <em>menu</em>.</h1>
             <p className="lede">{menu.note}</p>
             <div className="hero-ctas">
-              <a href="/locations" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">&rarr;</span></a>
-              <a href="/menus" className="btn btn-ghost btn-lg">All menus</a>
+              <a href="/locations/" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">&rarr;</span></a>
+              <a href="/menus/" className="btn btn-ghost btn-lg">All menus</a>
             </div>
             {others.length > 0 && (
               <nav className="menu-switch" aria-label="Other menus">
                 <span className="menu-switch-label">More menus</span>
                 {others.map((m) => (
-                  <a key={m.slug} href={`/menus/${m.slug}`}>{m.name}</a>
+                  <a key={m.slug} href={`/menus/${m.slug}/`}>{m.name}</a>
                 ))}
               </nav>
             )}
           </div>
           <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
-            <img src={img.src} alt={img.alt} />
+            <Image src={img.src} alt={img.alt} fill sizes="(max-width: 880px) 100vw, 50vw" priority style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>
 
       <section className="sec">
-        <div className="shell" style={{ display: 'block', maxWidth: 920 }}>
+        <div className="shell menu-body">
           {menu.pending && (
-            <p style={{ background: 'var(--cream-2)', border: '1px solid var(--line)', padding: '18px 22px', marginBottom: 40, fontSize: 14, color: 'var(--ink-soft)' }}>
+            <p className="menu-pending">
               Preview layout. The full {menu.name.toLowerCase()} listing and current pricing will be populated from the live menu before launch.
             </p>
           )}
           {menu.groups.map((g, gi) => (
-            <div key={gi} style={{ marginBottom: 48 }}>
-              <h2 className="h-display" style={{ marginBottom: 20 }}>{g.title}</h2>
+            <div key={gi} className="menu-group">
+              <h2 className="h-display">{g.title}</h2>
               {g.items.map((it, ii) => (
-                <div key={ii} style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '6px 24px', padding: '16px 0', borderBottom: '1px solid var(--line)', alignItems: 'baseline' }}>
-                  <span style={{ fontFamily: 'var(--serif)', fontSize: 22, color: 'var(--ink)' }}>
+                <div key={ii} className="menu-item">
+                  <span className="menu-item-name">
                     {it.name}
                     {it.gf && (
-                      <span style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.06em', color: 'var(--brass-dark)', border: '1px solid var(--line)', borderRadius: 3, padding: '2px 5px', marginLeft: 10, verticalAlign: 'middle' }}>
+                      <span className="menu-item-gf">
                         GF
                       </span>
                     )}
                   </span>
-                  {it.price && <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--brass-dark)', whiteSpace: 'nowrap' }}>{it.price}</span>}
-                  {it.desc && <p style={{ gridColumn: '1 / -1', fontSize: 14.5, lineHeight: 1.6, color: 'var(--ink-soft)', maxWidth: '64ch', margin: 0 }}>{it.desc}</p>}
+                  {it.price && <span className="menu-item-price">{it.price}</span>}
+                  {it.desc && <p className="menu-item-desc">{it.desc}</p>}
                 </div>
               ))}
             </div>
@@ -128,7 +129,7 @@ export default async function MenuPage({ params }) {
             <span className="menu-more-label">Keep exploring</span>
             <div className="menu-more-links">
               {others.map((m) => (
-                <a key={m.slug} href={`/menus/${m.slug}`} className="menu-more-link">
+                <a key={m.slug} href={`/menus/${m.slug}/`} className="menu-more-link">
                   <span>{m.name}</span><span className="arrow">&rarr;</span>
                 </a>
               ))}
@@ -136,6 +137,6 @@ export default async function MenuPage({ params }) {
           </nav>
         </div>
       </section>
-    </>
+    </div>
   );
 }

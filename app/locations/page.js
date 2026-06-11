@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { LOCATION_LIST } from '@/lib/locations';
 
 export const metadata = {
@@ -20,7 +21,7 @@ export default function LocationsIndex() {
             </div>
           </div>
           <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
-            <img src="/images/tacoma-hero.jpg" alt="Duke's Seafood on the Tacoma waterfront" />
+            <Image src="/images/tacoma-hero.jpg" alt="Duke's Seafood on the Tacoma waterfront" fill sizes="(max-width: 880px) 100vw, 50vw" priority style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>
@@ -29,8 +30,8 @@ export default function LocationsIndex() {
         <div className="shell">
           <div className="locations-grid">
             {LOCATION_LIST.map((l) => (
-              <a key={l.slug} href={`/locations/${l.slug}`} className="location-card">
-                <div className="photo imgfill"><img src={l.heroPhoto} alt={`Duke's ${l.name}`} /></div>
+              <a key={l.slug} href={`/locations/${l.slug}/`} className="location-card">
+                <div className="photo imgfill"><Image src={l.heroPhoto} alt={`Duke's ${l.name}`} fill sizes="(max-width: 880px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></div>
                 <div className="city">{l.name}</div>
                 <div className="meta">{l.heroLede}</div>
                 <div className="arr"><span>Visit page</span><span>→</span></div>

@@ -44,16 +44,16 @@ export default function Footer() {
           <div>
             <h4>Duke's</h4>
             <ul>
-              <li><a href="/gift-cards">Gift cards</a></li>
-              <li><a href="/frozen-chowders">Frozen chowders</a></li>
-              <li><a href="/dukes-vip">Free dinners (VIP)</a></li>
+              <li><Link href="/gift-cards/">Gift cards</Link></li>
+              <li><Link href="/frozen-chowders/">Frozen chowders</Link></li>
+              <li><Link href="/dukes-vip/">VIP Email Club</Link></li>
               <li><a href="https://dukesseafood.com/recipes/">Recipes</a></li>
               <li><a href="https://dukesseafood.com/blog">Blog</a></li>
             </ul>
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 Duke's Seafood Restaurants · Family-owned</span>
+          <span>© {new Date().getFullYear()} Duke&apos;s Seafood Restaurants · Family-owned</span>
           <span>Made with care in the Pacific Northwest</span>
         </div>
       </div>

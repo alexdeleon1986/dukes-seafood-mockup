@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getMenuHub } from '@/lib/menus';
 
 export const revalidate = 3600;
@@ -23,7 +24,7 @@ export default async function MenusHub() {
             </div>
           </div>
           <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
-            <img src="/images/patio-spread.jpg" alt="Sandwich, fish and chips, fries and a cocktail on a sunny Duke's patio table" />
+            <Image src="/images/patio-spread.jpg" alt="Sandwich, fish and chips, fries and a cocktail on a sunny Duke's patio table" fill sizes="(max-width: 880px) 100vw, 50vw" priority style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>

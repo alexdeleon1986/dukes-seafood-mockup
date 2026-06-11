@@ -264,6 +264,14 @@ p.lede {
   background: var(--cream-2);
   width: 100%;
   display: block;
+  position: relative;
+}
+/* When an .imgfill wraps a next/image (fill), it must inherit the .photo box. */
+.photo > .imgfill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 .photo image-slot {
   --is-bg: var(--cream-3);
@@ -2072,4 +2080,65 @@ body[data-theme="modern"] {
   color: var(--cream-2);
   max-width: 42ch;
   margin: 0;
+}
+
+/* =========================================================
+   4.2 — Menu detail page (.page-menu): scoped, replaces inline styles
+   ========================================================= */
+.page-menu .menu-body { display: block; max-width: 920px; }
+.page-menu .menu-pending {
+  background: var(--cream-2);
+  border: 1px solid var(--line);
+  padding: 18px 22px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.page-menu .menu-group { margin-bottom: 48px; }
+.page-menu .menu-group > h2 { margin-bottom: 20px; }
+.page-menu .menu-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+.page-menu .menu-item-name {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--ink);
+}
+.page-menu .menu-item-gf {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--brass-dark);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 2px 5px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.page-menu .menu-item-price {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--brass-dark);
+  white-space: nowrap;
+}
+.page-menu .menu-item-desc {
+  grid-column: 1 / -1;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 64ch;
+  margin: 0;
+}
+
+/* 4.2 — small homepage utilities (replacing inline one-offs) */
+.about-cta { margin-top: 24px; }
+.newsletter-fineprint {
+  margin-top: 12px;
+  font-size: 13px;
+  color: rgba(242, 235, 223, 0.55);
 }

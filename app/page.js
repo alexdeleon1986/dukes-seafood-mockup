@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import NewsletterForm from '@/components/NewsletterForm';
 import HeroVideoControls from '@/components/HeroVideoControls';
 import ReservationWidget from '@/components/ReservationWidget';
@@ -56,8 +57,8 @@ export default function Home() {
           <div>
             <p>Duke opened the first Duke&apos;s in 1977, two blocks from the Seattle Center, with cigar boxes for a register because nobody had set up a real one yet. Nearly fifty years later his son John runs the company, the chowder is the same recipe we&apos;ve poured since the first Chowder House, and the same family sits at the same tables.</p>
             <p>We buy from small Alaska boats Duke has known for thirty years, pull oysters and Dungeness crab from up and down the Sound, and pour the same award-winning chowder we opened with. Six restaurants, one family, recipes we won&apos;t change and sourcing we won&apos;t compromise.</p>
-            <div style={{marginTop: '24px'}}>
-              <a href="/our-story" className="btn btn-ghost btn-sm">Read our history <span className="arrow">→</span></a>
+            <div className="about-cta">
+              <a href="/our-story/" className="btn btn-ghost btn-sm">Read our history <span className="arrow">→</span></a>
             </div>
           </div>
         </div>
@@ -67,15 +68,15 @@ export default function Home() {
         <div className="shell">
           <div className="feature-row flip">
             <div className="photo">
-              <span className="imgfill"><img src="/images/patio-spread.jpg" alt="A spread of Duke's food and a cocktail on a sunny patio table" /></span>
+              <span className="imgfill"><Image src="/images/patio-spread.jpg" alt="A spread of Duke's food and a cocktail on a sunny patio table" fill sizes="(max-width: 880px) 100vw, 50vw" style={{ objectFit: 'cover' }} /></span>
             </div>
             <div>
               <p className="eyebrow">Happy Hour</p>
               <h2 className="h-display">Twice a day. <em>Full portions</em>, not just drinks.</h2>
               <p>Happy hour runs 3&ndash;6pm and again 9pm to close, seven days a week, in the dining room, the bar, and out on the deck. Dishes straight off the regular menu &mdash; the grass-fed cheeseburger, the crab &lsquo;un&rsquo;-cake, the chowder &mdash; at happy hour prices, in full portions. We never shrink the plate.</p>
               <div className="actions">
-                <a href="/menus/happy-hour-menu" className="btn btn-primary">See the happy hour menu <span className="arrow">→</span></a>
-                <a href="/locations" className="btn btn-ghost">Find a table</a>
+                <a href="/menus/happy-hour-menu/" className="btn btn-primary">See the happy hour menu <span className="arrow">→</span></a>
+                <a href="/locations/" className="btn btn-ghost">Find a table</a>
               </div>
             </div>
           </div>
@@ -90,38 +91,38 @@ export default function Home() {
           </div>
 
           <div className="locations-grid">
-            <a href="/locations/lake-union" className="location-card">
-              <div className="photo"><span className="imgfill"><img src="/images/slu-interior.jpg" alt="South Lake Union" /></span></div>
+            <a href="/locations/lake-union/" className="location-card">
+              <div className="photo"><span className="imgfill"><Image src="/images/slu-interior.jpg" alt="South Lake Union" fill sizes="(max-width: 880px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></span></div>
               <div className="city">South Lake Union</div>
               <div className="meta"><strong>The original Chowder House.</strong> Big bar, lake views, the patio that started it all. Opened 1989.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
-            <a href="/locations/bellevue" className="location-card">
-              <div className="photo"><span className="imgfill"><img src="/images/loc-bellevue.jpg" alt="Bellevue" /></span></div>
+            <a href="/locations/bellevue/" className="location-card">
+              <div className="photo"><span className="imgfill"><Image src="/images/loc-bellevue.jpg" alt="Bellevue" fill sizes="(max-width: 880px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></span></div>
               <div className="city">Bellevue</div>
               <div className="meta"><strong>Lincoln Square South.</strong> Second-floor dining room, downtown views.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
-            <a href="/locations/green-lake" className="location-card">
-              <div className="photo"><span className="imgfill"><img src="/images/greenlake-hero.jpg" alt="Green Lake" /></span></div>
+            <a href="/locations/green-lake/" className="location-card">
+              <div className="photo"><span className="imgfill"><Image src="/images/greenlake-hero.jpg" alt="Green Lake" fill sizes="(max-width: 880px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></span></div>
               <div className="city">Green Lake</div>
               <div className="meta"><strong>Right on the lake.</strong> Seaplanes overhead, the deck open most of the year.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
-            <a href="/locations/tacoma" className="location-card">
-              <div className="photo"><span className="imgfill"><img src="/images/tacoma-hero.jpg" alt="Tacoma" /></span></div>
+            <a href="/locations/tacoma/" className="location-card">
+              <div className="photo"><span className="imgfill"><Image src="/images/tacoma-hero.jpg" alt="Tacoma" fill sizes="(max-width: 880px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></span></div>
               <div className="city">Tacoma Waterfront</div>
               <div className="meta"><strong>Ruston Way.</strong> The water at your shoulder, Mount Rainier in the window.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
-            <a href="/locations/southcenter" className="location-card">
-              <div className="photo"><span className="imgfill"><img src="/images/southcenter-hero.jpg" alt="Southcenter" /></span></div>
+            <a href="/locations/southcenter/" className="location-card">
+              <div className="photo"><span className="imgfill"><Image src="/images/southcenter-hero.jpg" alt="Southcenter" fill sizes="(max-width: 880px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></span></div>
               <div className="city">Southcenter</div>
               <div className="meta"><strong>Westfield Southcenter.</strong> Full menu, full bar, easy from anywhere south of Seattle.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
-            <a href="/locations/kent-station" className="location-card">
-              <div className="photo"><span className="imgfill"><img src="/images/kent-hero.jpg" alt="Kent Station" /></span></div>
+            <a href="/locations/kent-station/" className="location-card">
+              <div className="photo"><span className="imgfill"><Image src="/images/kent-hero.jpg" alt="Kent Station" fill sizes="(max-width: 880px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></span></div>
               <div className="city">Kent Station</div>
               <div className="meta"><strong>Open daily.</strong> Family-friendly, easy parking, in the heart of Kent Station.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
@@ -155,15 +156,15 @@ export default function Home() {
         <div className="shell">
           <div className="feature-row">
             <div className="photo">
-              <span className="imgfill"><img src="/images/chowder-hero.jpg" alt="Duke's award-winning clam chowder in a bread bowl" /></span>
+              <span className="imgfill"><Image src="/images/chowder-hero.jpg" alt="Duke's award-winning clam chowder in a bread bowl" fill sizes="(max-width: 880px) 100vw, 50vw" style={{ objectFit: 'cover' }} /></span>
             </div>
             <div>
               <p className="eyebrow">The Chowder</p>
               <h2 className="h-display">The recipe Duke <em>perfected</em>. Three Cook Off wins.</h2>
               <p>Our award-winning clam chowder is the same recipe we&apos;ve poured since the first Chowder House opened in 1989, made fresh every day at every location. It took home the Seattle Chowder Cook Off three years running, and now the clam, lobster, and crab go home frozen too — stocked in Puget Sound grocery freezers and delivered by Sound Bites.</p>
               <div className="actions">
-                <a href="/frozen-chowders" className="btn btn-primary">Take it home <span className="arrow">→</span></a>
-                <a href="/menus" className="btn btn-ghost">Order in restaurant</a>
+                <a href="/frozen-chowders/" className="btn btn-primary">Take it home <span className="arrow">→</span></a>
+                <a href="/menus/" className="btn btn-ghost">Order in restaurant</a>
               </div>
             </div>
           </div>
@@ -184,7 +185,7 @@ export default function Home() {
         <div className="shell">
           <div className="feature-row flip">
             <div className="photo">
-              <span className="imgfill"><img src="/images/damsel-on-a-train.webp" alt="river / salmon / habitat" /></span>
+              <span className="imgfill"><Image src="/images/damsel-on-a-train.webp" alt="Wild salmon swimming upstream in a Pacific Northwest river" fill sizes="(max-width: 880px) 100vw, 50vw" style={{ objectFit: 'cover' }} /></span>
             </div>
             <div>
               <p className="eyebrow">Dukes Damsel on a Train Foundation</p>
@@ -206,11 +207,11 @@ export default function Home() {
           </div>
           <div>
             <NewsletterForm />
-            <p style={{marginTop: '12px', fontSize: '13px', color: 'rgba(242,235,223,0.55)'}}>One email a couple times a month. Unsubscribe anytime.</p>
+            <p className="newsletter-fineprint">One email a couple times a month. Unsubscribe anytime.</p>
           </div>
         </div>
       </section>
 
-      <div id="tweaks-root"></div>    </>
+    </>
   );
 }
