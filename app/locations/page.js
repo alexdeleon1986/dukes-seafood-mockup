@@ -3,6 +3,7 @@ import { LOCATION_LIST } from '@/lib/locations';
 export const metadata = {
   title: "Locations — Duke's Seafood",
   description: "Six Duke's Seafood restaurants across Western Washington: Bellevue, Tacoma Waterfront, South Lake Union, Green Lake, Southcenter, and Kent Station. Find hours, addresses, and reservations.",
+  alternates: { canonical: '/locations/' },
 };
 
 export default function LocationsIndex() {

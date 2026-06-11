@@ -11,7 +11,18 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const loc = getLocation(slug);
   if (!loc) return {};
-  return { title: loc.title, description: loc.metaDescription };
+  return {
+    title: loc.title,
+    description: loc.metaDescription,
+    alternates: { canonical: `/locations/${slug}/` },
+    openGraph: {
+      title: loc.title,
+      description: loc.metaDescription,
+      url: `/locations/${slug}/`,
+      type: 'website',
+      images: [loc.heroPhoto],
+    },
+  };
 }
 
 export default async function LocationPage({ params }) {
@@ -21,22 +32,56 @@ export default async function LocationPage({ params }) {
 
   const siblings = LOCATION_LIST.filter((l) => l.slug !== loc.slug);
 
-  // LocalBusiness / Restaurant JSON-LD for SEO parity
+  // LocalBusiness / Restaurant JSON-LD for SEO parity.
+  // Address + geo use the GBP-verified nap block (Supermetrics GMB, 2026-06-10).
+  const nap = loc.nap || {};
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Restaurant',
     name: `Duke's Seafood ${loc.name}`,
     servesCuisine: 'Seafood',
+    priceRange: '$$',
+    image: `https://dukesseafood.com${loc.heroPhoto}`,
+    url: `https://dukesseafood.com/locations/${loc.slug}/`,
+    telephone: loc.phone,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: loc.addressLines[0],
-      addressLocality: loc.addressLines[loc.addressLines.length - 1].split(',')[0],
-      addressRegion: 'WA',
+      streetAddress: nap.street || loc.addressLines[0],
+      addressLocality: nap.city || loc.addressLines[loc.addressLines.length - 1].split(',')[0],
+      addressRegion: nap.state || 'WA',
+      postalCode: nap.zip,
       addressCountry: 'US',
     },
-    telephone: loc.phone,
-    url: `https://dukesseafood.com/locations/${loc.slug}`,
+    // Open daily; dinner runs to 10pm Sun–Thu and 11pm Fri–Sat (verified vs
+    // OpenTable/Yelp). Lunch + happy hour + dinner are continuous service.
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+        opens: '11:00',
+        closes: '22:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Friday', 'Saturday'],
+        opens: '11:00',
+        closes: '23:00',
+      },
+    ],
+    acceptsReservations: loc.otSlug
+      ? `https://www.opentable.com/r/${loc.otSlug}`
+      : 'https://dukesseafood.com/reservations/',
+    hasMenu: 'https://dukesseafood.com/menus/',
+    ...(loc.otSlug ? { sameAs: [`https://www.opentable.com/r/${loc.otSlug}`] } : {}),
   };
+  // GBP returned no coordinates for SLU; only emit geo when we actually have it.
+  if (nap.geo && nap.geo.lat != null && nap.geo.lng != null) {
+    jsonLd.geo = {
+      '@type': 'GeoCoordinates',
+      latitude: nap.geo.lat,
+      longitude: nap.geo.lng,
+    };
+  }
 
   return (
     <>

@@ -3,6 +3,7 @@ import VipSignupForm from '@/components/VipSignupForm';
 export const metadata = {
   title: "Join the VIP Email Club — Duke's Seafood",
   description: "Sign up for Duke's Seafood Email Club. A free 2-for-1 dinner to start, a free entree every birthday, and up to $20 off your next meal whenever you dine and check in.",
+  alternates: { canonical: '/vip-club-sign-up/' },
 };
 
 export default function VipSignup() {

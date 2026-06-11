@@ -7,6 +7,7 @@ import { AWARDS, GUARANTEE } from '@/lib/awards';
 export const metadata = {
   title: "Duke's Seafood — Wild Pacific Seafood Since 1977",
   description: "Six family-owned Duke's Seafood restaurants across Western Washington. Wild Alaska salmon, sustainable Pacific seafood, and award-winning chowder since 1977.",
+  alternates: { canonical: '/' },
 };
 
 const RESERVE_ORDER = ['lake-union','bellevue','green-lake','tacoma','southcenter','kent-station'];

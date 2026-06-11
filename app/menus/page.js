@@ -5,6 +5,7 @@ export const revalidate = 3600;
 export const metadata = {
   title: "Menus \u2014 Duke's Seafood",
   description: "Lunch, dinner, happy hour, drinks, gluten-free, kids, and dessert menus at Duke's Seafood. Sustainable seafood, grass-fed beef, and award-winning chowder.",
+  alternates: { canonical: '/menus/' },
 };
 
 export default async function MenusHub() {

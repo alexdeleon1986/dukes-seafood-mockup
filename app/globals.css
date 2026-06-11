@@ -1991,3 +1991,62 @@ body[data-theme="modern"] {
   text-transform: uppercase;
   color: var(--brass-dark);
 }
+
+/* =========================================================
+   /group-dining/ — private dining hub (scoped under .page-simple)
+   ========================================================= */
+.page-simple .gd-loc { border-top: 1px solid var(--line); }
+.page-simple .gd-loc-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.page-simple .gd-loc-head h2 { font-size: clamp(28px, 4vw, 44px); margin: 0; }
+.page-simple .gd-aside {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: clamp(15px, 1.5vw, 18px);
+  max-width: 38ch;
+  margin: 0;
+}
+.page-simple .gd-rooms {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+@media (max-width: 880px) { .page-simple .gd-rooms { grid-template-columns: 1fr; } }
+.page-simple .gd-room {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  overflow: hidden;
+}
+.page-simple .gd-room .photo { aspect-ratio: 5 / 4; position: relative; }
+.page-simple .gd-room-body { padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 8px; }
+.page-simple .gd-room-body .opt {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass-dark);
+}
+.page-simple .gd-room-body h3 { font-size: clamp(19px, 2vw, 23px); margin: 0; }
+.page-simple .gd-room-body p { color: var(--ink-soft); margin: 0; line-height: 1.5; }
+.page-simple .gd-room-body .cap {
+  margin-top: auto;
+  padding-top: 10px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.page-simple .gd-dockside { background: var(--ink); color: var(--cream); }
+.page-simple .gd-dockside .gd-dockside-inner { max-width: 60ch; }
+.page-simple .gd-dockside h2 { color: var(--cream); font-size: clamp(28px, 4vw, 44px); }
+.page-simple .gd-dockside .eyebrow { color: var(--brass); }
+.page-simple .gd-dockside .body { color: var(--cream-2); }

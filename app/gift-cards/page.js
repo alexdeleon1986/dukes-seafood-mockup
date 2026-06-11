@@ -1,6 +1,7 @@
 export const metadata = {
   title: "Gift Cards — Duke's Seafood",
   description: "Give the gift of great food with a Duke's Seafood gift card. E-gift cards for instant delivery, physical cards by mail, good at any location for dining in or takeout. They never expire.",
+  alternates: { canonical: '/gift-cards/' },
 };
 
 const CARD_LINK = 'https://www.toasttab.com/dukes-seafood-seattle-greenlake/giftcards';

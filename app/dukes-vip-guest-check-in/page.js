@@ -3,6 +3,7 @@ import VipCheckinForm from '@/components/VipCheckinForm';
 export const metadata = {
   title: "VIP Guest Check-In — Duke's Seafood",
   description: "Duke's Email Club members: check in with your email and location after you dine, and we'll send a gift good for up to $20 off your next visit.",
+  alternates: { canonical: '/dukes-vip-guest-check-in/' },
 };
 
 export default function VipCheckin() {

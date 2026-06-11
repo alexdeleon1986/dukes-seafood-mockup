@@ -1,6 +1,7 @@
 export const metadata = {
   title: "Our Story — Duke's Seafood",
   description: "Duke Moscrip opened the first Duke's in 1977. Nearly fifty years on, the salmon still comes off the same Alaska boats and the chowder uses the same recipe. Family-owned since 1977.",
+  alternates: { canonical: '/our-story/' },
 };
 
 const PEOPLE = [

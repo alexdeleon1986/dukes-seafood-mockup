@@ -7,7 +7,6 @@ import ReserveModal from '@/components/ReserveModal';
 import { LOCATION_LIST } from '@/lib/locations';
 
 const ORDER_URL = 'https://order.online/business/dukes-seafood-22397';
-const DOCKSIDE_URL = 'https://docksideatdukes.com/';
 const RESERVE_ORDER = ['lake-union','bellevue','green-lake','tacoma','southcenter','kent-station'];
 const RESERVE_LOCATIONS = RESERVE_ORDER
   .map((slug) => LOCATION_LIST.find((l) => l.slug === slug))
@@ -41,7 +40,7 @@ export default function Nav() {
         <div className="nav-left">
           <Link href="/menus" className={`nav-link nav-link-hide-mobile ${isActive('/menus') ? 'active' : ''}`}>Menus</Link>
           <Link href="/locations" className={`nav-link nav-link-hide-mobile ${isActive('/locations') ? 'active' : ''}`}>Locations</Link>
-          <a href={DOCKSIDE_URL} className="nav-link nav-link-hide-mobile">Private Dining</a>
+          <a href="/group-dining/" className="nav-link nav-link-hide-mobile">Private Dining</a>
         </div>
 
         <Link href="/" className="wordmark">
@@ -62,7 +61,7 @@ export default function Nav() {
           <button className="mobile-menu-close" aria-label="Close menu" onClick={() => setOpen(false)}>×</button>
           <Link href="/menus">Menus</Link>
           <Link href="/locations">Locations</Link>
-          <a href={DOCKSIDE_URL}>Private Dining</a>
+          <a href="/group-dining/">Private Dining</a>
           <Link href="/chowder">Chowder</Link>
           <Link href="/our-story">Our Story</Link>
           <ReserveModal locations={RESERVE_LOCATIONS} triggerClassName="mobile-menu-cta" triggerLabel="Reserve a table" showArrow={false} />

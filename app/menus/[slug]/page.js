@@ -30,6 +30,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `${menu.name} Menu \u2014 Duke's Seafood`,
     description: `${menu.name} at Duke's Seafood. ${menu.note}`.slice(0, 155),
+    alternates: { canonical: `/menus/${slug}/` },
   };
 }
 

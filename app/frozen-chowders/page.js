@@ -1,6 +1,7 @@
 export const metadata = {
   title: "Frozen Chowders — Duke's Seafood",
   description: "Duke's award-winning chowders and bisque at home, any day of the week. Seattle's Best Clam Chowder, Lobster Mobster Chowder, and Dungeness Crab Bisque. In the frozen aisle at Puget Sound grocers and delivered through Sound Bites.",
+  alternates: { canonical: '/frozen-chowders/' },
 };
 
 const PRODUCTS = [

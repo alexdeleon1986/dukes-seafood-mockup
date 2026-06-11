@@ -1,6 +1,7 @@
 export const metadata = {
   title: "The Chowder — Duke's Seafood",
   description: "Duke's award-winning clam chowder: three-time Seattle Chowder Cook Off champion, made fresh daily at every location since 1989. Seven flavors, all gluten free.",
+  alternates: { canonical: '/chowder/' },
 };
 
 const CHOWDERS = [

@@ -1,6 +1,7 @@
 export const metadata = {
   title: "Duke's VIP Email Club — Duke's Seafood",
   description: "Join Duke's Seafood Email Club for a 2-for-1 entree, a birthday entree every year, and up to $20 off your next meal. Already a member? Check in after you dine.",
+  alternates: { canonical: '/dukes-vip/' },
 };
 
 export default function DukesVip() {
