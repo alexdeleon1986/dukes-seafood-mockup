@@ -744,7 +744,7 @@ body[data-theme="lodge"] .map-frame { background: #221d15; }
 }
 .hero-video video,
 .hero-video .hero-video-embed,
-.hero-video .hero-video-fallback {
+.hero-video .hero-video-poster {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -752,17 +752,21 @@ body[data-theme="lodge"] .map-frame { background: #221d15; }
   object-fit: cover;
   z-index: 0;
 }
-.hero-video .hero-video-fallback { display: none; }
-.hero-video .hero-video-fallback {
-  background:
-    radial-gradient(ellipse at 30% 30%, rgba(181,132,80,0.18), transparent 60%),
-    radial-gradient(ellipse at 70% 70%, rgba(54,90,124,0.25), transparent 60%),
-    linear-gradient(180deg, #0a141d 0%, #0f2030 60%, #1a3142 100%);
+/* Poster: real photo, visible immediately, sits behind the iframe. */
+.hero-video .hero-video-poster {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
+/* Injected iframe fades in over the poster once it has loaded. */
 .hero-video .hero-video-embed {
-  overflow: hidden;
   z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
+.hero-video .hero-video-embed.is-loaded { opacity: 1; }
 .hero-video .hero-video-embed iframe {
   position: absolute;
   top: 50%;
@@ -774,15 +778,6 @@ body[data-theme="lodge"] .map-frame { background: #221d15; }
   transform: translate(-50%, -50%);
   border: 0;
   pointer-events: none;
-}
-.hero-video .hero-video-fallback::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    repeating-linear-gradient(180deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 3px);
-  mix-blend-mode: overlay;
-  opacity: 0.4;
 }
 .hero-video .scrim {
   position: absolute;
@@ -1375,22 +1370,9 @@ body[data-theme="modern"] {
     gap: 12px !important;
   }
 @media (max-width: 768px) {
-  .hero-video .hero-video-embed { display: none !important; }
-  .hero-video .hero-video-fallback {
-    display: block !important;
-    z-index: 0 !important;
-    background:
-      url('/images/tacoma-pilings.jpg') center / cover no-repeat !important;
-  }
-  /* keep a dark scrim over the photo so hero text stays legible */
-  .hero-video .hero-video-fallback::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(10,20,29,0.45) 0%, rgba(10,20,29,0.35) 45%, rgba(10,20,29,0.7) 100%);
-  }
-  /* No video plays on mobile (embed hidden above), so the pause control has
-     nothing to act on — hide it. */
+  /* The iframe is never injected on mobile (HeroVideoBackground guards it), so
+     the poster image is the hero. The site-wide .scrim handles text contrast.
+     Hide the pause control: there's no video to control here. */
   .hero-video .hv-controls { display: none !important; }
 }
 @media (max-width: 880px) { .locations-grid { grid-template-columns: 1fr 1fr; } }
