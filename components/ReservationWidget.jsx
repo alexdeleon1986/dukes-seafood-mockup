@@ -15,14 +15,16 @@ const TIME_SLOTS = [
 ];
 
 function todayISO() {
+  // Local-time date, not UTC. toISOString() rolls to tomorrow after 5pm Pacific,
+  // which blocked same-day booking during the dinner rush.
   const d = new Date();
-  return d.toISOString().slice(0, 10);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
 // Props:
-//   rid, name        -> single-location mode (location page)
+//   rid, name, slug  -> single-location mode (location page)
 //   locations: [{slug,name,rid}]  -> multi-location mode (adds a picker)
-export default function ReservationWidget({ rid, name, locations }) {
+export default function ReservationWidget({ rid, name, slug, locations }) {
   const isMulti = Array.isArray(locations) && locations.length > 0;
   const [locSlug, setLocSlug] = useState(isMulti ? locations[0].slug : null);
   const [covers, setCovers] = useState(2);
@@ -34,23 +36,36 @@ export default function ReservationWidget({ rid, name, locations }) {
   const active = useMemo(() => {
     if (isMulti) {
       const l = locations.find((x) => x.slug === locSlug) || locations[0];
-      return { rid: l.rid, name: l.name };
+      return { rid: l.rid, name: l.name, slug: l.slug };
     }
-    return { rid, name };
-  }, [isMulti, locations, locSlug, rid, name]);
+    return { rid, name, slug: slug ?? null };
+  }, [isMulti, locations, locSlug, rid, name, slug]);
 
   const bookUrl = useMemo(() => {
     const dateTime = `${date}T${time}`;
+    // OpenTable restref/client endpoint: partysize (not covers), single restref
+    // (no duplicate rid in the path). ot_source attributes the cover to
+    // "Your Network" (the cheaper, restaurant-owned class tracked in the dashboard).
     const params = new URLSearchParams({
       restref: String(active.rid),
       datetime: dateTime,
-      covers: String(covers),
+      partysize: String(covers),
+      ot_source: 'Restaurant website',
       lang: 'en-US',
     });
-    return `https://www.opentable.com/restref/client/?rid=${active.rid}&${params.toString()}`;
+    return `https://www.opentable.com/restref/client/?${params.toString()}`;
   }, [active.rid, date, time, covers]);
 
   function handleBook() {
+    // Fire-and-forget GA4 handoff event (no-op if gtag isn't loaded yet).
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'reserve_handoff', {
+        location_slug: active.slug ?? null,
+        location_name: active.name,
+        party_size: covers,
+        reservation_date: date,
+      });
+    }
     window.open(bookUrl, '_blank', 'noopener,noreferrer');
     setBooked(true);
   }
@@ -60,10 +75,10 @@ export default function ReservationWidget({ rid, name, locations }) {
       <div className="reserve-form">
         <div className="rf-confirm">
           <div className="check">✓</div>
-          <div className="val" style={{ fontFamily: 'var(--serif)', fontSize: 22 }}>Opening OpenTable</div>
+          <div className="val" style={{ fontFamily: 'var(--serif)', fontSize: 22 }}>OpenTable is open in a new tab</div>
           <p className="rf-help">
-            We sent your request for {covers} {covers === 1 ? 'guest' : 'guests'} at {active.name} to OpenTable in a new tab.
-            Pick your spot there to confirm.
+            We opened OpenTable with your details filled in: {covers} {covers === 1 ? 'guest' : 'guests'} at {active.name}.
+            Finish there to confirm your table.
           </p>
           <button className="rf-time" style={{ marginTop: 12, padding: '10px 18px' }} onClick={() => setBooked(false)}>
             Change details

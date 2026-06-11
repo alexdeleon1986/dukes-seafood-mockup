@@ -1134,14 +1134,15 @@ body[data-theme="modern"] .footer { background: #0c1720; }
     background: rgba(13, 36, 54, 0.97);
     z-index: 100;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, visibility 0s 0.3s;
     display: flex !important;
     align-items: flex-start;
     justify-content: center;
     overflow-y: auto;
   }
-  body.menu-open .mobile-menu { opacity: 1; pointer-events: auto; }
+  body.menu-open .mobile-menu { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 0.3s; }
   .mobile-menu-inner {
     width: 100%;
     max-width: 480px;
@@ -1367,7 +1368,19 @@ body[data-theme="modern"] {
   }
 @media (max-width: 768px) {
   .hero-video .hero-video-embed { display: none !important; }
-  .hero-video .hero-video-fallback { display: block !important; z-index: 0 !important; }
+  .hero-video .hero-video-fallback {
+    display: block !important;
+    z-index: 0 !important;
+    background:
+      url('/images/tacoma-pilings.jpg') center / cover no-repeat !important;
+  }
+  /* keep a dark scrim over the photo so hero text stays legible */
+  .hero-video .hero-video-fallback::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,20,29,0.45) 0%, rgba(10,20,29,0.35) 45%, rgba(10,20,29,0.7) 100%);
+  }
   /* No video plays on mobile (embed hidden above), so the pause control has
      nothing to act on — hide it. */
   .hero-video .hv-controls { display: none !important; }
@@ -1418,14 +1431,15 @@ body[data-theme="modern"] {
     background: rgba(13, 36, 54, 0.97);
     z-index: 100;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, visibility 0s 0.3s;
     display: flex !important;
     align-items: flex-start;
     justify-content: center;
     overflow-y: auto;
   }
-  body.menu-open .mobile-menu { opacity: 1; pointer-events: auto; }
+  body.menu-open .mobile-menu { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 0.3s; }
   .mobile-menu-inner {
     width: 100%;
     max-width: 480px;
@@ -2050,3 +2064,12 @@ body[data-theme="modern"] {
 .page-simple .gd-dockside h2 { color: var(--cream); font-size: clamp(28px, 4vw, 44px); }
 .page-simple .gd-dockside .eyebrow { color: var(--brass); }
 .page-simple .gd-dockside .body { color: var(--cream-2); }
+
+/* 3.4 — honest pre-wiring state for the newsletter signup */
+.newsletter-soon {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--cream-2);
+  max-width: 42ch;
+  margin: 0;
+}

@@ -8,13 +8,14 @@ export const revalidate = 3600;
 
 // Per-menu hero image. Falls back to a general spread if a slug isn't mapped.
 const MENU_IMAGES = {
-  'lunch-dinner-menu': { src: '/images/menu-fish-and-chips.jpg', alt: "Duke's fish and chips with fries, slaw and dipping sauces" },
+  'lunch-menu': { src: '/images/menu-fish-and-chips.jpg', alt: "Duke's fish and chips with fries, slaw and dipping sauces" },
+  'dinner-menu': { src: '/images/menu-table-spread.jpg', alt: "A table of Duke's Seafood seafood dinners" },
   'happy-hour-menu': { src: '/images/menu-chowder-breadbowl.jpg', alt: "Award-winning clam chowder in a sourdough bread bowl with a margarita" },
   'drinks-menu': { src: '/images/menu-bloody-mary.jpg', alt: "Duke's Bloody Mary with a grilled prawn and asparagus garnish" },
   'dessert-menu': { src: '/images/menu-dessert-pie.jpg', alt: "A slice of layered chocolate and espresso mud pie with whipped cream" },
   'kids-menu': { src: '/images/menu-kids-plate.jpg', alt: "Kids fish and chips plate with fries, slaw and dipping sauces" },
   'gluten-free-menu': { src: '/images/menu-steamer-clams.jpg', alt: "Steamer clams in a white wine and tomato broth with grilled bread" },
-  'summer-specials': { src: '/images/menu-spread.jpg', alt: "A spread of Duke's summer dishes" },
+  'specials': { src: '/images/menu-spread.jpg', alt: "A spread of Duke's seasonal specials" },
 };
 const FALLBACK_IMAGE = { src: '/images/menu-table-spread.jpg', alt: "A table of Duke's Seafood dishes" };
 

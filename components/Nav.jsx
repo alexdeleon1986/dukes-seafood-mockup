@@ -30,8 +30,9 @@ export default function Nav() {
       <div className="shell">
         <button
           className="hamburger"
-          aria-label="Open menu"
+          aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
+          aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
         >
           <span></span><span></span><span></span>
@@ -56,7 +57,7 @@ export default function Nav() {
       </div>
 
       {/* Mobile overlay */}
-      <div className="mobile-menu" onClick={(e) => { if (e.target === e.currentTarget) setOpen(false); }}>
+      <div className="mobile-menu" id="mobile-menu" aria-hidden={!open} onClick={(e) => { if (e.target === e.currentTarget) setOpen(false); }}>
         <div className="mobile-menu-inner">
           <button className="mobile-menu-close" aria-label="Close menu" onClick={() => setOpen(false)}>×</button>
           <Link href="/menus">Menus</Link>

@@ -130,11 +130,12 @@ export default async function LocationPage({ params }) {
               Menus are kept current across all six locations.
             </p>
             <div className="menus-list">
-              <a href="/menus/lunch-menu"><span className="name">Lunch &amp; Dinner</span><span className="arr">→</span></a>
-              <a href="/menus/happy-hour-menu"><span className="name">Happy Hour · 3–6pm &amp; 9pm–close</span><span className="arr">→</span></a>
-              <a href="/menus/drinks-menu"><span className="name">Drinks</span><span className="arr">→</span></a>
-              <a href="/menus/dessert-menu"><span className="name">Dessert</span><span className="arr">→</span></a>
-              <a href="/menus/kids-menu"><span className="name">Kids</span><span className="arr">→</span></a>
+              <a href="/menus/lunch-menu/"><span className="name">Lunch</span><span className="arr">→</span></a>
+              <a href="/menus/dinner-menu/"><span className="name">Dinner</span><span className="arr">→</span></a>
+              <a href="/menus/happy-hour-menu/"><span className="name">Happy Hour · 3–6pm &amp; 9pm–close</span><span className="arr">→</span></a>
+              <a href="/menus/drinks-menu/"><span className="name">Drinks</span><span className="arr">→</span></a>
+              <a href="/menus/dessert-menu/"><span className="name">Dessert</span><span className="arr">→</span></a>
+              <a href="/menus/kids-menu/"><span className="name">Kids</span><span className="arr">→</span></a>
             </div>
           </div>
         </div>
@@ -147,7 +148,7 @@ export default async function LocationPage({ params }) {
             <h2 className="h-display">Reserve at <em>{loc.name}</em>.</h2>
             <p className="lede">Walk-ins always welcome at the bar — full menu and happy hour served there every day of the week.</p>
           </div>
-          <ReservationWidget rid={loc.rid} name={loc.name} />
+          <ReservationWidget rid={loc.rid} name={loc.name} slug={loc.slug} />
         </div>
       </section>
 
