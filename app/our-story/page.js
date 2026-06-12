@@ -28,8 +28,8 @@ export default function OurStory() {
       <section className="hero">
         <div className="shell">
           <div>
-            <h1 className="h-display">Fifty years on, the chowder hasn&apos;t changed and <em>neither have the boats</em>.</h1>
-            <p className="lede">Duke opened the first restaurant in 1977, paying employees in cash out of cigar boxes. His son John runs the company now. The salmon still comes off the same Alaska boats.</p>
+            <h1 className="h-display">Nearly fifty years on, the chowder hasn&apos;t changed and <em>neither have the boats</em>.</h1>
+            <p className="lede">Duke opened the first restaurant in 1977 with cigar boxes for a register. His son John runs the company now. The salmon still comes off the same Alaska boats.</p>
           </div>
           <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
             <img src="/images/duke-amy-jm-dock.jpg" alt="Duke, Amy, and John Moscrip on the dock" style={{ objectPosition: 'center' }} />
@@ -47,7 +47,7 @@ export default function OurStory() {
           <div>
             <p style={{ marginBottom: 16 }}>Duke Moscrip broke away from a partnership at Ray&apos;s Boathouse and opened the first Duke&apos;s Bar &amp; Grill on Queen Anne in 1977. Two blocks from the Seattle Center. Cigar boxes for a register because nobody had time to set up a real one yet.</p>
             <p style={{ marginBottom: 16 }}>He wanted a hangout. Quality, but no fuss. That tension between casual and serious has run through every Duke&apos;s since.</p>
-            <p style={{ fontFamily: 'var(--serif)', fontSize: 21, fontStyle: 'italic', color: 'var(--ink)', borderLeft: '3px solid var(--brass)', paddingLeft: 22, marginTop: 12 }}>&ldquo;There were no paychecks. We kept the money in cigar boxes. Really, cigar boxes.&rdquo;</p>
+            <p style={{ fontFamily: 'var(--serif)', fontSize: 21, fontStyle: 'italic', color: 'var(--ink)', borderLeft: '3px solid var(--brass)', paddingLeft: 22, marginTop: 12 }}>No cash register, just a cigar box on the counter. Some of that hangout spirit never left.</p>
           </div>
         </div>
       </section>
@@ -131,7 +131,7 @@ export default function OurStory() {
         <div className="shell">
           <div>
             <p className="eyebrow" style={{ color: 'var(--brass)' }}>Dukes Damsel on a Train Foundation</p>
-            <h2 className="h-display">We&apos;ve served wild salmon for fifty years. We&apos;d like to <em>serve it for fifty more</em>.</h2>
+            <h2 className="h-display">We&apos;ve served wild salmon for nearly fifty years. We&apos;d like to <em>serve it for fifty more</em>.</h2>
             <p className="lede" style={{ marginTop: 20, color: 'rgba(242,235,223,0.82)' }}>In 2025 we partnered with Damsel Cellars and the band Train to fund habitat restoration across the rivers our fish come home to.</p>
             <a href="https://dukesseafood.com/blog/dukes-partners-with-damsel-cellars-and-train-to-launch-foundation-to-save-wild-salmon/" className="btn btn-primary btn-lg" style={{ marginTop: 28 }}>Read the story →</a>
           </div>
