@@ -120,7 +120,7 @@ export default function Home() {
             <a href="/locations/kent-station/" className="location-card">
               <div className="photo"><span className="imgfill"><Image src="/images/kent-hero.jpg" alt="Kent Station" fill sizes="(max-width: 880px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></span></div>
               <div className="city">Kent Station</div>
-              <div className="meta"><strong>Open daily.</strong> Family-friendly, easy parking, in the heart of Kent Station.</div>
+              <div className="meta"><strong>Kent Station.</strong> A patio, easy parking, and one of Kent&apos;s best happy hours.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
           </div>
@@ -157,7 +157,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">The Chowder</p>
               <h2 className="h-display">Duke&apos;s grandfather&apos;s recipe. Three Cook Off wins</h2>
-              <p>Our award-winning clam chowder started as Duke&apos;s Grampa Cox&apos;s New England recipe, and we&apos;ve poured it since the first Chowder House opened in 1989, made fresh every day at every location. It took home the Seattle Chowder Cook Off three years running, and now the clam, lobster, and crab go home frozen too — stocked in Puget Sound grocery freezers and delivered by Sound Bites.</p>
+              <p>It started as Duke&apos;s Grampa Cox&apos;s New England recipe, and we&apos;ve poured it every day since the first Chowder House opened in 1989. It won the Seattle Chowder Cook Off three years running, and then they asked us to stop entering so someone else could have a turn. The clam, lobster, and crab go home frozen now too, stocked in Puget Sound grocery freezers and delivered by Sound Bites.</p>
               <div className="actions">
                 <a href="/frozen-chowders/" className="btn btn-primary">Take it home <span className="arrow">→</span></a>
                 <a href="/menus/" className="btn btn-ghost">Order in restaurant</a>
@@ -186,7 +186,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">Dukes Damsel on a Train Foundation</p>
               <h2 className="h-display">We've served wild salmon for nearly fifty years. We'd like to serve it for fifty more</h2>
-              <p>Wild Pacific salmon are running out of clean, cold water to spawn in. We started the Dukes Damsel on a Train Foundation with our partners at Damsel Cellars and the band Train to fund habitat restoration across the rivers our fish come home to.</p>
+              <p>Wild Pacific salmon are running out of clean, cold water to spawn in. We&apos;ve served that salmon for nearly fifty years, so in 2025 we started the Dukes Damsel on a Train Foundation, with Damsel Cellars and the band Train, to fund habitat restoration across the rivers our fish come home to.</p>
               <div className="actions">
                 <a href="https://dukesseafood.com/blog/dukes-partners-with-damsel-cellars-and-train-to-launch-foundation-to-save-wild-salmon/" className="btn btn-primary">Read the story <span className="arrow">→</span></a>
               </div>

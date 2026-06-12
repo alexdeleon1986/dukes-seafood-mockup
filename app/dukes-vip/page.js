@@ -12,7 +12,7 @@ export default function DukesVip() {
           <div>
             <p className="eyebrow">Members eat well</p>
             <h1 className="h-display">Duke&apos;s <em>Email Club</em></h1>
-            <p className="lede">Members eat well. A 2-for-1 entree when you join, a free entree every birthday, and up to $20 off your next meal each time you dine and check in.</p>
+            <p className="lede">A 2-for-1 entree when you join, a free entree every birthday, and up to $20 off your next meal each time you dine and check in.</p>
           </div>
         </div>
       </section>
@@ -42,8 +42,8 @@ export default function DukesVip() {
             <p className="body">Sign up and we send a 2-for-1 entree offer right away. Buy one entree at full price, get one of our five top choices free.</p>
           </div>
           <div className="benefit">
-            <h3>Dinner on us every birthday</h3>
-            <p className="body">Each year we send a voucher for a free birthday entree, or a free dessert for everyone at your table when they order a meal.</p>
+            <h3>A free entree on your birthday</h3>
+            <p className="body">Duke decided long ago that nobody pays for dinner on their birthday, so every year we send a voucher for a free birthday entree. Prefer to share? Take a free dessert for everyone at your table instead, when they order a meal.</p>
           </div>
           <div className="benefit">
             <h3>Up to $20 off, every time you dine</h3>
