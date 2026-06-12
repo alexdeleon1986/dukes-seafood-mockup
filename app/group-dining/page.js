@@ -23,7 +23,7 @@ export default function GroupDining() {
         <div className="shell">
           <div>
             <p className="eyebrow">Private &amp; group dining</p>
-            <h1 className="h-display">Your party, <em>Duke&apos;s style</em>.</h1>
+            <h1 className="h-display">Your party, <em>Duke&apos;s style</em></h1>
             <p className="lede">Every Duke&apos;s does group dining, and most have a private or semi-private room. Birthdays, business lunches, reunions, celebrations, all on 100% sustainable seafood, grass-fed beef, and our award-winning chowder. Find your location below and talk to the person who runs events there.</p>
           </div>
           <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>

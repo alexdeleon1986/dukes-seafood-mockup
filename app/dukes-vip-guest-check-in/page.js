@@ -13,7 +13,7 @@ export default function VipCheckin() {
         <div className="shell">
           <div>
             <p className="eyebrow">Email Club</p>
-            <h1 className="h-display">Welcome <em>back</em>.</h1>
+            <h1 className="h-display">Welcome <em>back</em></h1>
             <p className="lede">Check in with your email and the location you visited. We&apos;ll send a gift from Duke within 24 hours, good toward your next meal. Print it or show the email to your server.</p>
           </div>
           <div className="form-panel">

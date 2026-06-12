@@ -78,7 +78,7 @@ export default function ReservationWidget({ rid, name, slug, locations }) {
           <div className="val" style={{ fontFamily: 'var(--serif)', fontSize: 22 }}>OpenTable is open in a new tab</div>
           <p className="rf-help">
             We opened OpenTable with your details filled in: {covers} {covers === 1 ? 'guest' : 'guests'} at {active.name}.
-            Finish there to confirm your table.
+            Finish there to confirm your table &mdash; then we&apos;ll see you soon.
           </p>
           <button className="rf-time" style={{ marginTop: 12, padding: '10px 18px' }} onClick={() => setBooked(false)}>
             Change details

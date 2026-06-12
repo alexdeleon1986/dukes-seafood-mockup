@@ -29,7 +29,7 @@ export default function OurStory() {
       <section className="hero">
         <div className="shell">
           <div>
-            <h1 className="h-display">Nearly fifty years on, the chowder hasn&apos;t changed and <em>neither have the boats</em>.</h1>
+            <h1 className="h-display">Nearly fifty years on, the chowder hasn&apos;t changed and <em>neither have the boats</em></h1>
             <p className="lede">Duke opened the first restaurant in 1977 with cigar boxes for a register. His son John runs the company now. The salmon still comes off the same Alaska boats.</p>
           </div>
           <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
@@ -43,7 +43,7 @@ export default function OurStory() {
         <div className="shell">
           <div>
             <p className="eyebrow">The beginning · Queen Anne, 1977</p>
-            <h2 className="h-display">Duke wanted somewhere <em>less formal</em>. So he opened it.</h2>
+            <h2 className="h-display">Duke wanted somewhere less formal. So he opened it</h2>
           </div>
           <div>
             <p style={{ marginBottom: 16 }}>Duke Moscrip broke away from a partnership at Ray&apos;s Boathouse and opened the first Duke&apos;s Bar &amp; Grill on Queen Anne in 1977. Two blocks from the Seattle Center. Cigar boxes for a register because nobody had time to set up a real one yet.</p>
@@ -72,7 +72,7 @@ export default function OurStory() {
           </div>
           <div>
             <p className="eyebrow">The sourcing · Wild Alaska, since the nineties</p>
-            <h2 className="h-display">The same boats. <em>For thirty years</em>.</h2>
+            <h2 className="h-display">The same boats. For thirty years</h2>
             <p style={{ marginTop: 20, marginBottom: 16, color: 'var(--ink-soft)' }}>For more than three decades, our wild salmon has come from the same small, family-run Alaska fishing operations. Duke knows the captains by name and visits the docks himself.</p>
             <p style={{ marginBottom: 16, color: 'var(--ink-soft)' }}>Alaska is the only US state with sustainability written directly into its constitution, required since statehood in 1959. That&apos;s the law our suppliers fish under.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, marginTop: 32, borderTop: '1px solid var(--line)', paddingTop: 28 }}>
@@ -91,7 +91,7 @@ export default function OurStory() {
       <section className="sec events">
         <div className="shell">
           <div className="sec-head">
-            <h2 className="h-display">A <em>Moscrip</em> still runs every dining room.</h2>
+            <h2 className="h-display">A Moscrip still runs every dining room</h2>
             <div className="head-aside">Duke founded the company. His son John runs it now. The thread doesn&apos;t break.</div>
           </div>
           <div className="events-list">
@@ -112,7 +112,7 @@ export default function OurStory() {
       {/* Timeline */}
       <section className="sec">
         <div className="shell">
-          <div className="sec-head"><h2 className="h-display">Fifty years, give or take.</h2></div>
+          <div className="sec-head"><h2 className="h-display">Fifty years, give or take</h2></div>
           <div className="menus-list">
             {TIMELINE.map(([year, title, body]) => (
               <div key={year} style={{ display: 'grid', gridTemplateColumns: '90px 1fr', gap: 28, padding: '22px 0', borderBottom: '1px solid var(--line)', alignItems: 'baseline' }}>
@@ -132,7 +132,7 @@ export default function OurStory() {
         <div className="shell">
           <div>
             <p className="eyebrow" style={{ color: 'var(--brass)' }}>Dukes Damsel on a Train Foundation</p>
-            <h2 className="h-display">We&apos;ve served wild salmon for nearly fifty years. We&apos;d like to <em>serve it for fifty more</em>.</h2>
+            <h2 className="h-display">We&apos;ve served wild salmon for nearly fifty years. We&apos;d like to serve it for fifty more</h2>
             <p className="lede" style={{ marginTop: 20, color: 'rgba(242,235,223,0.82)' }}>In 2025 we partnered with Damsel Cellars and the band Train to fund habitat restoration across the rivers our fish come home to.</p>
             <a href="https://dukesseafood.com/blog/dukes-partners-with-damsel-cellars-and-train-to-launch-foundation-to-save-wild-salmon/" className="btn btn-primary btn-lg" style={{ marginTop: 28 }}>Read the story →</a>
           </div>

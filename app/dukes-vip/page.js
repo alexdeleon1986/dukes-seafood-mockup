@@ -11,7 +11,7 @@ export default function DukesVip() {
         <div className="shell">
           <div>
             <p className="eyebrow">Members eat well</p>
-            <h1 className="h-display">Duke&apos;s <em>Email Club</em>.</h1>
+            <h1 className="h-display">Duke&apos;s <em>Email Club</em></h1>
             <p className="lede">Members eat well. A 2-for-1 entree when you join, a free entree every birthday, and up to $20 off your next meal each time you dine and check in.</p>
           </div>
         </div>
@@ -21,13 +21,13 @@ export default function DukesVip() {
         <div className="shell">
           <div className="vip-card">
             <p className="eyebrow">Returning guest</p>
-            <h2 className="h-display">Welcome back.</h2>
+            <h2 className="h-display">Welcome back</h2>
             <p className="body">Just finished a meal with us? Check in with your email and location, and we&apos;ll send a Frequent Diner offer worth up to $20 off your next visit. Every visit qualifies.</p>
             <a href="/dukes-vip-guest-check-in" className="btn btn-primary btn-lg">Check in now <span className="arrow">→</span></a>
           </div>
           <div className="vip-card">
             <p className="eyebrow">New guest</p>
-            <h2 className="h-display">Join the club.</h2>
+            <h2 className="h-display">Join the club</h2>
             <p className="body">Sign up once and a 2-for-1 dinner offer lands in your inbox automatically. It takes about a minute.</p>
             <a href="/vip-club-sign-up" className="btn btn-primary btn-lg">Join the email club <span className="arrow">→</span></a>
           </div>
@@ -36,7 +36,7 @@ export default function DukesVip() {
 
       <section className="sec alt">
         <div className="shell-narrow">
-          <div className="sec-head"><h2 className="h-display">What members <em>get</em>.</h2></div>
+          <div className="sec-head"><h2 className="h-display">What members get</h2></div>
           <div className="benefit">
             <h3>A 2-for-1 entree to start</h3>
             <p className="body">Sign up and we send a 2-for-1 entree offer right away. Buy one entree at full price, get one of our five top choices free.</p>

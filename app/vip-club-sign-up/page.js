@@ -13,7 +13,7 @@ export default function VipSignup() {
         <div className="shell">
           <div>
             <p className="eyebrow">Better than a reward</p>
-            <h1 className="h-display">Join the <em>Email Club</em>.</h1>
+            <h1 className="h-display">Join the <em>Email Club</em></h1>
             <p className="lede">A 2-for-1 entree to start, a free entree every birthday, and up to $20 off your next meal each time you dine. Six restaurants around the Puget Sound, one membership.</p>
           </div>
           <div className="form-panel">

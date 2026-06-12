@@ -30,7 +30,7 @@ export default function ReserveModal({ locations, triggerClassName = 'btn btn-pr
             <button type="button" className="reserve-modal-close" onClick={() => setOpen(false)} aria-label="Close">×</button>
             <div className="reserve-modal-head">
               <p className="eyebrow">Reservations</p>
-              <h2 className="h-display">Book a <em>table</em>.</h2>
+              <h2 className="h-display">Book a table</h2>
               <p className="reserve-modal-sub">Pick a location, date, and time. We&apos;ll hand you off to OpenTable to confirm.</p>
             </div>
             <ReservationWidget locations={locations} />

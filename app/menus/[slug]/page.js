@@ -77,7 +77,7 @@ export default async function MenuPage({ params }) {
       <section className="hero">
         <div className="shell">
           <div>
-            <h1 className="h-display">{menu.name} <em>menu</em>.</h1>
+            <h1 className="h-display">{menu.name} <em>menu</em></h1>
             <p className="lede">{menu.note}</p>
             <div className="hero-ctas">
               <a href="/locations/" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">&rarr;</span></a>

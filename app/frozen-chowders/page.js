@@ -44,7 +44,7 @@ export default function FrozenChowders() {
         <div className="shell">
           <div>
             <p className="eyebrow">In the frozen aisle</p>
-            <h1 className="h-display">Duke&apos;s chowder, <em>at home</em>.</h1>
+            <h1 className="h-display">Duke&apos;s chowder, <em>at home</em></h1>
             <p className="lede">The same recipes we serve in the dining room, ready any night of the week. Every one is gluten free and simple to make. Keep it frozen, then boil the pouch. Serves one to two.</p>
             <div className="hero-ctas">
               <a href="https://www.soundbitesdelivers.com/dukes" className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Order from Sound Bites <span className="arrow">→</span></a>
@@ -59,7 +59,7 @@ export default function FrozenChowders() {
 
       <section className="sec">
         <div className="shell-narrow">
-          <div className="sec-head"><h2 className="h-display">Three to <em>choose from</em>.</h2></div>
+          <div className="sec-head"><h2 className="h-display">Three to choose from</h2></div>
         </div>
         <div className="shell shell-products">
           <div className="product-grid">
@@ -82,7 +82,7 @@ export default function FrozenChowders() {
 
       <section className="sec alt">
         <div className="shell-narrow">
-          <div className="sec-head"><h2 className="h-display">Find it <em>near you</em>.</h2></div>
+          <div className="sec-head"><h2 className="h-display">Find it near you</h2></div>
           <p className="body">Duke&apos;s frozen chowders and bisque are stocked at grocers around the Puget Sound:</p>
           <ul className="plain-list">
             {RETAILERS.map((r) => <li key={r}>{r}</li>)}

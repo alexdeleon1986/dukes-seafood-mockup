@@ -20,7 +20,7 @@ export default function Chowder() {
       <section className="hero">
         <div className="shell">
           <div>
-            <h1 className="h-display">The chowder that <em>started it all</em>.</h1>
+            <h1 className="h-display">The chowder that <em>started it all</em></h1>
             <p className="lede">Three-time champion of the Seattle Chowder Cook Off, made fresh every day at every location. It started as Duke&apos;s grandfather&apos;s New England recipe, and we&apos;ve never had a reason to change it.</p>
             <div className="hero-ctas">
               <a href="/frozen-chowders" className="btn btn-primary btn-lg">Take it home <span className="arrow">→</span></a>
@@ -40,7 +40,7 @@ export default function Chowder() {
           </div>
           <div>
             <p className="eyebrow">The recipe</p>
-            <h2 className="h-display">From <em>New England</em>, by way of South Lake Union.</h2>
+            <h2 className="h-display">From New England, by way of South Lake Union</h2>
             <p style={{ marginTop: 20, marginBottom: 16, color: 'var(--ink-soft)' }}>The recipe came from Duke&apos;s Grampa Cox, who swore it was the best in all of New England. Duke and Chef Bill refined it and started pouring it in 1989, when the first Chowder House opened on South Lake Union. It hasn&apos;t changed since.</p>
             <p style={{ marginBottom: 16, color: 'var(--ink-soft)' }}>Six other flavors have grown out of that original. None displaced it. Order the four-chowder sampler and decide for yourself.</p>
             <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', borderTop: '1px solid var(--line)', paddingTop: 24, marginTop: 8 }}>
@@ -57,7 +57,7 @@ export default function Chowder() {
       <section className="sec">
         <div className="shell">
           <div className="sec-head">
-            <h2 className="h-display">Seven <em>chowders</em>.</h2>
+            <h2 className="h-display">Seven chowders</h2>
             <p className="head-aside">One award-winning original and six that grew out of it. Every one made fresh daily, every one available by the cup or the bowl, and the clam, lobster, and crab also go home frozen.</p>
           </div>
           <div className="chowder-list">
@@ -71,7 +71,7 @@ export default function Chowder() {
       <section className="reserve">
         <div className="shell">
           <div>
-            <h2 className="h-display">Take it <em>home</em>.</h2>
+            <h2 className="h-display">Take it home</h2>
             <p className="lede" style={{ marginTop: 16, color: 'rgba(242,235,223,0.82)' }}>Find the clam, lobster, and crab in grocery freezers around the Puget Sound, or have them delivered by Sound Bites.</p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
