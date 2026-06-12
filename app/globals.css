@@ -815,20 +815,22 @@ body[data-theme="lodge"] .map-frame { background: #221d15; }
 }
 .hero-video .hv-mid h1 {
   color: var(--cream);
-  font-size: clamp(48px, 7.2vw, 116px);
-  line-height: 1;
+  font-size: clamp(44px, 5.4vw, 84px);
+  line-height: 1.02;
   max-width: 18ch;
-  margin: 0 0 28px;
+  margin: 0 0 22px;
 }
 .hero-video .hv-mid .hv-top + h1 {
-  /* Compensate for serif cap-height so the visual gap matches the value */
-  margin-top: clamp(48px, 7vh, 96px);
+  /* Compensate for serif cap-height so the visual gap matches the value.
+     Capped lower so the eyebrow + h1 + lede + CTAs stack fits inside the
+     92vh hero box on short laptop viewports (was pushing CTAs out below). */
+  margin-top: clamp(28px, 4vh, 48px);
 }
 .hero-video .hv-mid h1 em { color: var(--brass); }
 .hero-video .hv-mid .lede {
   color: rgba(242,235,223,0.82);
   max-width: 38ch;
-  margin: 0 0 28px;
+  margin: 0 0 22px;
 }
 .hero-video .hv-mid .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero-video .hv-mid .ctas .btn {
