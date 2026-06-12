@@ -24,9 +24,12 @@ function todayISO() {
 // Props:
 //   rid, name, slug  -> single-location mode (location page)
 //   locations: [{slug,name,rid}]  -> multi-location mode (adds a picker)
-export default function ReservationWidget({ rid, name, slug, locations }) {
+export default function ReservationWidget({ rid, name, slug, locations, defaultSlug }) {
   const isMulti = Array.isArray(locations) && locations.length > 0;
-  const [locSlug, setLocSlug] = useState(isMulti ? locations[0].slug : null);
+  const initialSlug = isMulti
+    ? (locations.some((l) => l.slug === defaultSlug) ? defaultSlug : locations[0].slug)
+    : null;
+  const [locSlug, setLocSlug] = useState(initialSlug);
   const [covers, setCovers] = useState(2);
   const [date, setDate] = useState(todayISO());
   const [time, setTime] = useState('19:00');

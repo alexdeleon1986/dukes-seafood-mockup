@@ -29,6 +29,14 @@ export function generateMetadata() {
       images: ['/images/dukes-sign.jpg'],
     },
     twitter: { card: 'summary_large_image' },
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/icon-32.png', type: 'image/png', sizes: '32x32' },
+        { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+      ],
+      apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+    },
     ...(isProd ? {} : { robots: { index: false, follow: false } }),
   };
 }

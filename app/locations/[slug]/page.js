@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { LOCATIONS, LOCATION_SLUGS, LOCATION_LIST, getLocation, ORDER_URL } from '@/lib/locations';
 import ReservationWidget from '@/components/ReservationWidget';
+import ReserveModal from '@/components/ReserveModal';
 
 export function generateStaticParams() {
   return LOCATION_SLUGS.map((slug) => ({ slug }));
@@ -94,7 +95,7 @@ export default async function LocationPage({ params }) {
             <h1 className="h-display">{loc.heroHeadline[0]}<em>{loc.heroHeadline[1]}</em></h1>
             <p className="lede">{loc.heroLede}</p>
             <div className="hero-ctas">
-              <a href="#reserve" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">→</span></a>
+              <ReserveModal locations={LOCATION_LIST} defaultSlug={loc.slug} triggerClassName="btn btn-primary btn-lg" triggerLabel="Reserve a table" />
               <a href="/menus" className="btn btn-ghost btn-lg">View menus</a>
             </div>
           </div>

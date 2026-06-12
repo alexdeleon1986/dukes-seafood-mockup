@@ -4,7 +4,7 @@ import ReservationWidget from '@/components/ReservationWidget';
 
 // A nav-launched reservation popup. Renders a trigger styled like the nav CTA,
 // and a modal containing the multi-location reservation widget.
-export default function ReserveModal({ locations, triggerClassName = 'btn btn-primary btn-sm', triggerLabel = 'Reserve', showArrow = true }) {
+export default function ReserveModal({ locations, triggerClassName = 'btn btn-primary btn-sm', triggerLabel = 'Reserve', showArrow = true, defaultSlug }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function ReserveModal({ locations, triggerClassName = 'btn btn-pr
               <h2 className="h-display">Book a table</h2>
               <p className="reserve-modal-sub">Pick a location, date, and time. We&apos;ll hand you off to OpenTable to confirm.</p>
             </div>
-            <ReservationWidget locations={locations} />
+            <ReservationWidget locations={locations} defaultSlug={defaultSlug} />
           </div>
         </div>
       )}
