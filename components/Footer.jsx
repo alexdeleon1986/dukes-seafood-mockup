@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { getMenuHub } from '@/lib/menus';
 
-export default function Footer() {
+export default async function Footer() {
+  const menuHub = await getMenuHub();
   return (
     <footer className="footer">
       <div className="shell">
@@ -20,12 +22,9 @@ export default function Footer() {
           <div>
             <h4>Menus</h4>
             <ul>
-              <li><Link href="/menus/lunch-menu/">Lunch</Link></li>
-              <li><Link href="/menus/dinner-menu/">Dinner</Link></li>
-              <li><Link href="/menus/happy-hour-menu/">Happy Hour</Link></li>
-              <li><Link href="/menus/drinks-menu/">Drinks</Link></li>
-              <li><Link href="/menus/dessert-menu/">Dessert</Link></li>
-              <li><Link href="/menus/kids-menu/">Kids</Link></li>
+              {menuHub.map((m) => (
+                <li key={m.slug}><Link href={`/menus/${m.slug}/`}>{m.name}</Link></li>
+              ))}
             </ul>
           </div>
 

@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { LOCATIONS, LOCATION_SLUGS, LOCATION_LIST, getLocation, ORDER_URL } from '@/lib/locations';
+import { getMenuHub } from '@/lib/menus';
 import ReservationWidget from '@/components/ReservationWidget';
 import ReserveModal from '@/components/ReserveModal';
 
@@ -32,6 +33,7 @@ export default async function LocationPage({ params }) {
   if (!loc) notFound();
 
   const siblings = LOCATION_LIST.filter((l) => l.slug !== loc.slug);
+  const menuHub = await getMenuHub();
 
   // LocalBusiness / Restaurant JSON-LD for SEO parity.
   // Address + geo use the GBP-verified nap block (Supermetrics GMB, 2026-06-10).
@@ -131,12 +133,12 @@ export default async function LocationPage({ params }) {
               Menus are kept current across all six locations.
             </p>
             <div className="menus-list">
-              <a href="/menus/lunch-menu/"><span className="name">Lunch</span><span className="arr">→</span></a>
-              <a href="/menus/dinner-menu/"><span className="name">Dinner</span><span className="arr">→</span></a>
-              <a href="/menus/happy-hour-menu/"><span className="name">Happy Hour · 3–6pm &amp; 9pm–close</span><span className="arr">→</span></a>
-              <a href="/menus/drinks-menu/"><span className="name">Drinks</span><span className="arr">→</span></a>
-              <a href="/menus/dessert-menu/"><span className="name">Dessert</span><span className="arr">→</span></a>
-              <a href="/menus/kids-menu/"><span className="name">Kids</span><span className="arr">→</span></a>
+              {menuHub.map((m) => (
+                <a key={m.slug} href={`/menus/${m.slug}/`}>
+                  <span className="name">{m.slug === 'happy-hour-menu' ? 'Happy Hour · 3–6pm & 9pm–close' : m.name}</span>
+                  <span className="arr">→</span>
+                </a>
+              ))}
             </div>
           </div>
         </div>
