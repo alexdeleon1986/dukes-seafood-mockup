@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { LOCATION_LIST } from '@/lib/locations';
+import ReserveModal from '@/components/ReserveModal';
 
 export const metadata = {
   title: "Locations — Duke's Seafood",
@@ -16,7 +17,7 @@ export default function LocationsIndex() {
             <h1 className="h-display">Six dining rooms, <em>one family</em></h1>
             <p className="lede">From the Tacoma waterfront to downtown Bellevue, every Duke&apos;s is run by the Moscrip family and pours from the same wine list. Pick the view that suits the night.</p>
             <div className="hero-ctas">
-              <a href="/locations" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">→</span></a>
+              <ReserveModal locations={LOCATION_LIST} triggerClassName="btn btn-primary btn-lg" triggerLabel="Reserve a table" />
               <a href="https://order.online/business/dukes-seafood-22397" className="btn btn-ghost btn-lg">Order online</a>
             </div>
           </div>
