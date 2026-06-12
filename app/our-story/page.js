@@ -6,19 +6,20 @@ export const metadata = {
 
 const PEOPLE = [
   { name: 'Duke Moscrip', role: 'Founder', photo: '/images/duke-portrait-2015.jpg', bio: 'Opened the original Duke\u2019s on Queen Anne in 1977. Still flies to Alaska to vet the boats, still runs taste tests in the kitchen, still writes most of the company\u2019s blog posts himself.', pos: 'center top' },
-  { name: 'John Moscrip', role: "President · Duke\u2019s Son", photo: '/images/duke-john-bar.jpg', bio: 'Took over running the company. Day-to-day operations, sourcing relationships, the foundation work. Wrote the announcement of the Saving Salmon Foundation in 2025.', pos: '85% center' },
+  { name: 'John Moscrip', role: "President · Duke\u2019s Son", photo: '/images/duke-john-bar.jpg', bio: 'Took over running the company. Day-to-day operations, sourcing relationships, the foundation work. Helped launch the Dukes Damsel on a Train Foundation in 2025.', pos: '85% center' },
   { name: 'Alan Caraco', role: 'Executive Chef', photo: '/images/alan-caraco.jpg', bio: 'Runs the kitchens across all six restaurants. Develops the seasonal menu alongside Chef Bill\u2019s specials. Believes a deviled egg without crab on top is a missed opportunity.', pos: 'center' },
 ];
 
 const TIMELINE = [
   ['1977', "Duke\u2019s Bar & Grill opens on Queen Anne.", 'Two blocks from the Seattle Center. Chalkboard menu, eclectic food, cigar boxes for a register.'],
-  ['1978', "Duke\u2019s Bellevue follows.", 'The success of Queen Anne pulls a second location across the lake.'],
-  ['1989', 'The first Chowder House opens on South Lake Union.', 'The chowder recipe goes on the menu and stays on the menu.'],
+  ['1978', "The original Duke\u2019s Bellevue follows.", 'The success of Queen Anne pulls a second location across the lake. It later closed; Bellevue returns in 2017.'],
+  ['1989', 'The first Chowder House opens on South Lake Union.', 'The prototype for everything that follows. The chowder recipe goes on the menu and stays on the menu.'],
   ['1990', "Duke\u2019s Green Lake opens.", 'Right on the lake. Seaplanes overhead. Most of the year, the deck is open.'],
-  ['~1995', 'The Alaska sourcing relationships begin.', 'Duke starts buying directly from small, family-run Alaska boats.'],
-  ['2018', 'South Lake Union moves up the lake.', 'The Chowder House relocates to a larger waterfront spot with party facilities.'],
-  ['2019', 'Tacoma Waterfront opens on Ruston Way.', 'The water at your shoulder, Mount Rainier in the window.'],
-  ['2022', 'Kent Station and Westfield Southcenter open.', 'Six dining rooms, all running on the same playbook.'],
+  ['2005', 'Kent Station opens.', 'In the heart of Kent Station, with a patio and one of Kent\u2019s best happy hours.'],
+  ['2006', 'Tacoma Waterfront opens on Ruston Way.', 'Built on pilings over Puget Sound. The water at your shoulder, Mount Rainier in the window.'],
+  ['2008', 'Southcenter opens at Westfield Mall.', 'Full menu, full bar, a big patio, easy to reach from anywhere south of Seattle.'],
+  ['2017', 'Duke\u2019s returns to Bellevue.', 'A showpiece room in Lincoln Square South, and the name becomes Duke\u2019s Seafood & Chowder.'],
+  ['2019', 'South Lake Union moves up the lake.', 'The Chowder House relocates to a larger second-floor waterfront spot, and Dockside at Duke\u2019s opens below it as the first event venue.'],
   ['2025', 'The Dukes Damsel on a Train Foundation launches.', 'A foundation to fund habitat restoration for wild Pacific salmon.'],
 ];
 
