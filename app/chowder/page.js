@@ -21,7 +21,7 @@ export default function Chowder() {
         <div className="shell">
           <div>
             <h1 className="h-display">The chowder that <em>started it all</em>.</h1>
-            <p className="lede">Three-time champion of the Seattle Chowder Cook Off, made fresh every day at every location. It&apos;s the recipe Duke spent years perfecting, and we&apos;ve never had a reason to change it.</p>
+            <p className="lede">Three-time champion of the Seattle Chowder Cook Off, made fresh every day at every location. It started as Duke&apos;s grandfather&apos;s New England recipe, and we&apos;ve never had a reason to change it.</p>
             <div className="hero-ctas">
               <a href="/frozen-chowders" className="btn btn-primary btn-lg">Take it home <span className="arrow">→</span></a>
               <a href="/locations" className="btn btn-ghost btn-lg">Find a location</a>
@@ -41,7 +41,7 @@ export default function Chowder() {
           <div>
             <p className="eyebrow">The recipe</p>
             <h2 className="h-display">From <em>New England</em>, by way of South Lake Union.</h2>
-            <p style={{ marginTop: 20, marginBottom: 16, color: 'var(--ink-soft)' }}>Our clam chowder is the recipe Duke spent years perfecting with Chef Bill. We&apos;ve been pouring it since 1989, when the first Chowder House opened on South Lake Union, and it hasn&apos;t changed since.</p>
+            <p style={{ marginTop: 20, marginBottom: 16, color: 'var(--ink-soft)' }}>The recipe came from Duke&apos;s Grampa Cox, who swore it was the best in all of New England. Duke and Chef Bill refined it and started pouring it in 1989, when the first Chowder House opened on South Lake Union. It hasn&apos;t changed since.</p>
             <p style={{ marginBottom: 16, color: 'var(--ink-soft)' }}>Six other flavors have grown out of that original. None displaced it. Order the four-chowder sampler and decide for yourself.</p>
             <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', borderTop: '1px solid var(--line)', paddingTop: 24, marginTop: 8 }}>
               {[['3× Champion', 'Seattle Chowder Cook Off'], ['Best Seafood', '425 Magazine, 2025'], ['Best of', 'South Sound, 2025']].map(([a, b]) => (

@@ -157,8 +157,8 @@ export default function Home() {
             </div>
             <div>
               <p className="eyebrow">The Chowder</p>
-              <h2 className="h-display">The recipe Duke <em>perfected</em>. Three Cook Off wins.</h2>
-              <p>Our award-winning clam chowder is the same recipe we&apos;ve poured since the first Chowder House opened in 1989, made fresh every day at every location. It took home the Seattle Chowder Cook Off three years running, and now the clam, lobster, and crab go home frozen too — stocked in Puget Sound grocery freezers and delivered by Sound Bites.</p>
+              <h2 className="h-display">Duke&apos;s grandfather&apos;s recipe. <em>Three Cook Off wins.</em></h2>
+              <p>Our award-winning clam chowder started as Duke&apos;s Grampa Cox&apos;s New England recipe, and we&apos;ve poured it since the first Chowder House opened in 1989, made fresh every day at every location. It took home the Seattle Chowder Cook Off three years running, and now the clam, lobster, and crab go home frozen too — stocked in Puget Sound grocery freezers and delivered by Sound Bites.</p>
               <div className="actions">
                 <a href="/frozen-chowders/" className="btn btn-primary">Take it home <span className="arrow">→</span></a>
                 <a href="/menus/" className="btn btn-ghost">Order in restaurant</a>
