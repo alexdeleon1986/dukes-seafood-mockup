@@ -58,7 +58,7 @@
   --line: rgba(17, 32, 46, 0.14);
   --line-soft: rgba(17, 32, 46, 0.07);
 
-  --serif: var(--font-serif), "Cormorant Garamond", Georgia, serif;
+  --serif: var(--font-serif), "Newsreader", Georgia, serif;
   --sans: var(--font-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
   --mono: var(--font-mono), ui-monospace, "SF Mono", Menlo, monospace;
 
@@ -126,26 +126,6 @@ p.lede {
    Utility bar
    ========================================================= */
 
-.utility-bar {
-  background: var(--ink);
-  color: var(--cream);
-  font-size: 13px;
-}
-.utility-bar .shell {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 40px;
-  gap: 24px;
-}
-.utility-bar .links { display: flex; gap: 24px; }
-.utility-bar a {
-  color: inherit;
-  text-decoration: none;
-  opacity: 0.78;
-  transition: opacity .2s;
-}
-.utility-bar a:hover { opacity: 1; }
 
 /* =========================================================
    Nav (kept from prior version per request)
@@ -1127,9 +1107,6 @@ body[data-theme="modern"] .footer { background: #0c1720; }
   body.menu-open .hamburger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
   /* Make nav shell relative so hamburger absolutes properly */
   .nav .shell { position: relative; padding-left: 56px !important; }
-  /* Hide utility bar links on mobile (only show brand line) */
-  .utility-bar .links { display: none !important; }
-  .utility-bar .shell { justify-content: center !important; }
   /* Mobile menu overlay */
   .mobile-menu {
     position: fixed;
@@ -1171,7 +1148,7 @@ body[data-theme="modern"] .footer { background: #0c1720; }
     color: var(--cream, #f2ebdf);
     text-decoration: none;
     padding: 18px 4px;
-    font-family: var(--serif, 'Cormorant Garamond', Georgia, serif);
+    font-family: var(--serif);
     font-size: 28px;
     font-weight: 400;
     line-height: 1.1;
@@ -1211,25 +1188,38 @@ body[data-theme="modern"] .footer { background: #0c1720; }
   }
   .mobile-menu .mobile-menu-rail .dot { color: var(--brass, #b58450); margin: 0 8px; }
   body.menu-open { overflow: hidden; }
-  /* Top utility bar: prevent overflow */
-  .topbar, .topbar .inner, .topbar > * {
-    font-size: 10px !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
+  /* Hero video: pull the lockup to top-aligned so it doesn't feel orphaned */
+  .hero-video .hv-mid {
+    align-self: start !important;
+    margin-bottom: 0 !important;
+    margin-top: 12vh;
   }
-  /* Section padding tightened for mobile */
+  .hero-video .hv-mid h1 {
+    font-size: clamp(36px, 9vw, 48px) !important;
+    max-width: none !important;
+  }
+  .hero-video .hv-mid .lede {
+    max-width: none !important;
+    font-size: 15px;
+  }
+  .hero-video .hv-content {
+    padding-top: clamp(20px, 4vh, 32px) !important;
+    padding-bottom: clamp(24px, 4vh, 40px) !important;
+  }
+  /* Static hero (non-video pages): tighten typography */
+  .hero h1, .hero .h-display {
+    font-size: clamp(32px, 9vw, 44px) !important;
+    line-height: 1.05 !important;
+  }
+  /* Section headlines: scale down and add breathing room */
+  .h-display {
+    font-size: clamp(28px, 8vw, 40px) !important;
+    line-height: 1.1 !important;
+  }
+  /* Section spacing tightened for mobile */
   .sec {
-    padding-top: clamp(40px, 8vw, 56px) !important;
-    padding-bottom: clamp(40px, 8vw, 56px) !important;
-  }
-  /* Reservation widget: prevent overflow */
-  #reservation-mount {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  #reservation-mount * {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
+    padding-top: clamp(48px, 8vw, 64px) !important;
+    padding-bottom: clamp(48px, 8vw, 64px) !important;
   }
   /* Event option cards: collapse internal photo+body grid to single column */
   .event {
@@ -1248,14 +1238,9 @@ body[data-theme="modern"] .footer { background: #0c1720; }
   .event .opt {
     font-size: 10px !important;
   }
-  /* Hero: tighten typography */
-  .hero h1, .hero .h-display {
-    font-size: clamp(32px, 9vw, 44px) !important;
-    line-height: 1.05 !important;
-  }
-  /* Buttons stack full width on mobile */
+  /* Buttons stack full width on mobile for easier tapping */
   .actions {
-    flex-direction: column !important;
+    flex-direction: column;
     align-items: stretch !important;
     gap: 12px !important;
   }
@@ -1320,55 +1305,6 @@ body[data-theme="modern"] {
   --line-soft: rgba(12, 23, 32, 0.06);
 }
 
-  /* Reservation widget: prevent overflow at narrow widths */
-  #reservation-mount {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* Hero: pull the lockup back to top-aligned on mobile so it doesnt feel orphaned */
-  .hero-video .hv-mid {
-    align-self: start !important;
-    margin-bottom: 0 !important;
-    margin-top: 12vh;
-  }
-
-  /* Section headlines: scale down and add breathing room */
-  .h-display {
-    font-size: clamp(28px, 8vw, 40px) !important;
-    line-height: 1.1 !important;
-  }
-
-  /* Tighten section spacing throughout */
-  .sec {
-    padding-top: clamp(48px, 8vw, 64px) !important;
-    padding-bottom: clamp(48px, 8vw, 64px) !important;
-  }
-
-  /* Location cards: ensure photos always render with a min-height */
-  .locations-grid .card .photo,
-  .locations-grid .card image-slot {
-    aspect-ratio: 4/3;
-    min-height: 200px;
-    display: block;
-    width: 100%;
-  }
-
-  .locations-grid .card h3 {
-    font-size: 22px !important;
-  }
-
-  /* Footer: tighter padding and stacking */
-  footer .shell, footer .row {
-    gap: 24px !important;
-  }
-
-  /* Buttons: full-width on mobile for easier tapping */
-  .actions {
-    flex-direction: column;
-    align-items: stretch !important;
-    gap: 12px !important;
-  }
 @media (max-width: 768px) {
   /* The iframe is never injected on mobile (HeroVideoBackground guards it), so
      the poster image is the hero. The site-wide .scrim handles text contrast.
@@ -1378,192 +1314,6 @@ body[data-theme="modern"] {
 @media (max-width: 880px) { .locations-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .locations-grid { grid-template-columns: 1fr; } }
 @media (max-width: 880px) { .newsletter .shell { grid-template-columns: 1fr; } }
-@media (max-width: 600px) {
-  /* Hide nav links on mobile, leaving wordmark + Reserve only */
-  .nav-link-hide-mobile { display: none !important; }
-  /* Hamburger button */
-  .hamburger {
-    display: flex !important;
-    background: none;
-    border: 0;
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    align-items: center;
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .hamburger span {
-    display: block;
-    width: 22px;
-    height: 1.5px;
-    background: var(--ink, #0d2436);
-    transition: all 0.25s;
-  }
-  body.menu-open .hamburger span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-  body.menu-open .hamburger span:nth-child(2) { opacity: 0; }
-  body.menu-open .hamburger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-  /* Make nav shell relative so hamburger absolutes properly */
-  .nav .shell { position: relative; padding-left: 56px !important; }
-  /* Hide utility bar links on mobile (only show brand line) */
-  .utility-bar .links { display: none !important; }
-  .utility-bar .shell { justify-content: center !important; }
-  /* Mobile menu overlay */
-  .mobile-menu {
-    position: fixed;
-    inset: 0;
-    background: rgba(13, 36, 54, 0.97);
-    z-index: 100;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.3s, visibility 0s 0.3s;
-    display: flex !important;
-    align-items: flex-start;
-    justify-content: center;
-    overflow-y: auto;
-  }
-  body.menu-open .mobile-menu { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 0.3s; }
-  .mobile-menu-inner {
-    width: 100%;
-    max-width: 480px;
-    padding: 80px 32px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    position: relative;
-  }
-  .mobile-menu-close {
-    position: absolute;
-    top: 20px;
-    right: 24px;
-    background: none;
-    border: 0;
-    color: var(--cream, #f2ebdf);
-    font-size: 36px;
-    line-height: 1;
-    cursor: pointer;
-    padding: 4px 12px;
-  }
-  .mobile-menu a {
-    color: var(--cream, #f2ebdf);
-    text-decoration: none;
-    padding: 18px 4px;
-    font-family: var(--serif, 'Cormorant Garamond', Georgia, serif);
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 1.1;
-    border-bottom: 1px solid rgba(242,235,223,0.12);
-    transition: color 0.2s;
-  }
-  .mobile-menu a:hover { color: var(--brass, #b58450); }
-  .mobile-menu .mobile-menu-cta {
-    margin-top: 24px;
-    padding: 18px 24px;
-    background: var(--brass, #b58450);
-    color: var(--ink, #0d2436);
-    text-align: center;
-    border: 0;
-    font-family: var(--mono, ui-monospace, monospace);
-    font-size: 13px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-  }
-  .mobile-menu .mobile-menu-rail {
-    margin-top: 24px;
-    text-align: center;
-    font-family: var(--mono, ui-monospace, monospace);
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(242,235,223,0.6);
-  }
-  .mobile-menu .mobile-menu-rail a {
-    display: inline;
-    color: rgba(242,235,223,0.78);
-    border: 0;
-    padding: 0;
-    font-family: inherit;
-    font-size: inherit;
-    letter-spacing: inherit;
-  }
-  .mobile-menu .mobile-menu-rail .dot { color: var(--brass, #b58450); margin: 0 8px; }
-  body.menu-open { overflow: hidden; }
-  /* Top utility bar: prevent overflow */
-  .topbar, .topbar .inner, .topbar > * {
-    font-size: 10px !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-  }
-  /* Reservation widget: prevent overflow at narrow widths */
-  #reservation-mount {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  #reservation-mount * {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  /* Hero: pull the lockup back to top-aligned on mobile so it doesnt feel orphaned */
-  .hero-video .hv-mid {
-    align-self: start !important;
-    margin-bottom: 0 !important;
-    margin-top: 12vh;
-  }
-  .hero-video .hv-mid h1 {
-    font-size: clamp(36px, 9vw, 48px) !important;
-    max-width: none !important;
-  }
-  .hero-video .hv-mid .lede {
-    max-width: none !important;
-    font-size: 15px;
-  }
-  .hero-video .hv-content {
-    padding-top: clamp(20px, 4vh, 32px) !important;
-    padding-bottom: clamp(24px, 4vh, 40px) !important;
-  }
-  /* Section headlines: scale down and add breathing room */
-  .h-display {
-    font-size: clamp(28px, 8vw, 40px) !important;
-    line-height: 1.1 !important;
-  }
-  /* Tighten section spacing throughout */
-  .sec {
-    padding-top: clamp(48px, 8vw, 64px) !important;
-    padding-bottom: clamp(48px, 8vw, 64px) !important;
-  }
-  /* Location cards: ensure photos always render with a min-height */
-  .locations-grid .card .photo,
-  .locations-grid .card image-slot {
-    aspect-ratio: 4/3;
-    min-height: 200px;
-    display: block;
-    width: 100%;
-  }
-  .locations-grid .card h3 {
-    font-size: 22px !important;
-  }
-  /* Footer: tighter padding and stacking */
-  footer .shell, footer .row {
-    gap: 24px !important;
-  }
-  /* Buttons: full-width on mobile for easier tapping */
-  .actions {
-    flex-direction: column;
-    align-items: stretch !important;
-    gap: 12px !important;
-  }
-  .actions .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
 
 /* ===== VIP + Frozen Chowders + form pages (scoped to .page-simple) ===== */
 .page-simple .shell-narrow {
