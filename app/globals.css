@@ -483,6 +483,20 @@ body[data-theme="modern"] .reserve { background: #0c1720; }
   padding: 18px 16px 0;
 }
 @media (max-width: 720px) { .rf-times { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) {
+  /* Keep the embedded reservation widget inside the viewport on small phones */
+  .reserve .shell { min-width: 0; }
+  .reserve .shell > * { min-width: 0; }
+  .reserve-form { padding: 18px; max-width: 100%; }
+  .reserve-form, .reserve-form * { min-width: 0; }
+  .rf-times { padding-left: 0; padding-right: 0; }
+  /* Newsletter capture: let the email input shrink so the row fits narrow phones */
+  .newsletter .shell { min-width: 0; }
+  .newsletter .shell > * { min-width: 0; }
+  .newsletter-form { max-width: 100%; }
+  .newsletter-form input { min-width: 0; padding: 16px 14px; }
+  .newsletter-form button { padding: 0 16px; white-space: nowrap; }
+}
 .rf-time {
   background: transparent;
   border: 1px solid var(--line);
@@ -1119,7 +1133,20 @@ body[data-theme="modern"] .footer { background: #0c1720; }
   body.menu-open .hamburger span:nth-child(2) { opacity: 0; }
   body.menu-open .hamburger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
   /* Make nav shell relative so hamburger absolutes properly */
-  .nav .shell { position: relative; padding-left: 56px !important; }
+  .nav .shell { position: relative; padding-left: 48px !important; padding-right: 4px !important; gap: 8px !important; }
+  /* Tighten the centre column so the wordmark + Reserve button fit at ~320px */
+  .nav-left, .nav-right { gap: 0 !important; }
+  .nav .wordmark { max-width: 100%; }
+  .nav .wordmark image-slot, .nav .wordmark img { max-width: 132px; height: auto; }
+  /* Reserve button: shrink padding/letter-spacing so it never pushes off-screen */
+  .nav-right .btn {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    letter-spacing: 0.1em !important;
+    white-space: nowrap;
+  }
+  /* The arrow on the nav Reserve button is redundant on mobile and adds width */
+  .nav-right .btn .arrow { display: none; }
   /* Mobile menu overlay */
   .mobile-menu {
     position: fixed;

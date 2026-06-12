@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getMenu, getAllMenuSlugs, getMenuHub } from '@/lib/menus';
+import { LOCATION_LIST } from '@/lib/locations';
+import ReserveModal from '@/components/ReserveModal';
 
 // Re-fetch the sheet at most once an hour in production. A menu edit goes live
 // within this window with no redeploy. Lower for faster updates, raise to cut
@@ -80,7 +82,7 @@ export default async function MenuPage({ params }) {
             <h1 className="h-display">{menu.name} <em>menu</em></h1>
             <p className="lede">{menu.note}</p>
             <div className="hero-ctas">
-              <a href="/locations/" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">&rarr;</span></a>
+              <ReserveModal locations={LOCATION_LIST} triggerClassName="btn btn-primary btn-lg" triggerLabel="Reserve a table" />
               <a href="/menus/" className="btn btn-ghost btn-lg">All menus</a>
             </div>
             {others.length > 0 && (

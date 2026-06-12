@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import { getMenuHub } from '@/lib/menus';
+import { LOCATION_LIST } from '@/lib/locations';
+import ReserveModal from '@/components/ReserveModal';
 
 export const revalidate = 3600;
 
@@ -19,7 +21,7 @@ export default async function MenusHub() {
             <h1 className="h-display">Menus &amp; <em>specials</em></h1>
             <p className="lede">Sustainable seafood, grass-fed beef, organic chicken, and the freshest seasonal produce. Gluten-free and vegetarian options at every location.</p>
             <div className="hero-ctas">
-              <a href="/locations" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">&rarr;</span></a>
+              <ReserveModal locations={LOCATION_LIST} triggerClassName="btn btn-primary btn-lg" triggerLabel="Reserve a table" />
               <a href="https://order.online/business/dukes-seafood-22397" className="btn btn-ghost btn-lg">Order online</a>
             </div>
           </div>

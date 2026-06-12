@@ -45,6 +45,16 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="awards-strip" aria-label="Awards">
+        <div className="shell">
+          <ul className="awards-list">
+            {AWARDS.map((a, i) => (
+              <li key={i}><span className="aw-name">{a.award}</span><span className="aw-src">{a.source}</span></li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <section className="sec about" id="story">
         <div className="shell">
           <div className="about-lead">
@@ -124,16 +134,6 @@ export default function Home() {
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
           </div>
-        </div>
-      </section>
-
-      <section className="awards-strip" aria-label="Awards">
-        <div className="shell">
-          <ul className="awards-list">
-            {AWARDS.map((a, i) => (
-              <li key={i}><span className="aw-name">{a.award}</span><span className="aw-src">{a.source}</span></li>
-            ))}
-          </ul>
         </div>
       </section>
 
