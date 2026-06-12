@@ -100,7 +100,7 @@ export default function Home() {
             <a href="/locations/lake-union/" className="location-card">
               <div className="photo"><span className="imgfill"><Image src="/images/slu-interior.jpg" alt="South Lake Union" fill sizes="(max-width: 880px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></span></div>
               <div className="city">South Lake Union</div>
-              <div className="meta"><strong>The original Chowder House.</strong> Big bar, lake views, the patio that started it all. Opened 1989.</div>
+              <div className="meta"><strong>The best view in the city.</strong> Front-row Lake Union and skyline views, minutes from downtown.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
             <a href="/locations/bellevue/" className="location-card">
