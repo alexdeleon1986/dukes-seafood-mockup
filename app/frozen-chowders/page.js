@@ -59,7 +59,7 @@ export default function FrozenChowders() {
 
       <section className="sec">
         <div className="shell-narrow">
-          <div className="sec-head"><h2 className="h-display">Three to choose from</h2></div>
+          <div className="sec-head"><h2 className="h-display">Three to <em>choose from</em></h2></div>
         </div>
         <div className="shell shell-products">
           <div className="product-grid">
@@ -82,7 +82,7 @@ export default function FrozenChowders() {
 
       <section className="sec alt">
         <div className="shell-narrow">
-          <div className="sec-head"><h2 className="h-display">Find it near you</h2></div>
+          <div className="sec-head"><h2 className="h-display">Find it <em>near you</em></h2></div>
           <p className="body">Duke&apos;s frozen chowders and bisque are stocked at grocers around the Puget Sound:</p>
           <ul className="plain-list">
             {RETAILERS.map((r) => <li key={r}>{r}</li>)}

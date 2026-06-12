@@ -36,7 +36,7 @@ export default function DukesVip() {
 
       <section className="sec alt">
         <div className="shell-narrow">
-          <div className="sec-head"><h2 className="h-display">What members get</h2></div>
+          <div className="sec-head"><h2 className="h-display">What members <em>get</em></h2></div>
           <div className="benefit">
             <h3>A 2-for-1 entree to start</h3>
             <p className="body">Sign up and we send a 2-for-1 entree offer right away. Buy one entree at full price, get one of our five top choices free.</p>

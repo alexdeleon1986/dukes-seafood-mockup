@@ -48,7 +48,7 @@ export default function Home() {
       <section className="sec about" id="story">
         <div className="shell">
           <div className="about-lead">
-            <h2 className="h-display">Seattle&apos;s been eating here since 1977</h2>
+            <h2 className="h-display">Seattle&apos;s been eating here <em>since 1977</em></h2>
           </div>
           <div>
             <p>Duke opened the first Duke&apos;s in 1977, two blocks from the Seattle Center, with cigar boxes for a register because nobody had set up a real one yet. Nearly fifty years later his son John runs the company, the chowder is the same recipe we&apos;ve poured since the first Chowder House, and the same family sits at the same tables.</p>
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
             <div>
               <p className="eyebrow">Happy Hour</p>
-              <h2 className="h-display">Twice a day. Full portions, not just drinks</h2>
+              <h2 className="h-display">Happy hour comes around <em>twice a day</em>, and the plates never shrink</h2>
               <p>Happy hour runs 3&ndash;6pm and again from 9 to close, seven days a week &mdash; dining room, bar, and deck. Dishes straight off the regular menu at happy hour prices, in full portions. We never shrink the plate.</p>
               <div className="actions">
                 <a href="/menus/happy-hour-menu/" className="btn btn-primary">See the happy hour menu <span className="arrow">→</span></a>
@@ -82,7 +82,7 @@ export default function Home() {
       <section className="sec" id="locations">
         <div className="shell">
           <div className="sec-head">
-            <h2 className="h-display">One menu. Six dining rooms</h2>
+            <h2 className="h-display">One menu, poured across <em>six dining rooms</em></h2>
             <div className="head-aside">From South Lake Union to Tacoma's Ruston Way, every Duke's is run by the Moscrip family and pours from the same wine list. Pick the view that suits the night.</div>
           </div>
 
@@ -156,7 +156,7 @@ export default function Home() {
             </div>
             <div>
               <p className="eyebrow">The Chowder</p>
-              <h2 className="h-display">Duke&apos;s grandfather&apos;s recipe. Three Cook Off wins</h2>
+              <h2 className="h-display">Duke&apos;s grandfather&apos;s recipe won the <em>Cook-Off three years running</em></h2>
               <p>It started as Duke&apos;s Grampa Cox&apos;s New England recipe, and we&apos;ve poured it every day since the first Chowder House opened in 1989. It won the Seattle Chowder Cook Off three years running, and then they asked us to stop entering so someone else could have a turn. The clam, lobster, and crab go home frozen now too, stocked in Puget Sound grocery freezers and delivered by Sound Bites.</p>
               <div className="actions">
                 <a href="/frozen-chowders/" className="btn btn-primary">Take it home <span className="arrow">→</span></a>
@@ -170,7 +170,7 @@ export default function Home() {
       <section className="reserve" id="reserve">
         <div className="shell">
           <div>
-            <h2 className="h-display">Reserve at any of the six</h2>
+            <h2 className="h-display">Reserve a table at <em>any of the six</em></h2>
             <p className="lede">Pick a date, time, and dining room. We'll hand you off to OpenTable to confirm. Walk-ins always welcome at the bar.</p>
           </div>
           <ReservationWidget locations={RESERVE_LOCATIONS} />
@@ -185,7 +185,7 @@ export default function Home() {
             </div>
             <div>
               <p className="eyebrow">Dukes Damsel on a Train Foundation</p>
-              <h2 className="h-display">We've served wild salmon for nearly fifty years. We'd like to serve it for fifty more</h2>
+              <h2 className="h-display">We&apos;ve served wild salmon for nearly fifty years, and we&apos;d like to <em>serve it for fifty more</em></h2>
               <p>Wild Pacific salmon are running out of clean, cold water to spawn in. We&apos;ve served that salmon for nearly fifty years, so in 2025 we started the Dukes Damsel on a Train Foundation, with Damsel Cellars and the band Train, to fund habitat restoration across the rivers our fish come home to.</p>
               <div className="actions">
                 <a href="https://dukesseafood.com/blog/dukes-partners-with-damsel-cellars-and-train-to-launch-foundation-to-save-wild-salmon/" className="btn btn-primary">Read the story <span className="arrow">→</span></a>
@@ -198,7 +198,7 @@ export default function Home() {
       <section className="newsletter">
         <div className="shell">
           <div>
-            <h2 className="h-display">Join the club, get a 2-for-1 dinner</h2>
+            <h2 className="h-display">Join the club and dinner&apos;s <em>two-for-one</em></h2>
             <p>Join the club and a 2-for-1 dinner offer lands in your inbox. There&apos;s a free entree every birthday too, because Duke decided long ago that nobody pays for dinner on their birthday. Check in when you dine and the visit works for you: $10 off a bill of $50, $20 off a bill of $100.</p>
           </div>
           <div>

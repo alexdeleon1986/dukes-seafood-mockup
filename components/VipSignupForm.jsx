@@ -23,6 +23,12 @@ export default function VipSignupForm() {
     setError('');
     if (!f.first.trim()) { setError('Please enter your first name.'); return; }
     if (!isEmail(f.email)) { setError('Please enter a valid email address.'); return; }
+    // Until the form is wired to a backend, this is a non-functional preview:
+    // validate, then show a demo confirmation rather than POSTing to a dead route.
+    if (!FORMS_ENABLED) {
+      setDone(true);
+      return;
+    }
     setSubmitting(true);
     try {
       const res = await fetch('/api/vip-signup', {
@@ -48,27 +54,19 @@ export default function VipSignupForm() {
       <div className="form-confirm">
         <div className="check">✓</div>
         <h3>Welcome to the club, {f.first}.</h3>
-        <p className="body">Your 2-for-1 dinner offer is on its way to your inbox. If it hasn&apos;t arrived within a few minutes, check your spam folder.</p>
-      </div>
-    );
-  }
-
-  // Honest pre-wiring state: don't collect data we can't deliver on.
-  if (!FORMS_ENABLED) {
-    return (
-      <div className="vip-form">
-        <div className="form-note" style={{ marginBottom: 12 }}>
-          Online sign-ups open soon. In the meantime, join the Email Club at any
-          Duke&apos;s location and start with a 2-for-1 dinner.
-        </div>
-        <a href="/locations/" className="btn btn-primary btn-lg">Find a location <span className="arrow">→</span></a>
+        <p className="body">{FORMS_ENABLED
+          ? <>Your 2-for-1 dinner offer is on its way to your inbox. If it hasn&apos;t arrived within a few minutes, check your spam folder.</>
+          : <>This is a preview of the sign-up flow. Once it&apos;s live, your 2-for-1 dinner offer will land in your inbox right after you join.</>}
+        </p>
       </div>
     );
   }
 
   return (
     <div className="vip-form">
-      <p className="form-note">A required field is marked with *</p>
+      {FORMS_ENABLED
+        ? <p className="form-note">A required field is marked with *</p>
+        : <p className="form-note">Preview — this sign-up form isn&apos;t collecting entries yet. A required field is marked with *</p>}
       <label className="field">
         <span className="field-label">First name *</span>
         <input type="text" value={f.first} onChange={set('first')} placeholder="First name" required />

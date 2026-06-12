@@ -109,7 +109,7 @@ export default async function LocationPage({ params }) {
       <section className="sec about">
         <div className="shell">
           <div>
-            <h2 className="h-display">{loc.about.heading[0]}{loc.about.heading[1]}</h2>
+            <h2 className="h-display">{loc.about.heading[0]}<em>{loc.about.heading[1]}</em></h2>
           </div>
           <div>
             {loc.about.paras.map((p, i) => <p key={i} style={{ marginBottom: 16 }}>{p}</p>)}
@@ -125,7 +125,7 @@ export default async function LocationPage({ params }) {
           </div>
           <div>
             <div className="sec-head" style={{ marginBottom: 20 }}>
-              <h2 className="h-display">Menus &amp; specials</h2>
+              <h2 className="h-display">Menus &amp; <em>specials</em></h2>
             </div>
             <p style={{ color: 'var(--ink-soft)', margin: '0 0 12px', maxWidth: '44ch' }}>
               Menus are kept current across all six locations.
@@ -146,7 +146,7 @@ export default async function LocationPage({ params }) {
       <section className="reserve" id="reserve">
         <div className="shell">
           <div>
-            <h2 className="h-display">Reserve at {loc.name}</h2>
+            <h2 className="h-display">Reserve at <em>{loc.name}</em></h2>
             <p className="lede">Walk-ins always welcome at the bar — full menu and happy hour served there every day of the week.</p>
           </div>
           <ReservationWidget rid={loc.rid} name={loc.name} slug={loc.slug} />
@@ -157,7 +157,7 @@ export default async function LocationPage({ params }) {
       <section className="sec events" id="events">
         <div className="shell">
           <div className="sec-head">
-            <h2 className="h-display">Private &amp; semi-private dining</h2>
+            <h2 className="h-display">Private &amp; semi-private <em>dining</em></h2>
             <div className="head-aside">{loc.events.aside}</div>
           </div>
           <div className="events-intro">
@@ -193,7 +193,7 @@ export default async function LocationPage({ params }) {
       <section className="sec visit" id="visit">
         <div className="shell">
           <div className="col col-info">
-            <h2 className="h-display" style={{ marginBottom: 24 }}>Visit {loc.name}</h2>
+            <h2 className="h-display" style={{ marginBottom: 24 }}>Visit <em>{loc.name}</em></h2>
             <div className="hours-block">
               {loc.hours.map((h, i) => (
                 <span key={i} style={{ display: 'contents' }}>
@@ -235,7 +235,7 @@ export default async function LocationPage({ params }) {
       {/* Other locations */}
       <section className="sec">
         <div className="shell">
-          <div className="sec-head"><h2 className="h-display">Visit another Duke&apos;s</h2></div>
+          <div className="sec-head"><h2 className="h-display">Visit another <em>Duke&apos;s</em></h2></div>
           <div className="menus-list">
             {siblings.map((s) => (
               <a key={s.slug} href={`/locations/${s.slug}`}>

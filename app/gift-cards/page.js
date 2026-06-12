@@ -47,7 +47,7 @@ export default function GiftCards() {
 
       <section className="sec alt">
         <div className="shell-narrow">
-          <div className="sec-head"><h2 className="h-display">Already have one?</h2></div>
+          <div className="sec-head"><h2 className="h-display">Already <em>have one?</em></h2></div>
           <p className="body">Check your balance any time. Duke&apos;s gift cards work at every location, for dining in or takeout, and never expire.</p>
           <a href={BALANCE_LINK} className="btn btn-ghost btn-lg" target="_blank" rel="noopener noreferrer" style={{ marginTop: 8 }}>Check your balance</a>
         </div>

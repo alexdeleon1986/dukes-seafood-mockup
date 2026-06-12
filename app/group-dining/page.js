@@ -69,7 +69,7 @@ export default function GroupDining() {
         <div className="shell">
           <div className="gd-dockside-inner">
             <p className="eyebrow">Bigger events</p>
-            <h2 className="h-display">Booking the whole room?</h2>
+            <h2 className="h-display">Booking the <em>whole room?</em></h2>
             <p className="body">For full-venue events, weddings, and large receptions, our dedicated event space, Dockside at Duke&apos;s on South Lake Union, is built for it: a private floor, a full event team, and seating well beyond what the restaurant rooms hold.</p>
             <a href={DOCKSIDE_URL} className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Visit Dockside at Duke&apos;s <span className="arrow">→</span></a>
           </div>

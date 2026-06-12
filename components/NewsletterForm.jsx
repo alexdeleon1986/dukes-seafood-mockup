@@ -13,6 +13,8 @@ export default function NewsletterForm() {
   async function handleSubmit(e) {
     e.preventDefault();
     if (!isEmail(email)) { setState('error'); return; }
+    // Preview mode: validate and confirm without POSTing to a route that isn't live.
+    if (!FORMS_ENABLED) { setState('done'); return; }
     setState('submitting');
     try {
       const res = await fetch('/api/vip-signup', {
@@ -25,14 +27,6 @@ export default function NewsletterForm() {
     } catch {
       setState('error');
     }
-  }
-
-  if (!FORMS_ENABLED) {
-    return (
-      <p className="newsletter-soon">
-        Email sign-ups open soon. Join the Duke&apos;s Email Club at any location for a 2-for-1 dinner.
-      </p>
-    );
   }
 
   return (
@@ -48,6 +42,11 @@ export default function NewsletterForm() {
       <button type="submit" disabled={state === 'submitting' || state === 'done'}>
         {state === 'done' ? 'Welcome aboard ✓' : state === 'submitting' ? 'Joining…' : 'Join'}
       </button>
+      {!FORMS_ENABLED && state !== 'done' && (
+        <span className="newsletter-note" style={{ display: 'block', marginTop: 8, fontSize: 12, color: 'var(--ink-soft)' }}>
+          Preview — not collecting entries yet.
+        </span>
+      )}
       {state === 'error' && (
         <span className="newsletter-err" role="alert" style={{ display: 'block', marginTop: 8, fontSize: 13, color: 'var(--brass-dark)' }}>
           Please enter a valid email, or try again shortly.
