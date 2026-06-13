@@ -92,15 +92,15 @@ export default function Home() {
       <section className="sec" id="locations">
         <div className="shell">
           <div className="sec-head">
-            <h2 className="h-display">One menu, served across <em>six dining rooms</em></h2>
-            <div className="head-aside">From South Lake Union to Tacoma&apos;s Ruston Way, every Duke&apos;s is run by the Moscrip family, serves the same menu, and pours from the same wine list. Pick the view that suits the night.</div>
+            <h2 className="h-display">One menu, poured across <em>six dining rooms</em></h2>
+            <div className="head-aside">From South Lake Union to Tacoma's Ruston Way, every Duke's is run by the Moscrip family and pours from the same wine list. Pick the view that suits the night.</div>
           </div>
 
           <div className="locations-grid">
             <a href="/locations/lake-union/" className="location-card">
               <div className="photo"><span className="imgfill"><Image src="/images/slu-interior.jpg" alt="South Lake Union" fill sizes="(max-width: 880px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></span></div>
               <div className="city">South Lake Union</div>
-              <div className="meta"><strong>The best view in the city.</strong> Front-row Lake Union and skyline views, minutes from downtown.</div>
+              <div className="meta"><strong>The original Chowder House.</strong> Big bar, lake views, the patio that started it all. Opened 1989.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
             <a href="/locations/bellevue/" className="location-card">
@@ -112,7 +112,7 @@ export default function Home() {
             <a href="/locations/green-lake/" className="location-card">
               <div className="photo"><span className="imgfill"><Image src="/images/greenlake-hero.jpg" alt="Green Lake" fill sizes="(max-width: 880px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></span></div>
               <div className="city">Green Lake</div>
-              <div className="meta"><strong>A neighborhood favorite.</strong> Family-friendly dining and a deck on the lake, open most of the year.</div>
+              <div className="meta"><strong>Right on the lake.</strong> Seaplanes overhead, the deck open most of the year.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
             <a href="/locations/tacoma/" className="location-card">
