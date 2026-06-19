@@ -67,7 +67,7 @@ export default function OurStory() {
       {/* Sourcing */}
       <section className="sec menus">
         <div className="shell">
-          <div className="photo imgfill" style={{ aspectRatio: '4/5' }}>
+          <div className="photo imgfill" style={{ aspectRatio: '1278/1760' }}>
             <img src="/images/duke-rockfish.jpg" alt="Duke Moscrip fishing for rockfish in Alaska" />
           </div>
           <div>
@@ -76,7 +76,7 @@ export default function OurStory() {
             <p style={{ marginTop: 20, marginBottom: 16, color: 'var(--ink-soft)' }}>For more than three decades, our wild salmon has come from the same small, family-run Alaska fishing operations. Duke knows the captains by name and visits the docks himself.</p>
             <p style={{ marginBottom: 16, color: 'var(--ink-soft)' }}>Alaska is the only US state with sustainability written directly into its constitution, required since statehood in 1959. That&apos;s the law our suppliers fish under.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, marginTop: 32, borderTop: '1px solid var(--line)', paddingTop: 28 }}>
-              {[['30+', 'Years sourcing from Alaska'], ['100%', 'Wild & sustainably caught'], ['1959', 'Sustainability in AK law']].map(([n, l]) => (
+              {[['30+', 'Years sourcing from Alaska'], ['100%', 'Wild & sustainably caught'], ['6', 'Dining rooms, one supply chain']].map(([n, l]) => (
                 <div key={n}>
                   <div style={{ fontFamily: 'var(--serif)', fontSize: 40, color: 'var(--ink)', lineHeight: 1 }}>{n}</div>
                   <div style={{ fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brass-dark)', marginTop: 10 }}>{l}</div>
