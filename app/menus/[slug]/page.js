@@ -51,8 +51,11 @@ function menuSchema(menu) {
         '@type': 'MenuItem',
         name: it.name,
         ...(it.desc ? { description: it.desc } : {}),
-        ...(it.price && /\d/.test(it.price)
-          ? { offers: { '@type': 'Offer', price: it.price.replace(/[^0-9.]/g, '') || undefined, priceCurrency: 'USD' } }
+        // Multi-size prices ("$16.90/$21.90/$26.90") use the first (smallest)
+        // size. Stripping non-digits used to glue them into "16.9021.9026.90".
+        // "$3 OFF" happy hour discounts aren't prices, so they're skipped.
+        ...(it.price && !/off/i.test(it.price) && /\d/.test(it.price)
+          ? { offers: { '@type': 'Offer', price: it.price.match(/\d+(?:\.\d+)?/)[0], priceCurrency: 'USD' } }
           : {}),
         ...(it.gf ? { suitableForDiet: 'https://schema.org/GlutenFreeDiet' } : {}),
       })),
