@@ -1,0 +1,300 @@
+/* =========================================================
+   Duke's Seafood: shop.dukesseafood.com brand layer
+   Loaded after Dawn's base.css. Mirrors the tokens, type and
+   components of the dukesseafood.com rebuild (app/globals.css)
+   so the shop reads as the same site.
+
+   Rules here are scoped to Dawn's own class names or to .dukes-*
+   classes, so they don't leak into app blocks or checkout.
+   ========================================================= */
+
+:root {
+  --dukes-cream: #f2ebdf;
+  --dukes-cream-2: #ebe2d2;
+  --dukes-cream-3: #ddd1bc;
+  --dukes-ink: #11202e;
+  --dukes-ink-soft: #4d5d6c;
+  --dukes-brass: #b58450;
+  --dukes-brass-dark: #8d6536;
+  --dukes-line: rgba(17, 32, 46, 0.14);
+  --dukes-line-soft: rgba(17, 32, 46, 0.07);
+
+  --dukes-serif: 'Dukes Newsreader', 'Newsreader', Georgia, serif;
+  --dukes-sans: 'Dukes Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --dukes-mono: 'Dukes Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Hand Dawn's own type variables the Duke's fonts. Declared after
+     Dawn's inline :root block, so these win without !important. */
+  --font-body-family: var(--dukes-sans);
+  --font-body-style: normal;
+  --font-body-weight: 400;
+  --font-body-weight-bold: 500;
+  --font-heading-family: var(--dukes-serif);
+  --font-heading-style: normal;
+  --font-heading-weight: 400;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Type ---------- */
+
+h1, h2, h3, h4, h5,
+.h0, .h1, .h2, .h3, .h4, .h5 {
+  font-family: var(--dukes-serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+h1 em, h2 em, h3 em,
+.h0 em, .h1 em, .h2 em, .h3 em {
+  font-style: italic;
+  color: var(--dukes-brass-dark);
+}
+/* On the dark (ink) and brass schemes the dark brass is too dim; use the
+   lighter brass, as the main site does on its dark bands. */
+.color-scheme-3 h1 em, .color-scheme-3 h2 em, .color-scheme-3 h3 em,
+.color-scheme-3 .dukes-eyebrow,
+.color-scheme-5 h1 em, .color-scheme-5 h2 em, .color-scheme-5 h3 em {
+  color: var(--dukes-brass);
+}
+.color-scheme-5 h1 em, .color-scheme-5 h2 em, .color-scheme-5 h3 em { color: var(--dukes-cream); }
+
+/* Section eyebrows, as on the main site */
+.dukes-eyebrow {
+  font-family: var(--dukes-serif);
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.14em;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--dukes-brass-dark);
+  margin: 0 0 14px;
+}
+
+/* ---------- Buttons ---------- */
+
+.button,
+.shopify-challenge__button,
+.customer button {
+  font-family: var(--dukes-sans);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+.button .dukes-arrow { display: inline-block; margin-left: 10px; transition: transform .2s ease; }
+.button:hover .dukes-arrow { transform: translateX(3px); }
+
+/* ---------- Header ---------- */
+
+.header-wrapper { border-bottom: 1px solid var(--dukes-line-soft); }
+
+.header__menu-item,
+.header__active-menu-item,
+.menu-drawer__menu-item {
+  font-family: var(--dukes-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.header__menu-item span { text-decoration: none; }
+.header__menu-item:hover span,
+.header__active-menu-item { color: var(--dukes-brass-dark); text-decoration: none; }
+
+/* Mobile drawer links stay readable at phone size */
+.menu-drawer__menu-item { font-size: 13px; }
+
+.dukes-wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+.dukes-wordmark__logo {
+  display: block;
+  width: 160px;
+  height: 48px;
+  object-fit: contain;
+}
+.dukes-wordmark__tag {
+  display: block;
+  font-family: var(--dukes-mono);
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  font-weight: 500;
+  color: var(--dukes-brass);
+  margin-top: 4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+@media screen and (max-width: 749px) {
+  .dukes-wordmark__logo { width: 128px; height: 38px; }
+  .dukes-wordmark__tag { font-size: 8px; letter-spacing: 0.24em; }
+}
+
+/* ---------- Product cards and product page ---------- */
+
+.card__heading,
+.card-information .card__heading {
+  font-family: var(--dukes-serif);
+  font-size: 20px;
+  letter-spacing: -0.01em;
+}
+.card__heading a { text-decoration: none; }
+
+.price,
+.price-item,
+.price__regular .price-item--regular {
+  font-family: var(--dukes-mono);
+  letter-spacing: 0.02em;
+}
+.price-item--regular,
+.price-item--sale { color: var(--dukes-brass-dark); }
+
+.product__title h1,
+.product__title .h1 { font-size: clamp(30px, 3.5vw, 40px); line-height: 1.05; }
+
+.product-form__input .form__label,
+.quantity__label,
+.product__text.caption-with-letter-spacing,
+.caption-with-letter-spacing {
+  font-family: var(--dukes-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+/* ---------- Section titles ---------- */
+
+.title-wrapper .title,
+.collection__title .title {
+  font-size: clamp(30px, 3.5vw, 40px);
+  line-height: 1.05;
+}
+
+/* =========================================================
+   Duke's sections (sections/dukes-*.liquid)
+   ========================================================= */
+
+.dukes-section { padding: clamp(56px, 7vw, 96px) 0; }
+
+/* Hero */
+.dukes-hero__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+.dukes-hero__grid > * { min-width: 0; }
+.dukes-hero__heading {
+  font-size: clamp(36px, 4.6vw, 56px);
+  line-height: 1;
+  margin: 0;
+}
+.dukes-hero__lede {
+  font-family: var(--dukes-serif);
+  font-size: clamp(19px, 1.4vw, 22px);
+  line-height: 1.4;
+  margin: 22px 0 0;
+  max-width: 38ch;
+  text-wrap: pretty;
+}
+.dukes-hero__ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+.dukes-hero__media { aspect-ratio: 4 / 5; overflow: hidden; }
+.dukes-hero__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media screen and (max-width: 749px) {
+  .dukes-hero__grid { grid-template-columns: 1fr; }
+  .dukes-hero__media { aspect-ratio: 4 / 3; order: -1; }
+}
+
+/* Product grid head */
+.dukes-products__head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 40px;
+}
+.dukes-products__head > * { min-width: 0; }
+.dukes-products__heading { font-size: clamp(30px, 3.5vw, 40px); line-height: 1.05; margin: 0; }
+.dukes-products__aside { margin: 0; max-width: 46ch; color: var(--dukes-ink-soft); }
+.dukes-products__empty { color: var(--dukes-ink-soft); }
+@media screen and (max-width: 749px) {
+  .dukes-products__head { grid-template-columns: 1fr; }
+}
+
+/* Contact / callout band */
+.dukes-band__grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+}
+.dukes-band__grid > * { min-width: 0; }
+.dukes-band__heading { font-size: clamp(28px, 3.2vw, 36px); line-height: 1.1; margin: 0; }
+.dukes-band__body { margin: 14px 0 0; max-width: 56ch; opacity: 0.82; }
+.dukes-band__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+@media screen and (max-width: 749px) {
+  .dukes-band__grid { grid-template-columns: 1fr; }
+}
+
+/* Footer */
+.dukes-footer { padding: 64px 0 28px; }
+.dukes-footer__grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(242, 235, 223, 0.18);
+}
+.dukes-footer__grid > * { min-width: 0; }
+.dukes-footer .dukes-wordmark { align-items: flex-start; }
+.dukes-footer .dukes-wordmark__logo {
+  width: 200px;
+  height: 60px;
+  object-position: left center;
+  filter: brightness(0) invert(1) opacity(0.92);
+}
+.dukes-footer .dukes-wordmark__tag { margin-top: 8px; }
+.dukes-footer__blurb {
+  margin: 20px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  max-width: 32ch;
+  opacity: 0.72;
+}
+.dukes-footer__heading {
+  font-family: var(--dukes-sans);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.55;
+  margin: 0 0 14px;
+}
+.dukes-footer__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.dukes-footer a {
+  color: rgba(242, 235, 223, 0.85);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color .2s;
+}
+.dukes-footer a:hover { color: var(--dukes-brass); }
+.dukes-footer__bottom {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  opacity: 0.6;
+}
+.dukes-footer__policies { display: flex; gap: 16px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
+.dukes-footer__policies a { font-size: 12px; }
+.dukes-footer .list-payment { margin: 16px 0 0; justify-content: flex-start; }
+@media screen and (max-width: 880px) {
+  .dukes-footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .dukes-footer__brand { grid-column: 1 / -1; }
+}

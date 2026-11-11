@@ -1,0 +1,88 @@
+{% comment %}
+  Duke's footer, matching the dukesseafood.com footer. Each column is a block
+  with a heading and one link per line, written "Label | URL", so staff can
+  edit links in the theme editor without setting up Shopify navigation menus.
+  Every default link points at a URL that exists on both the current and the
+  rebuilt dukesseafood.com, so nothing breaks at cutover.
+{% endcomment %}
+<footer class="dukes-footer color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="dukes-footer__grid">
+      <div class="dukes-footer__brand">
+        <a href="{{ section.settings.home_link | default: 'https://dukesseafood.com/' | escape }}" aria-label="{{ shop.name | escape }}">
+          {% render 'dukes-wordmark', variant: 'footer' %}
+        </a>
+        {%- if section.settings.blurb != blank -%}
+          <p class="dukes-footer__blurb">{{ section.settings.blurb | escape }}</p>
+        {%- endif -%}
+      </div>
+
+      {%- for block in section.blocks -%}
+        <div {{ block.shopify_attributes }}>
+          {%- if block.settings.heading != blank -%}
+            <h2 class="dukes-footer__heading">{{ block.settings.heading | escape }}</h2>
+          {%- endif -%}
+          <ul class="dukes-footer__list" role="list">
+            {%- assign lines = block.settings.links | newline_to_br | split: '<br />' -%}
+            {%- for line in lines -%}
+              {%- assign parts = line | strip | split: '|' -%}
+              {%- if parts.size > 1 -%}
+                <li><a href="{{ parts[1] | strip | escape }}">{{ parts[0] | strip | escape }}</a></li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <div class="dukes-footer__bottom">
+      <span>&copy; {{ 'now' | date: '%Y' }} {{ section.settings.copyright | escape }}</span>
+      {%- if section.settings.show_policies -%}
+        <ul class="dukes-footer__policies" role="list">
+          {%- for policy in shop.policies -%}
+            {%- if policy != blank -%}
+              <li><a href="{{ policy.url }}">{{ policy.title | escape }}</a></li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
+      {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
+      <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+      <ul class="list list-payment" role="list">
+        {%- for type in shop.enabled_payment_types -%}
+          <li class="list-payment__item">{{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Duke's footer",
+  "tag": "div",
+  "class": "section",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "text", "id": "home_link", "label": "Logo link", "default": "https://dukesseafood.com/" },
+    { "type": "text", "id": "blurb", "label": "Line under the logo", "default": "Six restaurants across Western Washington. Family-owned since 1977." },
+    { "type": "text", "id": "copyright", "label": "Copyright line", "default": "Duke's Seafood Restaurants · Family-owned" },
+    { "type": "checkbox", "id": "show_policies", "label": "Show store policy links", "default": true },
+    { "type": "checkbox", "id": "show_payment_icons", "label": "Show payment icons", "default": true },
+    { "type": "color_scheme", "id": "color_scheme", "label": "t:sections.all.colors.label", "default": "scheme-3" }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Link column",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "textarea", "id": "links", "label": "Links", "info": "One per line, written Label | URL" }
+      ]
+    }
+  ]
+}
+{% endschema %}

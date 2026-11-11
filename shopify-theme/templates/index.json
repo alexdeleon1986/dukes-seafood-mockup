@@ -1,0 +1,48 @@
+{
+  "sections": {
+    "hero": {
+      "type": "dukes-hero",
+      "settings": {
+        "eyebrow": "The Duke's shop",
+        "heading": "Give someone a table at",
+        "heading_em": "Duke's",
+        "lede": "Duke's Seafood gift cards and As Wild As It Gets, the Duke's cookbook, from the family that has run Duke's since 1977.",
+        "button_label": "Shop gift cards",
+        "button_link": "/products/gift-cards",
+        "button_label_2": "Back to dukesseafood.com",
+        "button_link_2": "https://dukesseafood.com/",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "products": {
+      "type": "dukes-products",
+      "settings": {
+        "heading": "In the",
+        "heading_em": "shop",
+        "aside": "",
+        "limit": 6,
+        "columns_desktop": 3,
+        "empty_text": "Nothing here yet. Check back soon.",
+        "color_scheme": "scheme-2"
+      }
+    },
+    "band": {
+      "type": "dukes-band",
+      "settings": {
+        "heading": "Questions about a",
+        "heading_em": "gift card?",
+        "body": "Call (206) 283-8422. Press 2 for gift cards, or 4 for the cookbook.",
+        "button_label": "Call Duke's",
+        "button_link": "tel:2062838422",
+        "button_label_2": "Find a location",
+        "button_link_2": "https://dukesseafood.com/locations/",
+        "color_scheme": "scheme-3"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "products",
+    "band"
+  ]
+}

@@ -1,0 +1,46 @@
+{% comment %}
+  Duke's callout band: headline, one line of body, up to two buttons.
+  Defaults to the gift card phone line printed on the current shop footer.
+{% endcomment %}
+<section class="dukes-section dukes-band color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width dukes-band__grid">
+    <div>
+      <h2 class="dukes-band__heading">
+        {{- section.settings.heading | escape -}}
+        {%- if section.settings.heading_em != blank %} <em>{{ section.settings.heading_em | escape }}</em>{%- endif -%}
+      </h2>
+      {%- if section.settings.body != blank -%}
+        <p class="dukes-band__body">{{ section.settings.body | escape }}</p>
+      {%- endif -%}
+    </div>
+    <div class="dukes-band__actions">
+      {%- if section.settings.button_label != blank -%}
+        <a href="{{ section.settings.button_link | escape }}" class="button button--primary">
+          {{- section.settings.button_label | escape -}}<span class="dukes-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      {%- endif -%}
+      {%- if section.settings.button_label_2 != blank -%}
+        <a href="{{ section.settings.button_link_2 | escape }}" class="button button--secondary">{{ section.settings.button_label_2 | escape }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Duke's callout band",
+  "tag": "div",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Questions about a" },
+    { "type": "text", "id": "heading_em", "label": "Heading, brass italic part", "default": "gift card?" },
+    { "type": "textarea", "id": "body", "label": "Body", "default": "Call (206) 283-8422. Press 2 for gift cards, or 4 for the cookbook." },
+    { "type": "text", "id": "button_label", "label": "Primary button label", "default": "Call Duke's" },
+    { "type": "text", "id": "button_link", "label": "Primary button link", "info": "A full URL, a shop path like /products/gift-cards, or tel:", "default": "tel:2062838422" },
+    { "type": "text", "id": "button_label_2", "label": "Secondary button label", "default": "Find a location" },
+    { "type": "text", "id": "button_link_2", "label": "Secondary button link", "info": "A full URL, a shop path like /products/gift-cards, or tel:", "default": "https://dukesseafood.com/locations/" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "t:sections.all.colors.label", "default": "scheme-3" }
+  ],
+  "presets": [{ "name": "Duke's callout band" }]
+}
+{% endschema %}

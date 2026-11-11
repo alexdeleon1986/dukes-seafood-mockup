@@ -1,0 +1,48 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "dukes-footer",
+      "blocks": {
+        "col-0": {
+          "type": "column",
+          "settings": {
+            "heading": "Menus",
+            "links": "Lunch & Dinner | https://dukesseafood.com/menus/lunch-menu/\nHappy Hour | https://dukesseafood.com/menus/happy-hour-menu/\nKids | https://dukesseafood.com/menus/kids-menu/\nDessert | https://dukesseafood.com/menus/dessert-menu/\nSpecials | https://dukesseafood.com/menus/specials/"
+          }
+        },
+        "col-1": {
+          "type": "column",
+          "settings": {
+            "heading": "All locations",
+            "links": "Bellevue | https://dukesseafood.com/locations/bellevue/\nSouth Lake Union | https://dukesseafood.com/locations/lake-union/\nGreen Lake | https://dukesseafood.com/locations/green-lake/\nTacoma Waterfront | https://dukesseafood.com/locations/tacoma/\nSouthcenter | https://dukesseafood.com/locations/southcenter/\nKent Station | https://dukesseafood.com/locations/kent-station/"
+          }
+        },
+        "col-2": {
+          "type": "column",
+          "settings": {
+            "heading": "Duke's",
+            "links": "Gift cards | /products/gift-cards\nVIP Email Club | https://dukesseafood.com/dukes-vip/\nFrozen chowders | https://dukesseafood.com/frozen-chowders/\nRecipes | https://dukesseafood.com/recipes/\nBlog | https://dukesseafood.com/blog/"
+          }
+        }
+      },
+      "block_order": [
+        "col-0",
+        "col-1",
+        "col-2"
+      ],
+      "settings": {
+        "home_link": "https://dukesseafood.com/",
+        "blurb": "Six restaurants across Western Washington. Family-owned since 1977.",
+        "copyright": "Duke's Seafood Restaurants \u00b7 Family-owned",
+        "show_policies": true,
+        "show_payment_icons": true,
+        "color_scheme": "scheme-3"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

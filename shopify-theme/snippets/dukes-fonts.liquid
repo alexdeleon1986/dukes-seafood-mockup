@@ -1,0 +1,18 @@
+{% comment %}
+  Duke's brand fonts, self-hosted as theme assets so the shop matches
+  dukesseafood.com without depending on the Shopify font library.
+  Newsreader, Geist and JetBrains Mono are SIL Open Font License 1.1.
+{% endcomment %}
+{{ 'dukes-newsreader-latin-400-normal.woff2' | asset_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: true }}
+{{ 'dukes-geist-400.woff2' | asset_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: true }}
+{% style %}
+  @font-face { font-family: 'Dukes Newsreader'; font-style: normal; font-weight: 400; font-display: swap; src: url({{ 'dukes-newsreader-latin-400-normal.woff2' | asset_url }}) format('woff2'); }
+  @font-face { font-family: 'Dukes Newsreader'; font-style: italic; font-weight: 400; font-display: swap; src: url({{ 'dukes-newsreader-latin-400-italic.woff2' | asset_url }}) format('woff2'); }
+  @font-face { font-family: 'Dukes Newsreader'; font-style: normal; font-weight: 500; font-display: swap; src: url({{ 'dukes-newsreader-latin-500-normal.woff2' | asset_url }}) format('woff2'); }
+  @font-face { font-family: 'Dukes Newsreader'; font-style: italic; font-weight: 500; font-display: swap; src: url({{ 'dukes-newsreader-latin-500-italic.woff2' | asset_url }}) format('woff2'); }
+  @font-face { font-family: 'Dukes Geist'; font-style: normal; font-weight: 300; font-display: swap; src: url({{ 'dukes-geist-300.woff2' | asset_url }}) format('woff2'); }
+  @font-face { font-family: 'Dukes Geist'; font-style: normal; font-weight: 400; font-display: swap; src: url({{ 'dukes-geist-400.woff2' | asset_url }}) format('woff2'); }
+  @font-face { font-family: 'Dukes Geist'; font-style: normal; font-weight: 500; font-display: swap; src: url({{ 'dukes-geist-500.woff2' | asset_url }}) format('woff2'); }
+  @font-face { font-family: 'Dukes Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url({{ 'dukes-mono-400.woff2' | asset_url }}) format('woff2'); }
+  @font-face { font-family: 'Dukes Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url({{ 'dukes-mono-500.woff2' | asset_url }}) format('woff2'); }
+{% endstyle %}

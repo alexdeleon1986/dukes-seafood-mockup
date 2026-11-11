@@ -1,0 +1,16 @@
+{% comment %}
+  Duke's logo + tagline, matching the dukesseafood.com header and footer.
+  Used when no logo is uploaded in Theme settings (the default for this theme).
+
+  @param {string} [variant] - 'header' (default) or 'footer'. The footer
+    version is inverted to cream for the dark background.
+{% endcomment %}
+{%- assign variant = variant | default: 'header' -%}
+<span class="dukes-wordmark dukes-wordmark--{{ variant }}">
+  {{
+    'dukes-logo.png'
+    | asset_url
+    | image_tag: alt: shop.name, width: 160, height: 48, class: 'dukes-wordmark__logo', loading: 'eager'
+  }}
+  <span class="dukes-wordmark__tag">Wild Pacific Seafood · Since 1977</span>
+</span>

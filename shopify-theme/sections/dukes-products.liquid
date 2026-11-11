@@ -1,0 +1,69 @@
+{% comment %}
+  Duke's product grid. Shows a chosen collection, or every product in the
+  store when none is chosen, so it works before any collection exists
+  (meal kits can get their own collection and their own copy of this section).
+{% endcomment %}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign source = section.settings.collection
+  if source == blank
+    assign source = collections.all
+  endif
+  assign columns = section.settings.columns_desktop
+-%}
+
+<section class="dukes-section dukes-products color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="dukes-products__head">
+      <h2 class="dukes-products__heading">
+        {{- section.settings.heading | escape -}}
+        {%- if section.settings.heading_em != blank %} <em>{{ section.settings.heading_em | escape }}</em>{%- endif -%}
+      </h2>
+      {%- if section.settings.aside != blank -%}
+        <p class="dukes-products__aside">{{ section.settings.aside | escape }}</p>
+      {%- endif -%}
+    </div>
+
+    {%- if source.products_count > 0 -%}
+      <ul class="grid product-grid contains-card contains-card--product grid--{{ columns }}-col-desktop grid--1-col-tablet-down" role="list">
+        {%- for product in source.products limit: section.settings.limit -%}
+          <li class="grid__item">
+            {% render 'card-product',
+              card_product: product,
+              media_aspect_ratio: 'square',
+              show_secondary_image: false,
+              lazy_load: true,
+              section_id: section.id,
+              quick_add: 'none',
+              product_view_context: 'collection'
+            %}
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- else -%}
+      <p class="dukes-products__empty">{{ section.settings.empty_text | escape }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Duke's products",
+  "tag": "div",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "In the" },
+    { "type": "text", "id": "heading_em", "label": "Heading, brass italic part", "default": "shop" },
+    { "type": "textarea", "id": "aside", "label": "Supporting line" },
+    { "type": "collection", "id": "collection", "label": "Collection", "info": "Leave empty to show every product in the store." },
+    { "type": "range", "id": "limit", "label": "Products to show", "min": 1, "max": 12, "step": 1, "default": 6 },
+    { "type": "range", "id": "columns_desktop", "label": "Columns on desktop", "min": 2, "max": 4, "step": 1, "default": 3 },
+    { "type": "text", "id": "empty_text", "label": "Text when the collection is empty", "default": "Nothing here yet. Check back soon." },
+    { "type": "color_scheme", "id": "color_scheme", "label": "t:sections.all.colors.label", "default": "scheme-1" }
+  ],
+  "presets": [{ "name": "Duke's products" }]
+}
+{% endschema %}
