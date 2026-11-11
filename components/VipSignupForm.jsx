@@ -66,7 +66,7 @@ export default function VipSignupForm() {
     <div className="vip-form">
       {FORMS_ENABLED
         ? <p className="form-note">A required field is marked with *</p>
-        : <p className="form-note">Preview — this sign-up form isn&apos;t collecting entries yet. A required field is marked with *</p>}
+        : <p className="form-note">Preview only. This sign-up form isn&apos;t collecting entries yet. A required field is marked with *</p>}
       <label className="field">
         <span className="field-label">First name *</span>
         <input type="text" value={f.first} onChange={set('first')} placeholder="First name" required />

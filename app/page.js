@@ -31,7 +31,7 @@ export default function Home() {
               <span>Pacific Northwest · Family-Owned Since 1977</span>
             </div>
             <h1 className="h-display">Pacific Northwest seafood, <em>family-run since 1977</em></h1>
-            <p className="lede">We buy directly from small Alaska boats Duke has known for thirty years and pull oysters and Dungeness crab from up and down the Sound. Family-owned since 1977, six dining rooms in Western Washington, and the chowder is the same award-winning recipe that&apos;s carried our name for decades.</p>
+            <p className="lede">Wild Alaska salmon, Dungeness crab, and a clam chowder recipe from Duke&apos;s grandfather in New England, served in six dining rooms around Puget Sound.</p>
             <div className="ctas">
               <a href="#reserve" className="btn btn-primary btn-lg">Reserve a table <span className="arrow">→</span></a>
               <a href="#locations" className="btn btn-lg">Find a location</a>
@@ -62,7 +62,7 @@ export default function Home() {
           </div>
           <div>
             <p>Duke opened the first Duke&apos;s in 1977, two blocks from the Seattle Center, with cigar boxes for a register because nobody had set up a real one yet. Nearly fifty years later his son John runs the company, the chowder is the same recipe we&apos;ve poured since the first Chowder House, and the same family sits at the same tables.</p>
-            <p>We buy from small Alaska boats Duke has known for thirty years, pull oysters and Dungeness crab from up and down the Sound, and pour the same award-winning chowder we opened with. Six restaurants, one family, recipes we won&apos;t change and sourcing we won&apos;t compromise.</p>
+            <p>We buy from small Alaska boats Duke has known for thirty years, pull oysters and Dungeness crab from up and down the Sound, and pour the same award-winning chowder we opened with.</p>
             <div className="about-cta">
               <a href="/our-story/" className="btn btn-ghost btn-sm">Read our history</a>
             </div>
@@ -79,7 +79,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">Happy Hour</p>
               <h2 className="h-display">Happy hour comes around <em>twice a day</em>, and the plates never shrink</h2>
-              <p>Happy hour runs 3&ndash;6pm and again from 9 to close, seven days a week &mdash; dining room, bar, and deck. Dishes straight off the regular menu at happy hour prices, in full portions. We never shrink the plate.</p>
+              <p>Happy hour runs 3 to 6pm and again from 9pm to close, seven days a week, in the dining room, at the bar, and out on the deck. The dishes come straight off the regular menu at happy hour prices, in full portions.</p>
               <div className="actions">
                 <a href="/menus/happy-hour-menu/" className="btn btn-primary">See the happy hour menu <span className="arrow">→</span></a>
                 <a href="/locations/" className="btn btn-ghost">Find a table</a>
@@ -93,14 +93,14 @@ export default function Home() {
         <div className="shell">
           <div className="sec-head">
             <h2 className="h-display">One menu, served across <em>six dining rooms</em></h2>
-            <div className="head-aside">From South Lake Union to Tacoma&apos;s Ruston Way, every Duke&apos;s is run by the Moscrip family, serves the same menu, and pours from the same wine list. Pick the view that suits the night.</div>
+            <div className="head-aside">From South Lake Union to Tacoma&apos;s Ruston Way, every Duke&apos;s serves the same menu and pours from the same wine list, and the Moscrip family still owns and runs the company. Pick the view that suits the night.</div>
           </div>
 
           <div className="locations-grid">
             <a href="/locations/lake-union/" className="location-card">
               <div className="photo"><span className="imgfill"><Image src="/images/slu-interior.jpg" alt="South Lake Union" fill sizes="(max-width: 880px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></span></div>
               <div className="city">South Lake Union</div>
-              <div className="meta"><strong>The best view in the city.</strong> Front-row Lake Union and skyline views, minutes from downtown.</div>
+              <div className="meta"><strong>The &ldquo;Best in the Sound&rdquo; deck.</strong> Front-row Lake Union and skyline views, minutes from downtown.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
             <a href="/locations/bellevue/" className="location-card">
@@ -130,7 +130,7 @@ export default function Home() {
             <a href="/locations/kent-station/" className="location-card">
               <div className="photo"><span className="imgfill"><Image src="/images/kent-hero.jpg" alt="Kent Station" fill sizes="(max-width: 880px) 100vw, 33vw" style={{ objectFit: 'cover' }} /></span></div>
               <div className="city">Kent Station</div>
-              <div className="meta"><strong>Kent Station.</strong> A patio, easy parking, and one of Kent&apos;s best happy hours.</div>
+              <div className="meta"><strong>Kent Station.</strong> A patio, free parking throughout Kent Station, and happy hour twice a day.</div>
               <div className="arr"><span>Visit page</span><span>→</span></div>
             </a>
           </div>

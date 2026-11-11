@@ -44,7 +44,7 @@ export default function NewsletterForm() {
       </button>
       {!FORMS_ENABLED && state !== 'done' && (
         <span className="newsletter-note" style={{ display: 'block', marginTop: 8, fontSize: 12, color: 'var(--ink-soft)' }}>
-          Preview — not collecting entries yet.
+          Preview only. This form isn't collecting entries yet.
         </span>
       )}
       {state === 'error' && (

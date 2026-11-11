@@ -53,10 +53,13 @@ export default function VipCheckinForm() {
     return (
       <div className="vip-form">
         <div className="form-note" style={{ marginBottom: 12 }}>
-          Online check-in opens soon. Already an Email Club member? Your check-in
-          reward is applied when you dine and show your email at the table.
+          Check-in isn&apos;t connected on this preview yet, so nothing entered
+          here would reach Duke&apos;s. Until it is, members can check in on the
+          current Duke&apos;s site.
         </div>
-        <a href="/locations/" className="btn btn-primary btn-lg">Find a location <span className="arrow">→</span></a>
+        {/* Points at the live WordPress check-in page. Only shown while
+            NEXT_PUBLIC_FORMS_ENABLED is off, which must be flipped before cutover. */}
+        <a href="https://dukesseafood.com/dukes-vip-guest-check-in/" className="btn btn-primary btn-lg">Check in on dukesseafood.com <span className="arrow">→</span></a>
       </div>
     );
   }

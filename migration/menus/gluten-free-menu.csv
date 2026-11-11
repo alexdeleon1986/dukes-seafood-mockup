@@ -1,0 +1,15 @@
+section,item,description,price,gf,active,sort
+Lunch & Dinner,Dungeness Crab Dip,"Havarti, Boursin cheese, roasted garlic, spinach, Walla Walla sweet onions & dipping chips.",$24.90,TRUE,TRUE,10
+Lunch & Dinner,Chilled Prawn Cocktail Veracruz,,$11.90,TRUE,TRUE,20
+Lunch & Dinner,Dungeness Crabby Deviled Egg,Cage-free local egg with fresh Dungeness Crab.,$8.90,TRUE,TRUE,30
+Lunch & Dinner,Maple Bacon Seafood Bites,Bacon-wrapped Wild Mexican Prawn & Alaska Weathervane Scallop with herb maple butter sauce.,$9.90,TRUE,TRUE,40
+Lunch & Dinner,Smoked Salmon Deviled Egg,"Smoked Wild Alaska Salmon, fresh dill, capers.",$8.90,TRUE,TRUE,50
+Lunch & Dinner,Award Winning Clam Chowder,"All natural, New England style with nitrite-free bacon, creamy and herby.",$16.90/$21.90/$26.90,TRUE,TRUE,60
+Lunch & Dinner,Dinghy Sized Chowder Samplers,,$5.40/$9.90/$14.90,TRUE,TRUE,70
+Lunch & Dinner,Lobster Mobster Pernod Chowder,"Nova Scotia Lobster meat, Argentinean Red Shrimp, sweet potatoes.",$16.90/$21.90/$26.90,TRUE,TRUE,80
+Lunch & Dinner,North By Northwest Seafood Chowder,"Wild Alaska Salmon, Halibut & Cod, Steamer Clams - cioppino style.",$16.90/$21.90/$26.90,TRUE,TRUE,90
+Lunch & Dinner,Wild Alaska Smoked Salmon Chowder,"Duke's custom smoked Wild Alaska Coho Salmon with dill, fresh herbs, baby red potatoes.",$14.90/$19.90,TRUE,TRUE,100
+Lunch & Dinner,Vegan Veggie Stew,"Sauteed vegetables, caramelized peppers and onions, organic roasted potatoes, garlic, herbs in tomato broth. Vegan and gluten free.",$24.90,TRUE,TRUE,110
+Dessert,Enticingly Refreshing Sorbet,"By Lopez Island Creamery, ask your server for today's selections",$6.90,TRUE,TRUE,10
+Dessert,What's Up Duke?!? Carrot Cake,"Dense, moist and tasty with cream cheese frosting and a tangy raspberry coulis",$11.90,TRUE,TRUE,20
+Drinks,Ghostfish Brewing Co.,Gluten free beer,,TRUE,TRUE,10

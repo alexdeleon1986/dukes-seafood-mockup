@@ -15,7 +15,7 @@ export default function LocationsIndex() {
         <div className="shell">
           <div>
             <h1 className="h-display">Six dining rooms, <em>one family</em></h1>
-            <p className="lede">From the Tacoma waterfront to downtown Bellevue, every Duke&apos;s is run by the Moscrip family and pours from the same wine list. Pick the view that suits the night.</p>
+            <p className="lede">From the Tacoma waterfront to downtown Bellevue, every Duke&apos;s pours from the same wine list, and the Moscrip family still owns and runs the company. Pick the view that suits the night.</p>
             <div className="hero-ctas">
               <ReserveModal locations={LOCATION_LIST} triggerClassName="btn btn-primary btn-lg" triggerLabel="Reserve a table" />
               <a href="https://order.online/business/dukes-seafood-22397" className="btn btn-ghost btn-lg">Order online</a>

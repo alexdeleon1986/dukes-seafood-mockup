@@ -1,0 +1,45 @@
+section,item,description,price,gf,active,sort
+In-House Infusions,Cucumber Mojito,"Cucumber-infused vodka, muddled mint and lime, splash of homemade sour and soda",$3 OFF,,TRUE,10
+In-House Infusions,Duke's Famous Bloody Mary,"Vodka infused with garlic, onions, peppercorns, bell peppers, citrus, Demitri's seasoning, two jumbo prawns",$3 OFF,,TRUE,20
+Must-Have Mules,Sunny Slope Nectarine Mule,"Nectarine vodka, fresh limes, basil, and ginger beer",$3 OFF,,TRUE,10
+Must-Have Mules,Tito's Texas Mule,Tito's vodka with fresh limes and Cock & Bull Ginger Beer,$3 OFF,,TRUE,20
+Marvelous Margs,Blood Orange Margarita,"Milagro Reposado tequila, Solerno liqueur, lime, orange, sour, red sugar, salted rim",$3 OFF,,TRUE,10
+Marvelous Margs,Paloma Margarita,"LALO Blanco tequila, sour, grapefruit liqueur, grapefruit juice, on the rocks",$3 OFF,,TRUE,20
+Marvelous Margs,Perfecto Cristalino Margarita,"Dobel Diamante Cristalino tequila, Cointreau, splash of homemade sour, major lime squeeze, salted rim, on the rocks",$3 OFF,,TRUE,30
+Bourbon & Brown,Duke's Kentucky Manhattan,"Buffalo Trace bourbon stirred with Carpano Antica and Bigallet Amer, natural cherries, served 'up'",$3 OFF,,TRUE,10
+Bourbon & Brown,Elijah Craig Old Fashioned,"Elijah Craig bourbon, Regan's orange bitters, oversized ice cube",$3 OFF,,TRUE,20
+Bourbon & Brown,Woodinville Whiskey Sour,"Woodinville bourbon, toasted Applewood staves, homemade sour, raw egg white",$3 OFF,,TRUE,30
+Classic Cocktails,Not for Long Island Iced Tea,"Vodka, rum, sweet tea vodka, lemons, lemonade, cola",$3 OFF,,TRUE,10
+Classic Cocktails,Oh Mai Tai!,"Rum, Cointreau, lime, pineapple, orange juice, Kraken Black Spiced Rum float",$3 OFF,,TRUE,20
+Lively Libations,Blueberry Lemon Drop,"Blueberry vodka, lemon, Oregon blueberries, lemonade, sugared rim",$3 OFF,,TRUE,10
+Lively Libations,Grapefruit Nirvana,"Grapefruit vodka, agave nectar, muddled grapefruit, lemonade, half sugared rim",$3 OFF,,TRUE,20
+Lively Libations,Refreshing Gin Splash,"Kur Gin, Elderflower liqueur, Aperol, sour, orange rosemary syrup",$3 OFF,,TRUE,30
+Lively Libations,The Duke & The King,"Hendrick's gin, Elderflower liqueur, sour, basil, served 'up'",$3 OFF,,TRUE,40
+Can't-Miss Martinis,3 John's Martini,"Citroen vodka, shaken and served 'up' with lemon twist",$3 OFF,,TRUE,10
+Can't-Miss Martinis,Seattle's Epic Espresso Martini,"Do Epic Sh*t vodka, extra shaken with fresh cold brew, Browne Vanilla Bean Whiskey and Cantera Negra Cafe coffee liqueur",$3 OFF,,TRUE,20
+Can't-Miss Martinis,Tito's Classic Martini,"Tito's vodka, wave of vermouth, served 'up'",$3 OFF,,TRUE,30
+Bubbles,"Prosecco, LaMarca Split (187ml)",,$2 OFF,,TRUE,10
+Bubbles,"Sparkling Rose, Lucien Albrecht",,$2 OFF,,TRUE,20
+Bubbles,"Sparkling, Treveri Brut Flute",,$2 OFF,,TRUE,30
+Wine by the Glass,Wines by the Glass,Choose any of our current wines by the glass - 6 oz & 9 oz pours,$3 OFF,,TRUE,10
+Appeteasers & Shared Plates,Clam Lover's Steamer Clams,"Steamer clams with butter, garlic, white wine, basil, rosemary bread",$3 OFF,,TRUE,10
+Appeteasers & Shared Plates,Coco Loco Prawns,Coconut-encrusted prawns with sweet chili sauce,$3 OFF,,TRUE,20
+Appeteasers & Shared Plates,"Dungeness Crab ""Un""Cake",Crab-heavy cake with zesty lime aioli,$3 OFF,,TRUE,30
+Appeteasers & Shared Plates,Dungeness Crab Dip,"Havarti, Boursin, garlic, spinach, onions, served with chips",$3 OFF,TRUE,TRUE,40
+Appeteasers & Shared Plates,Finger Lickin' Chicken Strips,"Organic chicken breast, buttermilk marinated, with honey mustard",$3 OFF,,TRUE,50
+Appeteasers & Shared Plates,Heirloom Masa Dusted Calamari,"Flash fried, buttermilk marinated, with tequila lime aioli and hot honey sauces",$3 OFF,,TRUE,60
+Appeteasers & Shared Plates,Lobster Risotto Bites,"Lobster, arborio rice, cheeses, flash fried, with tomato basil cream and arugula",$3 OFF,,TRUE,70
+Appeteasers & Shared Plates,Wildly Delicious Alaska Salmon Sliders,Served on rosemary bread with basil pesto and tomato,$3 OFF,,TRUE,80
+Appeteasers & Shared Plates,Wondrous Wild Salmon Bites,Bite-sized and flash fried with wasabi and chipotle aioli for dipping,$3 OFF,,TRUE,90
+Tiny Bites,Chilled Prawn Cocktail Veracruz,,$2 OFF,TRUE,TRUE,10
+Tiny Bites,Dungeness Crabby Deviled Egg,Cage-free egg with Dungeness Crab,$2 OFF,TRUE,TRUE,20
+Tiny Bites,Maple Bacon Seafood Bites,Bacon-wrapped prawns and scallops with herb maple butter sauce,$2 OFF,TRUE,TRUE,30
+Tiny Bites,Smoked Salmon Deviled Egg,"Smoked Wild Alaska Salmon, fresh dill, capers",$2 OFF,TRUE,TRUE,40
+Champion Chowder,Award Winning Clam Chowder,"New England style with nitrite-free bacon, creamy and herby",$3 OFF,TRUE,TRUE,10
+Champion Chowder,Chowder Loaded Fries,,$8.90,,TRUE,20
+Sumptuous Salad,All Hail Caesar Salad,"Romaine, homemade croutons, Caesar dressing",$3 OFF,,TRUE,10
+Grass Fed Burgers,North of California Burger,"Fresh avocado, nitrite-free bacon, Havarti cheese, bibb lettuce, onion, tomato, chipotle aioli",$5 OFF,,TRUE,10
+Grass Fed Burgers,The Duke Cheeseburger,"Grass-fed beef, cheddar, bibb lettuce, tomato, onion, mayo",$5 OFF,,TRUE,20
+Tasty Sandwiches,Savory Chipotle Wild Salmon Sandwich,"Salmon, avocado, tomato, chipotle aioli, lettuce, bacon, rosemary bread",$5 OFF,,TRUE,10
+Tasty Sandwiches,Screaming Good Grilled Chicken Sandwich,"Grilled chicken, mayo, bacon, avocado, tomato, cheddar, Havarti, rosemary bread",$5 OFF,,TRUE,20
+Tasty Sandwiches,Seattle's Best Crab Cake Sandwich,"Crab ""Un""Cake, Havarti, bacon, chipotle aioli, avocado, tomato, bibb lettuce",$5 OFF,,TRUE,30

@@ -1714,9 +1714,15 @@ body[data-theme="modern"] {
    Location events: per-location contact CTA
    ========================================================= */
 .events-contact {
+  /* Supersedes the older dark-box .events-contact rules near line 606, which
+     still set a dark background under this block's dark text and hid
+     "Talk to ... about your event" on every location page. */
   margin-top: 36px;
-  padding-top: 28px;
+  padding: 28px 0 0;
   border-top: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  display: block;
 }
 .events-contact p {
   font-family: var(--serif);
@@ -1726,6 +1732,9 @@ body[data-theme="modern"] {
 }
 .events-contact p strong { color: var(--brass-dark); font-weight: 500; }
 .events-contact-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.events-contact-actions a.btn-primary { color: var(--cream); }
+.events-contact-actions a.btn-ghost { color: var(--ink); }
+.events-contact-actions a.btn-ghost:hover { color: var(--brass-dark); }
 
 /* =========================================================
    Homepage: awards strip + guarantee band
@@ -1907,6 +1916,18 @@ body[data-theme="modern"] {
   max-width: 64ch;
   margin: 0;
 }
+/* Required GF and county notices, verbatim from the live menus */
+.page-menu .menu-notices {
+  margin-top: 40px;
+  max-width: 72ch;
+}
+.page-menu .menu-notices p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0 0 10px;
+}
+.page-menu .menu-notices strong { color: var(--ink); font-weight: 500; }
 
 /* 4.2 — small homepage utilities (replacing inline one-offs) */
 .about-cta { margin-top: 24px; }

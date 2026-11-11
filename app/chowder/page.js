@@ -1,17 +1,17 @@
 export const metadata = {
   title: "The Chowder — Duke's Seafood",
-  description: "Duke's award-winning clam chowder: three-time Seattle Chowder Cook Off champion, made fresh daily at every location since 1989. Seven flavors, all gluten free.",
+  description: "Duke's award-winning clam chowder: three-time Seattle Chowder Cook Off champion, poured at every location since 1989. Four chowders and a vegan stew, all gluten free.",
   alternates: { canonical: '/chowder/' },
 };
 
 const CHOWDERS = [
-  "Seattle's Best Clam Chowder",
-  'Lobster Mobster Chowder',
-  'Dungeness Crab Bisque',
-  'Smoked Salmon Chowder',
-  'North by Northwest Seafood Chowder',
-  "Ragin\u2019 Cajun Chicken & Corn Chowder",
-  'Four-Chowder Sampler',
+  // Matches the live Lunch & Dinner menu, November 2026.
+  'Award Winning Clam Chowder',
+  'Lobster Mobster Pernod Chowder',
+  'North By Northwest Seafood Chowder',
+  'Wild Alaska Smoked Salmon Chowder',
+  'Vegan Veggie Stew',
+  'Dinghy Sized Chowder Samplers',
 ];
 
 export default function Chowder() {
@@ -41,10 +41,10 @@ export default function Chowder() {
           <div>
             <p className="eyebrow">The recipe</p>
             <h2 className="h-display">From New England, by way of <em>South Lake Union</em></h2>
-            <p style={{ marginTop: 20, marginBottom: 16, color: 'var(--ink-soft)' }}>The recipe came from Duke&apos;s Grampa Cox, who swore it was the best in all of New England. Duke and Chef Bill refined it and started pouring it in 1989, when the first Chowder House opened on South Lake Union. It hasn&apos;t changed since.</p>
-            <p style={{ marginBottom: 16, color: 'var(--ink-soft)' }}>Six other flavors have grown out of that original. None displaced it. Order the four-chowder sampler and decide for yourself.</p>
+            <p style={{ marginTop: 20, marginBottom: 16, color: 'var(--ink-soft)' }}>The recipe came from Duke&apos;s Grampa Cox, who swore it was the best in all of New England. Duke started pouring it in 1989, when the first Chowder House opened on South Lake Union. It hasn&apos;t changed since.</p>
+            <p style={{ marginBottom: 16, color: 'var(--ink-soft)' }}>Three more chowders have grown out of that original, and none has displaced it. Order the dinghy-sized samplers and decide for yourself.</p>
             <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', borderTop: '1px solid var(--line)', paddingTop: 24, marginTop: 8 }}>
-              {[['3× Champion', 'Seattle Chowder Cook Off'], ['Best Seafood', '425 Magazine, 2025'], ['Best of', 'South Sound, 2025']].map(([a, b]) => (
+              {[['3× Champion', 'Seattle Chowder Cook Off'], ['Best Clam Chowder', 'Food Network'], ['360,000', 'Servings in 2022']].map(([a, b]) => (
                 <div key={a} style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--ink)' }}>
                   <strong style={{ display: 'block', color: 'var(--brass-dark)', marginBottom: 4 }}>{a}</strong>{b}
                 </div>
@@ -57,8 +57,8 @@ export default function Chowder() {
       <section className="sec">
         <div className="shell">
           <div className="sec-head">
-            <h2 className="h-display">Seven <em>chowders</em></h2>
-            <p className="head-aside">One award-winning original and six that grew out of it. Every one made fresh daily, every one available by the cup or the bowl, and the clam, lobster, and crab also go home frozen.</p>
+            <h2 className="h-display">Four chowders and <em>a stew</em></h2>
+            <p className="head-aside">The clam chowder that started it all, three that grew out of it, a vegan veggie stew, and dinghy-sized samplers for the undecided. All of them are gluten free, and the clam, Lobster Mobster, and crab bisque also go home frozen.</p>
           </div>
           <div className="chowder-list">
             {CHOWDERS.map((c) => (
@@ -72,7 +72,7 @@ export default function Chowder() {
         <div className="shell">
           <div>
             <h2 className="h-display">Take it <em>home</em></h2>
-            <p className="lede" style={{ marginTop: 16, color: 'rgba(242,235,223,0.82)' }}>Find the clam, lobster, and crab in grocery freezers around the Puget Sound, or have them delivered by Sound Bites.</p>
+            <p className="lede" style={{ marginTop: 16, color: 'rgba(242,235,223,0.82)' }}>Find the clam, Lobster Mobster, and crab bisque in grocery freezers around the Puget Sound, or have them delivered by Sound Bites.</p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <a href="/frozen-chowders" className="btn btn-primary btn-lg">Find it in stores <span className="arrow">→</span></a>

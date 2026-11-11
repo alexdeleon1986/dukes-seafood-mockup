@@ -1,0 +1,57 @@
+section,item,description,price,gf,active,sort
+Appeteasers & Shared Plates,Clam Lover's Steamer Clams,"Steamer clams with butter, garlic, white wine, fresh basil, and rosemary bread.",$21.90,,TRUE,10
+Appeteasers & Shared Plates,Coco Loco Prawns,Coconut encrusted Wild Mexican Prawns with homemade sweet chili sauce.,$19.90,,TRUE,20
+Appeteasers & Shared Plates,"Dungeness Crab ""Un""Cake","Lots of Dungeness Crab, cake not so much, with zesty lime aioli.",$27.90,,TRUE,30
+Appeteasers & Shared Plates,Finger Lickin' Chicken Strips,"Organic, non-GMO, free-range chicken breast, buttermilk marinated with honey mustard.",$17.90,,TRUE,40
+Appeteasers & Shared Plates,Dungeness Crab Dip,"Havarti, Boursin cheese, roasted garlic, spinach, Walla Walla sweet onions & dipping chips.",$24.90,TRUE,TRUE,50
+Appeteasers & Shared Plates,Heirloom Masa Dusted Calamari,"Flash fried and buttermilk marinated, served with tequila lime aioli and hot honey sauces.",$19.90,,TRUE,60
+Appeteasers & Shared Plates,Lobster Risotto Bites,"Arborio rice and imported cheeses, flash fried, served with tomato basil cream and dressed arugula.",$22.90,,TRUE,70
+Appeteasers & Shared Plates,Wildly Delicious Alaska Salmon Sliders,"Rosemary bread, pesto, sliced tomato.",$19.90,,TRUE,80
+Appeteasers & Shared Plates,Wondrous Wild Salmon Bites,Bite-sized and flash fried with wasabi and chipotle aioli for dipping.,$22.90,,TRUE,90
+Tiny Bites,Chilled Prawn Cocktail Veracruz,,$11.90,TRUE,TRUE,10
+Tiny Bites,Dungeness Crabby Deviled Egg,Cage-free local egg with fresh Dungeness Crab.,$8.90,TRUE,TRUE,20
+Tiny Bites,Maple Bacon Seafood Bites,Bacon-wrapped Wild Mexican Prawn & Alaska Weathervane Scallop with herb maple butter sauce.,$9.90,TRUE,TRUE,30
+Tiny Bites,Smoked Salmon Deviled Egg,"Smoked Wild Alaska Salmon, fresh dill, capers.",$8.90,TRUE,TRUE,40
+Champion Chowders,Award Winning Clam Chowder,"All natural, New England style with nitrite-free bacon, creamy and herby.",$16.90/$21.90/$26.90,TRUE,TRUE,10
+Champion Chowders,Dinghy Sized Chowder Samplers,,$5.40/$9.90/$14.90,TRUE,TRUE,20
+Champion Chowders,Lobster Mobster Pernod Chowder,"Nova Scotia Lobster meat, Argentinean Red Shrimp, sweet potatoes.",$16.90/$21.90/$26.90,TRUE,TRUE,30
+Champion Chowders,North By Northwest Seafood Chowder,"Wild Alaska Salmon, Halibut & Cod, Steamer Clams - cioppino style.",$16.90/$21.90/$26.90,TRUE,TRUE,40
+Champion Chowders,Wild Alaska Smoked Salmon Chowder,"Duke's custom smoked Wild Alaska Coho Salmon with dill, fresh herbs, baby red potatoes.",$14.90/$19.90,TRUE,TRUE,50
+Champion Chowders,Vegan Veggie Stew,"Sauteed vegetables, caramelized peppers and onions, organic roasted potatoes, garlic, herbs in tomato broth. Vegan and gluten free.",$24.90,TRUE,TRUE,60
+Sumptuous Salads & Seafood Salads,"""Un""Chopped Seafood Salad","Seared scallops and prawns with cashews, avocado, tomato, feta, garlic-basil-lemon-olive oil dressing.",$29.90/$36.90,,TRUE,10
+Sumptuous Salads & Seafood Salads,All Hail Caesar Salad,"Romaine, Parmesan/Asiago, Caesar dressing, garlic sourdough croutons.",$16.90/$21.90,,TRUE,20
+Sumptuous Salads & Seafood Salads,Cosmic Wild Mixed Greens Salad,"Organic greens, Rogue Creamery bleu cheese, Cosmic Crisp apples, candied pecans, tarragon vinaigrette.",$16.90/$21.90,,TRUE,30
+Sumptuous Salads & Seafood Salads,Dungeness Crab & Prawn Louie Louie,,$36.90,,TRUE,40
+Sumptuous Salads & Seafood Salads,Sweet Caper Spinach Salad,"Baby spinach, sweet caper vinaigrette, bacon, almonds, egg, tomatoes, Parmesan/Asiago.",$16.90/$21.90,,TRUE,50
+Sumptuous Salads & Seafood Salads,Wild & Bleu Blackened Salmon Salad,"Blackened Wild Salmon, blueberries, bleu cheese, candied pecans, greens, bleu cheese dressing.",$27.90/$36.90,,TRUE,60
+Salad Add On,"Crab ""Un""Cake",,$21.90,,TRUE,10
+Salad Add On,Fresh Dungeness Crab,,$18.90,,TRUE,20
+Salad Add On,Nova Scotia Lobster,,$14.90,,TRUE,30
+Salad Add On,Organic Chicken,,$12.90,,TRUE,40
+Salad Add On,Prawn & Scallop Skewer,,$14.90,,TRUE,50
+Salad Add On,Wild Alaska Salmon,,$16.90,,TRUE,60
+Fish & Chips,Oh My Cod! Fish & Chips,Panko breaded Alaska Pacific Cod with Mac & Jack's beer and homemade tartar.,$38.90/$29.90,,TRUE,10
+Famous Fish Tacos,Rockin' Rockfish Tacos,"Wild Rockfish, Thai chili marinade, cheddar, mango chutney, tequila lime aioli, cucumber pico de gallo.",$38.90/$29.90,,TRUE,10
+Famous Fish Tacos,Unforgettable Sea Cod Tacos,"Blackened Pacific Cod with feta, tequila lime aioli, avocado, Napa cabbage, cucumber pico de gallo.",$38.90/$29.90,,TRUE,20
+Combo Wombos,Chowder & Salad Combo,"Choose a starter Cosmic Wild Mixed Greens, Sweet Caper Spinach Salad, or All Hail Caesar Salad, with a cup of Award-Winning Clam Chowder.",$29.90,,TRUE,10
+Combo Wombos,Crab Cake Sandwich Combo,"Dungeness Crab ""Un""Cake on locally made bun, sweet potato fries, Lobster Mobster Chowder.",$41.90,,TRUE,20
+Combo Wombos,Fish & Chips Combo,"Alaska Pacific Cod, cup of Award-Winning Clam Chowder, homemade tartar.",$46.90/$38.90,,TRUE,30
+Combo Wombos,Rockfish Taco Combo,"One Alaska Wild Rockfish Taco, cup of Award-Winning Clam Chowder.",$38.90,,TRUE,40
+Combo Wombos,Sea Cod Taco Combo,"One Unforgettable Sea Cod Taco, cup of Award-Winning Clam Chowder.",$38.90,,TRUE,50
+Wild Succulent Salmon,Colonel Mustard Wild Salmon,Pan seared Wild Salmon with herbs and Dijon cream sauce.,$45.90,,TRUE,10
+Wild Succulent Salmon,Duke's Favorite Pasta with Wild Salmon,"Lightly blackened Wild Alaska Salmon on tagliatelle pasta with basil, garlic cream, caramelized bell peppers and onions.",$45.90,,TRUE,20
+Wild Succulent Salmon,Off the Hook Stuffed Wild Salmon,"Stuffed with Crab, Prawns, cheeses, pesto, lemon beurre blanc.",$48.90,,TRUE,30
+Wild Succulent Salmon,Tantalizing Silky Pan Seared Salmon,"Ginger and basil encrusted, pan seared with herbs and Grand Marnier balsamic beurre blanc.",$46.90,,TRUE,40
+Heavenly Halibut,Crab & Prawn Stuffed Halibut,"Halibut stuffed with Crab, Prawns, cheeses, pesto, lemon beurre blanc.",$51.90,,TRUE,10
+Heavenly Halibut,It's So Dreamy Parmesan Halibut,Parmesan/Asiago encrusted fresh Kodiak Island Halibut with a lemon caper butter sauce.,$49.90,,TRUE,20
+Luxurious Lobster,Crab Stuffed Cold Water Lobster Tail,"Lobster tail stuffed with Crab, Prawns, cheeses.",$48.90,,TRUE,10
+Luxurious Lobster,Lavish Lobster Roll,Tossed with creamy lemon mayo and a hint of Old Bay seasoning on butter grilled soft brioche roll.,$38.90,,TRUE,20
+Luxurious Lobster,Lobster & Seafood Cavatappi Mac 'n Cheese,"Lobster, Salmon, Halibut, Cod in creamy gruyere, parmesan and asiago sauce.",$42.90,,TRUE,30
+Wild Shellfish,"Crab ""Un""Cakes",Dungeness Crab with lime aioli.,$52.90,,TRUE,10
+Wild Shellfish,Mixed Grill,"Crab ""Un""Cake, scallops & prawns.",$44.90,,TRUE,20
+Wild Shellfish,Stuffed Jumbo Prawns,"Stuffed with Crab, Prawns, cheeses, pesto, lemon beurre blanc.",$36.90,,TRUE,30
+Grass Fed Burgers,North of California Burger,"Fresh avocado, nitrate-free bacon, Havarti cheese, bibb lettuce, onion, tomato, chipotle aioli.",$28.90,,TRUE,10
+Grass Fed Burgers,The Duke Cheeseburger,"Tillamook extra sharp white cheddar, bibb lettuce, sliced tomato, onion, homemade mayo.",$24.90,,TRUE,20
+Gourmet Sandwiches,Chipotle Wild Salmon Sandwich,"Wild Salmon, bacon, avocado, tomato, chipotle aioli.",$34.90,,TRUE,10
+Gourmet Sandwiches,Crab Cake Sandwich,"Crab ""Un""Cake, Havarti, bacon, chipotle aioli, avocado, tomato, bibb lettuce.",$34.90,,TRUE,20
+Gourmet Sandwiches,Grilled Chicken Sandwich,"Grilled chicken, bacon, avocado, tomato, mayo, cheddar and Havarti.",$26.90,,TRUE,30

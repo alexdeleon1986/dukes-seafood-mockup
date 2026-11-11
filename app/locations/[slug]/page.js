@@ -55,8 +55,9 @@ export default async function LocationPage({ params }) {
       postalCode: nap.zip,
       addressCountry: 'US',
     },
-    // Open daily; dinner runs to 10pm Sun–Thu and 11pm Fri–Sat (verified vs
-    // OpenTable/Yelp). Lunch + happy hour + dinner are continuous service.
+    // Open daily; dinner runs to 10pm Sun–Thu at all six. Fri–Sat closing
+    // differs by location (loc.weekendClose, from the live location pages).
+    // Lunch + happy hour + dinner are continuous service.
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -68,7 +69,7 @@ export default async function LocationPage({ params }) {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Friday', 'Saturday'],
         opens: '11:00',
-        closes: '23:00',
+        closes: loc.weekendClose || '22:00',
       },
     ],
     acceptsReservations: loc.otSlug
@@ -149,7 +150,7 @@ export default async function LocationPage({ params }) {
         <div className="shell">
           <div>
             <h2 className="h-display">Reserve at <em>{loc.name}</em></h2>
-            <p className="lede">Walk-ins always welcome at the bar — full menu and happy hour served there every day of the week.</p>
+            <p className="lede">Walk-ins are always welcome at the bar, with the full menu and happy hour served there every day of the week.</p>
           </div>
           <ReservationWidget rid={loc.rid} name={loc.name} slug={loc.slug} />
         </div>
@@ -163,7 +164,9 @@ export default async function LocationPage({ params }) {
             <div className="head-aside">{loc.events.aside}</div>
           </div>
           <div className="events-intro">
-            <p><strong>{loc.name} Duke&apos;s</strong> {loc.events.intro[0].replace(/^Duke\u2019s [^—]+ /, '')}</p>
+            {/* Rendered as written. A regex here used to strip all but the
+                last word of the sentence on five locations. */}
+            <p>{loc.events.intro[0]}</p>
             <p>{loc.events.intro[1]}</p>
           </div>
           <div className="events-list">

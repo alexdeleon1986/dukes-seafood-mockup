@@ -1,0 +1,7 @@
+section,item,description,price,gf,active,sort
+Dessert,Brookie Betty Boop,"Chocolate brownie mixed with chocolate chip cookie, baked and served warm with Lopez Island Creamery vanilla ice cream",$13.90,,TRUE,10
+Dessert,Carefully Selected Local Ice Cream,Made by local favorite Lopez Island Creamery,$6.90,,TRUE,20
+Dessert,Enticingly Refreshing Sorbet,"By Lopez Island Creamery, ask your server for today's selections",$6.90,TRUE,TRUE,30
+Dessert,Mouthwatering Marionberry Pie,"Wild Woodland, WA marionberries, served warm, with 2 scoops of Lopez Island Creamery vanilla ice cream",$14.90,,TRUE,40
+Dessert,Peerless Pier Pie,"From the Pier Restaurant in Newport, Rhode Island. Lopez Island Creamery chocolate and espresso ice cream layered in a cookie crust with chocolate sauce, homemade whipped cream and toasted almonds",$12.90,,TRUE,50
+Dessert,What's Up Duke?!? Carrot Cake,"Dense, moist and tasty with cream cheese frosting and a tangy raspberry coulis",$11.90,TRUE,TRUE,60

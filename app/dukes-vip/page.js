@@ -43,13 +43,13 @@ export default function DukesVip() {
           </div>
           <div className="benefit">
             <h3>A free entree on your birthday</h3>
-            <p className="body">Duke decided long ago that nobody pays for dinner on their birthday, so every year we send a voucher for a free birthday entree. Prefer to share? Take a free dessert for everyone at your table instead, when they order a meal.</p>
+            <p className="body">Duke decided long ago that nobody pays for dinner on their birthday, so every year on your birthday we treat you to a free entrée. Celebrating with a crowd? You can choose a special party option for your entire group instead.</p>
           </div>
           <div className="benefit">
             <h3>Up to $20 off, every time you dine</h3>
             <p className="body">Check in after any visit and we take $10 off a bill of $50 or more, or $20 off a bill of $100 or more. At any of our six restaurants.</p>
           </div>
-          <p className="body" style={{ marginTop: 28 }}>You&apos;ll also get our newsletter: stories from more than forty years of Duke&apos;s, recipes and tips from Wild Bill Ranniger, and member-only promotions.</p>
+          <p className="body" style={{ marginTop: 28 }}>You&apos;ll also get our newsletter: stories from nearly fifty years of Duke&apos;s, recipes and tips from Wild Bill Ranniger, and member-only promotions.</p>
         </div>
       </section>
     </div>

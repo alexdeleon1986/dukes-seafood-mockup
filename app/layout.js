@@ -16,7 +16,8 @@ export function generateMetadata() {
     metadataBase: new URL('https://dukesseafood.com'),
     title: {
       default: "Duke's Seafood — Wild Pacific Seafood Since 1977",
-      template: "%s | Duke's Seafood",
+      // Page titles already carry the brand; a suffix here doubled it.
+      template: '%s',
     },
     description: "Six family-owned restaurants across Western Washington serving sustainable wild Pacific seafood, grass-fed burgers, and award-winning chowder since 1977.",
     alternates: { canonical: '/' },

@@ -126,6 +126,19 @@ export default async function MenuPage({ params }) {
             </div>
           ))}
 
+          {/* Required on every menu. Wording copied verbatim from the live
+              dukesseafood.com menus (Nov 2026); do not paraphrase. Kept in the
+              template, not the sheet, so a sheet edit can never drop them. */}
+          <aside className="menu-notices" aria-label="Menu notices">
+            <p>Prices may vary by location.</p>
+            <p>
+              <strong>GF</strong> Gluten Free Selection - GF menu items were developed for the purpose of accommodating people who have a desire to avoid gluten in food products. Please note our kitchen is not gluten free and we cannot guarantee that menu items have not come in contact with gluten products during the preparation in our kitchen.
+            </p>
+            <p>
+              <strong>Notice Required by the County:</strong> Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs under cooked to your specification may increase your risk of foodborne illness, especially if you have certain medical conditions.
+            </p>
+          </aside>
+
           <nav className="menu-more" aria-label="Browse other menus">
             <span className="menu-more-label">Keep exploring</span>
             <div className="menu-more-links">

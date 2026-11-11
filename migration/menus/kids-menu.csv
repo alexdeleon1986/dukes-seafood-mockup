@@ -1,0 +1,19 @@
+section,item,description,price,gf,active,sort
+Main,Coco Loco Wild Prawns,,$12.90,,TRUE,10
+Main,Finger Lickin' Organic Chicken Strips,,$12.90,,TRUE,20
+Main,Grilled Organic Chicken Breast,,$11.90,,TRUE,30
+Main,Grilled Wild Alaska Coho Salmon,,$16.90,,TRUE,40
+Main,Luigi's Linguini Noodles,tomato or alfredo sauce,$10.90,,TRUE,50
+Main,Oh My Cod! 1 Piece Fish & Chips,,$14.90,,TRUE,60
+Main,Royal Ranch Grass-Fed Cheeseburger,,$13.90,,TRUE,70
+Main,Sensational Salmon Bites,,$13.90,,TRUE,80
+Sides,Dinghy of Clam Chowder,,,,TRUE,10
+Sides,French Fries,,,,TRUE,20
+Sides,Organic Baby Red Potatoes,,,,TRUE,30
+Sides,Seasonal Vegetable,,,,TRUE,40
+Sides,Sweet Potato Fries,,,,TRUE,50
+Drinks,Any of Our Juices or Milk,,,,TRUE,10
+Drinks,Fresh Squeezed Lemonade,,,,TRUE,20
+Drinks,Pure Cane Sweetened Soda,,,,TRUE,30
+Drinks,Strawberry or Blueberry Lemonade,,,,TRUE,40
+Kid's Dessert,Ice Cream or Sorbet,,$2.90,,TRUE,10

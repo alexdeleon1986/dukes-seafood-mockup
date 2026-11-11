@@ -1,0 +1,88 @@
+section,item,description,price,gf,active,sort
+Duketails,3 John's Martini,"Citroen vodka, shaken and served 'up' with lemon twist",$17.90,,TRUE,10
+Duketails,Blood Orange Margarita,"Milagro Reposado tequila, Solerno Blood Orange liqueur, lime, orange, sour, red sugar, salted rim",$16.90,,TRUE,20
+Duketails,Blueberry Lemon Drop,"Blueberry vodka, lemon, Oregon blueberries, lemonade, sugared rim",$15.90,,TRUE,30
+Duketails,Cucumber Mojito,"Cucumber-infused vodka, mint, lime, homemade sour, soda, sugared rim",$15.40,,TRUE,40
+Duketails,Duke's Famous Bloody Bloody Mary,"Vodka infused with garlic, onions, peppercorns, bell peppers, lemons, limes, Demitri's seasoning, garnished with jumbo prawns",$15.90,,TRUE,50
+Duketails,Duke's Kentucky Manhattan,"Buffalo Trace bourbon stirred with Carpano Antica and Bigallet Amer, natural cherries, served 'up'",$17.90,,TRUE,60
+Duketails,Elijah Craig Old Fashioned,"Elijah Craig bourbon, Regan's orange bitters, oversized ice cube",$17.40,,TRUE,70
+Duketails,Grapefruit Nirvana,"Grapefruit vodka, agave nectar, muddled grapefruit, lemonade, half sugared rim",$15.90,,TRUE,80
+Duketails,Not for Long Island Iced Tea,"Vodka, rum, sweet tea vodka, lemons, lemonade, cola",$16.40,,TRUE,90
+Duketails,Oh Mai Tai!,"Rum, Cointreau, lime, pineapple, orange juice, Kraken Black Spiced Rum",$15.90,,TRUE,100
+Duketails,Paloma Margarita,"LALO Blanco tequila, sour, Grapefruit liqueur, grapefruit juice, salted rim",$16.40,,TRUE,110
+Duketails,Perfecto Cristalino Margarita,"Dobel Diamante Cristalino tequila, Cointreau, splash of homemade sour, major lime squeeze, salted rim, on the rocks",$16.40,,TRUE,120
+Duketails,Refreshing Gin Splash,"Kur Gin, Aperol, Elderflower liqueur, homemade sour, orange rosemary syrup",$15.90,,TRUE,130
+Duketails,Seattle's Epic Espresso Martini,"Do Epic Sh*t vodka, extra shaken with fresh cold brew, Browne Vanilla Bean Whiskey and Cantera Negra Cafe coffee liqueur",$16.90,,TRUE,140
+Duketails,Sunny Slope Nectarine Mule,"Nectarine vodka, fresh limes, basil, ginger beer",$15.90,,TRUE,150
+Duketails,The Duke & The King,"Hendrick's gin, Elderflower liqueur, homemade sour, fresh basil, served 'up'",$15.90,,TRUE,160
+Duketails,Tito's Texas Mule,"Tito's vodka, fresh limes, ginger beer",$15.40,,TRUE,170
+Duketails,Woodinville Whiskey Sour,"Woodinville bourbon, toasted Applewood staves, homemade sour, raw egg white",$16.90,,TRUE,180
+Draft Beer,Bale Breaker Top Cutter IPA,,,,TRUE,10
+Draft Beer,Black Raven Pilsner,,,,TRUE,20
+Draft Beer,Coors Light,,,,TRUE,30
+Draft Beer,Mac & Jack's African Amber,,,,TRUE,40
+Draft Beer,Manny's Pale Ale,,,,TRUE,50
+Bottled Beer,$2 Modelito's (7oz can),,,,TRUE,10
+Bottled Beer,Pacifico / Pacifico bucket (4),,,,TRUE,20
+Bottled Beer,Rainier (16oz can),,,,TRUE,30
+Gluten Free Beer,Ghostfish Brewing Co.,,,TRUE,TRUE,10
+Non-Alcoholic Beer,Athletic Brewing Co. (N/A),,,,TRUE,10
+Cider / Hard Seltzer,High Noon Peach,,,,TRUE,10
+Cider / Hard Seltzer,Incline Blackberry Cider,,,,TRUE,20
+Cider / Hard Seltzer,Topo Chico Straw/Guava,,,,TRUE,30
+Cider / Hard Seltzer,Yonder Cider,,,,TRUE,40
+Non-Alcoholic,Acqua Panna,,,,TRUE,10
+Non-Alcoholic,Caffe Ladro Organic Coffee,,,,TRUE,20
+Non-Alcoholic,Q Ginger Ale,,,,TRUE,30
+Non-Alcoholic,San Pellegrino,,,,TRUE,40
+Non-Alcoholic,Scotty's Local Fresh Lemonades,,,,TRUE,50
+Non-Alcoholic,Seattle Soda Co. Sodas,,,,TRUE,60
+Non-Alcoholic,Tazo Hot Tea,,,,TRUE,70
+NA Seltzers,Hiyo Social Seltzers,"Watermelon Lime, Blackberry Lemon, Passionfruit Tangerine",,,TRUE,10
+White Selection,"Albarino, Nortico",Portugal; Sustainably grown with fresh citrus notes and vibrant minerality,$14.90 / $18.90 / $52,,TRUE,10
+White Selection,"Chardonnay, House - Duke's Selection",Duke's house Chardonnay,$13.90 / $17.90 / $46,,TRUE,20
+White Selection,"Chardonnay, Mark Ryan 'Lu + Oly'",Alluring flavors with great texture and balance,$14.90 / $18.90 / $52,,TRUE,30
+White Selection,"Chardonnay, Sonoma-Cutrer","Russian River Ranches; tropical fruit, light vanilla oak finish",$16.90 / $20.90 / $62,,TRUE,40
+White Selection,"Dry Rose, Flowerhead by Mark Ryan","Full bodied and refreshing, with vibrant dry notes of strawberry and citrus",$14.90 / $18.90 / $52,,TRUE,50
+White Selection,"Pinot Gris, Nine Hats","Columbia Valley; medium bodied, vibrant fresh flavors, crisp finish",$14.90 / $18.90 / $52,,TRUE,60
+White Selection,"Pinot Gris/Sauvignon Blanc, Browne Family 'Gigi's Garden'","Columbia Valley; Crisp and refreshing, with a lively and lush minerality",$14.90 / $18.90 / $52,,TRUE,70
+White Selection,"Riesling, J Bookwalter Winery","Columbia Valley; Juicy entry with ripe fruit, rich mouthfeel, bright citrus finish",$13.90 / $17.90 / $46,,TRUE,80
+White Selection,"Sauvignon Blanc, Black Stallion",North Coast; bright fruit with a lingering finish,$15.90 / $19.90 / $56,,TRUE,90
+White Selection,"Sauvignon Blanc, Whitehaven","Marlborough, NZ; Full, fresh and juicy with vibrant acidity",$15.90 / $19.90 / $56,,TRUE,100
+White Selection,"Viognier, San Simeon",Paso Robles; Bright and luscious with floral aroma,$14.90 / $18.90 / $52,,TRUE,110
+Red Selection,"Cabernet Sauvignon, Black Stallion","Napa Valley; deep, dark fruit flavors, luscious finish",$16.90 / $21.90 / $62,,TRUE,10
+Red Selection,"Cabernet Sauvignon, Duke's 'Up River Red'","Candy Mountain; medium to full body, beautiful fruit, lingering finish",$14.90 / $18.90 / $52,,TRUE,20
+Red Selection,Grenache/Syrah/Mourvedre 'GSM' JM Cellars,Columbia Valley; versatile and fruit forward blend,$14.90 / $18.90 / $52,,TRUE,30
+Red Selection,"Merlot, Browne Family","Columbia Valley; floral and fruit aromas, estate fruit",$14.90 / $18.90 / $52,,TRUE,40
+Red Selection,"Petite Syrah, Stags' Leap Winery","Columbia Valley; power and intensity with finesse, long finish",$16.90 / $21.90 / $62,,TRUE,50
+Red Selection,"Pinot Noir, Benton-Lane","Willamette Valley, OR; medium bodied, vibrant, a killer food wine",$14.90 / $18.90 / $52,,TRUE,60
+Red Selection,"Pinot Noir, Calera Winery","Central Coast; soft velvety tannins, vibrant fruit and spice, long finish",$14.90 / $18.90 / $52,,TRUE,70
+Red Selection,"Red Blend, Darby Winery 'Purple Haze'",Columbia Valley; silky smooth with dense rich fruit,$14.90 / $18.90 / $52,,TRUE,80
+Bubbles,"Champagne, Moet & Chandon","Brut Imperial - Champagne, FR; bright fruitiness, elegant maturity",$22.90 / $118,,TRUE,10
+Bubbles,"Prosecco, LaMarca","Veneto, Italy; bright, crisp and refreshing",$14.40 / $48,,TRUE,20
+Bubbles,"Sparkling Rose, Lucien Albrecht Cremant d'Alsace Brut Rose","Alsace, FR; 100% Pinot Noir sparkling wine",$15.90 / $58,,TRUE,30
+Bubbles,"Sparkling, Treveri Brut","Yakima Valley; locally made, fresh, crisp and dry",$13.90 / $48,,TRUE,40
+Boutique WA Winery,Browne Family Cabernet Sauvignon,,$62,,TRUE,10
+Boutique WA Winery,Browne Family Dry Rose,,$52,,TRUE,20
+Boutique WA Winery,Darby 'Le Deuce' Viognier/Roussanne,,$52,,TRUE,30
+Boutique WA Winery,Darby Winery 'The Dark Side' Syrah,,$58,,TRUE,40
+Boutique WA Winery,Dossier Sauvignon Blanc,,$56,,TRUE,50
+Boutique WA Winery,Dossier Winery Red Blend,,$74,,TRUE,60
+Boutique WA Winery,Eight Bells 'David's Block' Red Blend,,$64,,TRUE,70
+Boutique WA Winery,Feather Cabernet Sauvignon,,$108,,TRUE,80
+Boutique WA Winery,Fidelitas Malbec,,$78,,TRUE,90
+Boutique WA Winery,J. Bookwalter 'Conflict' Red Blend,,$66,,TRUE,100
+Boutique WA Winery,JM Cellars Sauvignon Blanc,,$54,,TRUE,110
+Boutique WA Winery,Mark Ryan 'The Dissident' Red Blend,,$69,,TRUE,120
+Boutique WA Winery,Mark Ryan Viognier,,$62,,TRUE,130
+Boutique WA Winery,Novelty Hill Sangiovese,,$52,,TRUE,140
+Boutique WA Winery,Passing Time Chardonnay,,$64,,TRUE,150
+Boutique WA Winery,Passing Time Red Blend,,$86,,TRUE,160
+Boutique WA Winery,Sparkman Grenache,,$48,,TRUE,170
+Boutique WA Winery,Sparkman Lumiere Chardonnay,,$58,,TRUE,180
+Boutique WA Winery,Upchurch Estate Cabernet Sauvignon,,$94,,TRUE,190
+Boutique WA Winery,Woodward Canyon 'Artist Series' Cabernet Sauvignon,,$76,,TRUE,200
+California Beauty,Etude Pinot Noir,,$76,,TRUE,10
+California Beauty,Faust Cabernet Sauvignon,,,,TRUE,20
+California Beauty,Flowers Chardonnay,,,,TRUE,30
+California Beauty,Rombauer Sauvignon Blanc,,,,TRUE,40

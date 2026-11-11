@@ -5,17 +5,17 @@ export const metadata = {
 };
 
 const PEOPLE = [
-  { name: 'Duke Moscrip', role: 'Founder', photo: '/images/duke-portrait-2015.jpg', bio: 'Opened the original Duke\u2019s on Queen Anne in 1977. Still flies to Alaska to vet the boats, still runs taste tests in the kitchen, still writes most of the company\u2019s blog posts himself.', pos: 'center top' },
-  { name: 'John Moscrip', role: "President · Duke\u2019s Son", photo: '/images/duke-john-bar.jpg', bio: 'Took over running the company. Day-to-day operations, sourcing relationships, the foundation work. Helped launch the Dukes Damsel on a Train Foundation in 2025.', pos: '85% center' },
-  { name: 'Alan Caraco', role: 'Executive Chef', photo: '/images/alan-caraco.jpg', bio: 'Runs the kitchens across all six restaurants. Develops the seasonal menu alongside Chef Bill\u2019s specials. Believes a deviled egg without crab on top is a missed opportunity.', pos: 'center' },
+  { name: 'Duke Moscrip', role: 'Founder', photo: '/images/duke-portrait-2015.jpg', bio: 'Opened the original Duke\u2019s on Queen Anne in 1977. Sources the ingredients with John and Chef Bill, and has been out on the Alaska boats and docks himself.', pos: 'center top' },
+  { name: 'John Moscrip', role: "CEO & Partner · Duke\u2019s Son", photo: '/images/duke-john-bar.jpg', bio: 'Took over running the company. Day-to-day operations, sourcing relationships, the foundation work. Helped launch the Dukes Damsel on a Train Foundation in 2025.', pos: '85% center' },
+  { name: 'Alan Caraco', role: 'Director of Culinary', photo: '/images/alan-caraco.jpg', bio: 'Runs the kitchens across all six restaurants. Develops the seasonal menu alongside Chef Bill\u2019s specials.', pos: 'center' },
 ];
 
 const TIMELINE = [
   ['1977', "Duke\u2019s Bar & Grill opens on Queen Anne.", 'Two blocks from the Seattle Center. Chalkboard menu, eclectic food, cigar boxes for a register.'],
   ['1978', "The original Duke\u2019s Bellevue follows.", 'The success of Queen Anne pulls a second location across the lake. It later closed; Bellevue returns in 2017.'],
   ['1989', 'The first Chowder House opens on South Lake Union.', 'The prototype for everything that follows. The chowder recipe goes on the menu and stays on the menu.'],
-  ['1990', "Duke\u2019s Green Lake opens.", 'Right on the lake. Seaplanes overhead. Most of the year, the deck is open.'],
-  ['2005', 'Kent Station opens.', 'In the heart of Kent Station, with a patio and one of Kent\u2019s best happy hours.'],
+  ['1990', "Duke\u2019s Green Lake opens.", 'Right on the lake, with a deck that stays open most of the year.'],
+  ['2005', 'Kent Station opens.', 'Inside the Kent Station center, with a patio and free parking.'],
   ['2006', 'Tacoma Waterfront opens on Ruston Way.', 'Built on pilings over Puget Sound. The water at your shoulder, Mount Rainier in the window.'],
   ['2008', 'Southcenter opens at Westfield Mall.', 'Full menu, full bar, a big patio, easy to reach from anywhere south of Seattle.'],
   ['2017', 'Duke\u2019s returns to Bellevue.', 'A showpiece room in Lincoln Square South, and the name becomes Duke\u2019s Seafood & Chowder.'],
@@ -73,10 +73,10 @@ export default function OurStory() {
           <div>
             <p className="eyebrow">The sourcing · Wild Alaska, since the nineties</p>
             <h2 className="h-display">We&apos;ve bought from the <em>same Alaska boats</em> for thirty years</h2>
-            <p style={{ marginTop: 20, marginBottom: 16, color: 'var(--ink-soft)' }}>For more than three decades, our wild salmon has come from the same small, family-run Alaska fishing operations. Duke knows the captains by name and visits the docks himself.</p>
+            <p style={{ marginTop: 20, marginBottom: 16, color: 'var(--ink-soft)' }}>For more than three decades, our wild salmon has come from the same small, family-run Alaska fishing operations. Duke has been out on the boats and the Alaska docks himself.</p>
             <p style={{ marginBottom: 16, color: 'var(--ink-soft)' }}>Alaska is the only US state with sustainability written directly into its constitution, required since statehood in 1959. That&apos;s the law our suppliers fish under.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, marginTop: 32, borderTop: '1px solid var(--line)', paddingTop: 28 }}>
-              {[['30+', 'Years sourcing from Alaska'], ['100%', 'Wild & sustainably caught'], ['6', 'Dining rooms, one supply chain']].map(([n, l]) => (
+              {[['30+', 'Years sourcing from Alaska'], ['100%', 'Sustainable seafood'], ['6', 'Dining rooms, one supply chain']].map(([n, l]) => (
                 <div key={n}>
                   <div style={{ fontFamily: 'var(--serif)', fontSize: 40, color: 'var(--ink)', lineHeight: 1 }}>{n}</div>
                   <div style={{ fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brass-dark)', marginTop: 10 }}>{l}</div>
@@ -91,7 +91,7 @@ export default function OurStory() {
       <section className="sec events">
         <div className="shell">
           <div className="sec-head">
-            <h2 className="h-display">A Moscrip still runs <em>every dining room</em></h2>
+            <h2 className="h-display">A Moscrip still runs <em>the company</em></h2>
             <div className="head-aside">Duke founded the company. His son John runs it now. The thread doesn&apos;t break.</div>
           </div>
           <div className="events-list">

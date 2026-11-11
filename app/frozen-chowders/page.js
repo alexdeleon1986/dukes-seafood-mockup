@@ -10,7 +10,7 @@ const PRODUCTS = [
     img: '/images/frozen-clam.jpg',
     made: 'Sustainable clams',
     quote: 'This chowder won the Seattle Chowder Cook-Off so often, they asked us to stop entering.',
-    features: ['Rich & Creamy', 'Sustainable Clams', 'World Famous', 'Gluten Free'],
+    features: ['Rich & Creamy', 'Sustainable Clams', '3× Cook-Off Champion', 'Gluten Free'],
   },
   {
     name: 'Lobster Mobster Chowder',
