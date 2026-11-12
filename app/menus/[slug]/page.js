@@ -119,7 +119,7 @@ export default async function MenuPage({ params }) {
                       </span>
                     )}
                   </span>
-                  {it.price && <span className="menu-item-price">{it.price}</span>}
+                  {it.price && <span className="menu-item-price">{it.price.replace(/\$\s*/g, '')}</span>}
                   {it.desc && <p className="menu-item-desc">{it.desc}</p>}
                 </div>
               ))}
